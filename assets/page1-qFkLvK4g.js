@@ -1,4 +1,4 @@
-const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i={sections:[{id:"section1",title:"基础知识",files:[{id:"file1",title:"什么是硬件钱包",content:`
+const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i={sections:[{id:"section1",title:"基础知识",files:[{id:"file1_1",title:"什么是硬件钱包",content:`
             <h2>什么是硬件钱包？</h2>
             <p>
             硬件钱包是一种专门用于生成和存储私钥的电子设备，其核心是使用安全芯片来保护私钥的安全。在加密数字资产领域，私钥是资产所有权的唯一凭证，因此保护私钥的安全至关重要。硬件钱包通过将私钥完全隔离在离线环境中，避免了私钥暴露在网络中的风险，从而显著降低了被盗的可能性。
@@ -40,14 +40,14 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i={sections:[{id:"section1",title:"
 <p>
 常见硬件钱包有 <strong> imKey/ Ledger/ Trezor </strong>等，硬件钱包通过将私钥从网络环境中隔离出来，为用户提供了最高级别的资产保护。对于注重安全的用户，尤其是持有大额数字资产时，选择硬件钱包是明智之举。无论是 imKey、Ledger 还是 Trezor，都可以根据自身需求选择适合的产品，以最大限度保障个人数字资产的安全。
 </p>
-          `,lastUpdated:"2025-08-25"},{id:"file2",title:"什么是助记词",content:`
+          `,lastUpdated:"2025-08-25"},{id:"file1_2",title:"什么是助记词",content:`
             <p>助记词是明文私钥的另一种表现形式，最早是由 BIP39 提案提出，其目的是为了帮助用户记忆复杂的私钥。助记词一般由12、15、18、24个单词构成，这些单词都取自一个固定词库，其生成顺序也是按照一定算法而来，所以用户没必要担心随便输入 12 个单词就会生成一个地址。任何人得到了你的助记词，可以不费吹灰之力的夺走你的资产。所以用户在备份助记词之后，一定要注意三点:</p>
             <ol>
             <li> <strong>尽可能采用物理介质备份，例如用笔抄在纸上等或使用</strong> 防火防水防腐蚀的「助记词密盒」，尽可能不要采用截屏或者拍照之后放在联网的设备里，以防被黑客窃取；</li>
             <li>多次验证备份的助记词是否正确，一旦抄错一两个单词，那么将对后续找回正确的助记词带来巨大的困难；</li>
             <li>将备份后的助记词妥善保管，做好防盗防丢措施。</li>
 </ol>
-          `,lastUpdated:"2025-08-25"},{id:"file3",title:"什么是私钥",content:`
+          `,lastUpdated:"2025-08-25"},{id:"file1_3",title:"什么是私钥",content:`
                     <h2>什么是私钥？</h2>
                     <p>私钥是区块链交易中用于证明资金所有权的核心凭证。我们常说， <strong> 谁掌握了私钥，谁就掌握了钱包中的资金。</strong>在区块链系统中，私钥用于生成交易签名，以验证资产的所有权和合法性。</p>
                     <p>由于私钥的极端重要性，必须始终保持机密。一旦私钥被泄露，等同于资产的控制权也被转移给了第三方，造成不可挽回的损失。</p>
@@ -119,7 +119,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i={sections:[{id:"section1",title:"
 </li>
 </ol>
 <p>私钥是区块链资产的核心，是用户对资金控制权的根本体现。对私钥的妥善保管不仅能确保资产的安全，也体现了用户对区块链去中心化理念的认知和实践。无论是通过硬件钱包、助记词备份，还是保持良好的安全习惯，都能为你的数字资产构建一道坚固的防线。</p>
-                    `,lastUpdated:"2025-08-25"},{id:"file4",title:"什么是绑定码",content:`
+                    `,lastUpdated:"2025-08-25"},{id:"file1_4",title:"什么是绑定码",content:`
 <p>
 绑定码由 8 位随机的数字或字母组成，用于 imKey 与
 <a href="http://token.im/" target="_blank"> imToken 客户端</a> /
@@ -140,7 +140,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i={sections:[{id:"section1",title:"
  6、备份绑定码。</li>
 </ul>
 <p>注：上述过程中遇到任何问题，请发送邮件至 support@imkey.im 与我们联系。</p>
-                    `,lastUpdated:"2025-08-25"},{id:"fil5",title:"什么是 PIN 码",content:`
+                    `,lastUpdated:"2025-08-25"},{id:"file1_5",title:"什么是 PIN 码",content:`
                     <p>当我们谈到数字安全时，PIN 码（个人识别码）是一种常见且重要的保护措施。尤其在使用硬件钱包，如 imKey 时，PIN 码的设置和管理直接关系到我们的资产安全。本文将详细介绍什么是 PIN 码、imKey 硬件钱包中的 PIN 码如何设置及其安全机制，让初级用户也能轻松理解并掌握其使用方法。</p>
                     <h2>什么是 PIN 码?</h2>
                     <p>PIN，全称为 Personal Identification Number，即个人识别码。最早，PIN 码是电信运营商用来保护 SIM 卡的一种安全措施，类似于银行卡的 6 位密码功能。</p>
@@ -169,7 +169,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i={sections:[{id:"section1",title:"
 </ul>
 <img src="${l}" alt="PIN">
                     
-                    `,lastUpdated:"2025-08-25"},{id:"fil6",title:"什么是区块链",content:`
+                    `,lastUpdated:"2025-08-25"},{id:"file1_6",title:"什么是区块链",content:`
                     <p> <strong> 区块链（Blockchain）是由节点参与的分布式数据库系统，</strong>起源于比特币，最早在 2008 年中本聪提出。区块链是由一串使用密码学方法产生的数据块组成的，每一个区块都包含了上一个区块的哈希值，从创始区块开始连接到当前区块，形成一条区块链。每一个区块都确保按照时间顺序在上一个区块之后产生，否则前一个区块的哈希值是未知的。这些特征使得比特币的双花非常困难。</p>
                     
                     <h2>区块链分为公有链、联盟链和私有链。</h2>
@@ -177,7 +177,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i={sections:[{id:"section1",title:"
                     <p><strong>联盟链：</strong>指参与区块链的节点是事先选择好的, 节点间通常有良好的网络连接等合作关系，区块链上的数据可以是公开的也可以是内部的，为部分意义上的分布式，可视为” 多中心化 ”。典型应用包括 Hyperledger、R3 和 EEA 等。</p>
                     <p><strong>私有链：</strong>参与节点只有有限的范围，比如特定机构的自身用户等，数据的访问及使用有严格的权限管理。</p>
                     <p>在区块链发展的早期，基础协议就是为了实现单一的支付功能。随着以太坊平台的出现，区块链进入2.0 时代，完备的底层协议和智能合约的概念，开发者无需深入区块链的底层协议，也可以开发各式各样的去中心化应用 (DApps)。</p>
-                    `,lastUpdated:"2025-08-25"},{id:"fil7",title:"什么是多链钱包",content:`
+                    `,lastUpdated:"2025-08-25"},{id:"file1_7",title:"什么是多链钱包",content:`
                     <h2>什么是多链钱包？</h2>
                     <p><strong>多链钱包 </strong>是一种能够支持多条公链（主链）及其链上代币存储、交易和管理的数字钱包。换句话说，用户可以通过一个钱包管理多种区块链资产，而不需要为每条区块链单独使用不同的钱包。</p>
                     <p>例如，一个钱包同时支持比特币（Bitcoin）、以太坊（Ethereum）和波场（tron）等区块链的资产管理，这样的钱包就被称为多链钱包。常见的多链钱包括 <strong> imToken </strong>和 <strong> imKey </strong>等。</p>
@@ -239,7 +239,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i={sections:[{id:"section1",title:"
 <h2>最后</h2>
 <p>多链钱包是区块链技术发展的重要成果，极大地提升了数字资产管理的便捷性和安全性。以 <strong> imKey 硬件钱包 </strong>为例，其通过支持多条公链及主流代币，同时采用离线存储私钥的设计，成为用户保护和管理加密资产的可靠选择。</p>
                     
-                    `,lastUpdated:"2025-08-25"}]},{id:"section2",title:"常见操作",files:[{id:"file3",title:"如何发送加密货币",content:`
+                    `,lastUpdated:"2025-08-25"}]},{id:"section2",title:"常见操作",files:[{id:"file2_1",title:"如何发送加密货币",content:`
             <h2>发送加密货币步骤</h2>
             <ol>
               <li>打开您的加密钱包应用</li>
@@ -258,7 +258,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i={sections:[{id:"section1",title:"
               <li>注意网络手续费</li>
               <li>确保钱包有足够的余额支付手续费</li>
             </ul>
-          `,lastUpdated:"2023-10-03"},{id:"file4",title:"如何接收加密货币",content:`
+          `,lastUpdated:"2023-10-03"},{id:"file2_2",title:"如何接收加密货币",content:`
             <h2>接收加密货币步骤</h2>
             <ol>
               <li>打开您的加密钱包应用</li>
