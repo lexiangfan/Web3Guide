@@ -16,7 +16,7 @@ const routes = [
         name: 'page1',
         component: () => import('@/views/page1.vue'),
         meta: {
-            title: '新手帮助'
+            title: '基础知识'
         }
     },
     {
@@ -24,7 +24,7 @@ const routes = [
         name: 'page',
         component: () => import('@/views/pageTemplate.vue'),
         meta: {
-            title: 'Web3 内容第一章'
+            title: 'Web3 测试'
         }
     }
 ]

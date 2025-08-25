@@ -1,7 +1,7 @@
 <!-- src/views/page1.vue -->
 <template>
   <div class="page-container">
-    <ContentPageTemplate :content-data="pageContents" />
+    <ContentPageTemplate :content-data="formattedContentData" />
   </div>
 </template>
 
@@ -14,9 +14,11 @@ export default {
   components: {
     ContentPageTemplate
   },
-  setup() {
-    return {
-      pageContents
+  computed: {
+    formattedContentData() {
+      return {
+        sections: pageContents
+      };
     }
   }
 }

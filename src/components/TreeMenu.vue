@@ -9,7 +9,7 @@
           @click="toggleItem(item)"
       >
         <span class="tree-item-title">{{ item.title }}</span>
-        <el-icon v-if="item.files || item.children" class="arrow-icon" :class="{ expanded: expandedItems.includes(item.id) }">
+        <el-icon v-if="item.files || item.children" class="arrow-icon" :class="{ expanded: isItemExpanded(item) }">
           <arrow-down />
         </el-icon>
       </div>
@@ -24,7 +24,7 @@
       </div>
 
       <transition name="slide">
-        <div v-show="expandedItems.includes(item.id)" v-if="item.files || item.children" class="tree-item-children">
+        <div v-show="isItemExpanded(item)" v-if="item.files || item.children" class="tree-item-children">
           <TreeMenu
               v-if="item.children"
               :sections="item.children"
@@ -50,7 +50,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { Document, ArrowDown } from '@element-plus/icons-vue'
 
 const props = defineProps({
@@ -68,6 +68,11 @@ const props = defineProps({
 defineEmits(['select-file'])
 
 const expandedItems = ref([])
+
+// 判断项目是否展开
+const isItemExpanded = (item) => {
+  return expandedItems.value.includes(item.id)
+}
 
 const toggleItem = (item) => {
   const index = expandedItems.value.indexOf(item.id)
@@ -99,8 +104,8 @@ const isItemActive = (item) => {
   return checkChildren([item])
 }
 
-onMounted(() => {
-  // 默认展开包含当前文件的项
+// 展开包含当前文件的项
+const expandToCurrentFile = () => {
   if (props.currentFile && props.sections) {
     const findAndExpandParents = (items) => {
       items.forEach(item => {
@@ -131,6 +136,18 @@ onMounted(() => {
 
     findAndExpandParents(props.sections)
   }
+}
+
+onMounted(() => {
+  // 默认展开包含当前文件的项
+  expandToCurrentFile()
+})
+
+// 监听当前文件变化，自动展开到相应位置
+watch(() => props.currentFile, () => {
+  // 清空当前展开项并重新展开到当前文件
+  expandedItems.value = []
+  expandToCurrentFile()
 })
 </script>
 

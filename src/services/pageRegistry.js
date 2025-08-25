@@ -6,13 +6,13 @@ export const pageRegistry = {
             id: 'page1',
             path: '/page1',
             import: () => import('@/utils/page1.js'),
-            title: '内容第二章'
+            title: '基础知识'
         },
         {
             id: 'pageTemplate',
             path: '/page',
             import: () => import('@/utils/pageTemplate.js'),
-            title: 'Web3 内容第一章'
+            title: 'Web3 测试'
         }
         // 添加新页面时只需在这里注册
     ],
