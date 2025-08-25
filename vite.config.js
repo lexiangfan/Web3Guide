@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Web3Guide/',
   plugins: [
       vue(),
 
