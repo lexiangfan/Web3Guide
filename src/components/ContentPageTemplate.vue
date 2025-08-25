@@ -7,36 +7,11 @@
         <h3><i class="el-icon-folder-opened"></i> 文档目录</h3>
       </div>
       <div class="sidebar-content">
-        <div class="section-container" v-for="section in contentData.sections" :key="section.id">
-          <div
-              class="section-header"
-              :class="{ active: currentSection?.id === section.id }"
-              @click="selectSection(section)"
-          >
-            <span class="section-title">{{ section.title }}</span>
-            <el-icon v-if="currentSection?.id === section.id" class="arrow-icon">
-              <arrow-down />
-            </el-icon>
-          </div>
-
-          <transition name="slide">
-            <div
-                v-show="currentSection?.id === section.id"
-                class="files-container"
-            >
-              <div
-                  v-for="file in section.files"
-                  :key="file.id"
-                  class="file-item"
-                  :class="{ active: currentFile?.id === file.id }"
-                  @click="selectFile(file)"
-              >
-                <el-icon class="file-icon"><document /></el-icon>
-                <span class="file-title">{{ file.title }}</span>
-              </div>
-            </div>
-          </transition>
-        </div>
+        <TreeMenu
+            :sections="contentData.sections"
+            :current-file="currentFile"
+            @select-file="selectFile"
+        />
       </div>
     </div>
 
@@ -189,14 +164,16 @@
         :before-close="beforeDrawerClose"
     >
       <template #header>
-        <h3 class="drawer-header">
-          <i :class="drawerIcon"></i>
-          {{ drawerTitle }}
-        </h3>
-        <div class="close-drawer-wrapper" @click="closeDrawer">
-          <div class="close-drawer-icon">
-            <span></span>
-            <span></span>
+        <div class="drawer-header-wrapper">
+          <h3 class="drawer-header">
+            <i :class="drawerIcon"></i>
+            {{ drawerTitle }}
+          </h3>
+          <div class="close-drawer-wrapper" @click="closeDrawer">
+            <div class="close-drawer-icon">
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </template>
@@ -204,40 +181,11 @@
       <div class="drawer-content">
         <!-- 文档目录抽屉内容 -->
         <div v-if="drawerType === 'sections'" class="sections-drawer">
-          <div
-              v-for="section in contentData.sections"
-              :key="section.id"
-              class="section-container"
-          >
-            <div
-                class="section-header"
-                :class="{ active: currentSection?.id === section.id }"
-                @click="selectSection(section)"
-            >
-              <span class="section-title">{{ section.title }}</span>
-              <el-icon v-if="currentSection?.id === section.id" class="arrow-icon">
-                <arrow-down />
-              </el-icon>
-            </div>
-
-            <transition name="slide">
-              <div
-                  v-show="currentSection?.id === section.id"
-                  class="files-container"
-              >
-                <div
-                    v-for="file in section.files"
-                    :key="file.id"
-                    class="file-item"
-                    :class="{ active: currentFile?.id === file.id }"
-                    @click="() => { selectFile(file); closeDrawer(); }"
-                >
-                  <el-icon class="file-icon"><document /></el-icon>
-                  <span class="file-title">{{ file.title }}</span>
-                </div>
-              </div>
-            </transition>
-          </div>
+          <TreeMenu
+              :sections="contentData.sections"
+              :current-file="currentFile"
+              @select-file="selectFileAndCloseDrawer"
+          />
         </div>
 
         <!-- 内容导航抽屉内容 -->
@@ -265,6 +213,7 @@
 import { ref, onMounted, computed, onBeforeUnmount, watch } from 'vue'
 import { Document, ArrowDown, ArrowUp } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
+import TreeMenu from '@/components/TreeMenu.vue'
 
 const props = defineProps({
   contentData: {
@@ -277,9 +226,6 @@ const props = defineProps({
 const isMobile = ref(window.innerWidth <= 768)
 const drawerVisible = ref(false)
 const drawerType = ref('sections') // 'sections' 或 'toc'
-
-// 当前选中的章节
-const currentSection = ref(null)
 
 // 当前选中的文件
 const currentFile = ref(null)
@@ -334,11 +280,18 @@ const previousFile = computed(() => {
   if (!currentFile.value || !props.contentData.sections) return null
 
   const allFiles = []
-  props.contentData.sections.forEach(section => {
-    if (section.files) {
-      allFiles.push(...section.files)
-    }
-  })
+  const collectFiles = (sections) => {
+    sections.forEach(section => {
+      if (section.files) {
+        allFiles.push(...section.files)
+      }
+      if (section.children) {
+        collectFiles(section.children)
+      }
+    })
+  }
+
+  collectFiles(props.contentData.sections)
 
   const currentIndex = allFiles.findIndex(file => file.id === currentFile.value.id)
   return currentIndex > 0 ? allFiles[currentIndex - 1] : null
@@ -348,11 +301,18 @@ const nextFile = computed(() => {
   if (!currentFile.value || !props.contentData.sections) return null
 
   const allFiles = []
-  props.contentData.sections.forEach(section => {
-    if (section.files) {
-      allFiles.push(...section.files)
-    }
-  })
+  const collectFiles = (sections) => {
+    sections.forEach(section => {
+      if (section.files) {
+        allFiles.push(...section.files)
+      }
+      if (section.children) {
+        collectFiles(section.children)
+      }
+    })
+  }
+
+  collectFiles(props.contentData.sections)
 
   const currentIndex = allFiles.findIndex(file => file.id === currentFile.value.id)
   return currentIndex < allFiles.length - 1 ? allFiles[currentIndex + 1] : null
@@ -428,35 +388,29 @@ const handleScroll = () => {
   }
 }
 
-// 切换章节
-const selectSection = (section) => {
-  currentSection.value = section
-  // 默认选中该章节的第一个文件
-  if (section.files && section.files.length > 0) {
-    currentFile.value = section.files[0]
-  } else {
-    currentFile.value = null
-  }
-}
-
 // 切换文件
 const selectFile = (file) => {
-  // 找到文件所属的章节
-  const section = props.contentData.sections.find(
-      sec => sec.files && sec.files.some(f => f.id === file.id)
-  )
-
-  if (section) {
-    currentSection.value = section
-    currentFile.value = file
-  }
+  currentFile.value = file
 }
 
 // 选择第一个文件
 const selectFirstFile = () => {
-  if (props.contentData.sections.length > 0) {
-    const firstSection = props.contentData.sections[0]
-    selectSection(firstSection)
+  const findFirstFile = (sections) => {
+    for (const section of sections) {
+      if (section.files && section.files.length > 0) {
+        return section.files[0]
+      }
+      if (section.children) {
+        const firstFile = findFirstFile(section.children)
+        if (firstFile) return firstFile
+      }
+    }
+    return null
+  }
+
+  const firstFile = findFirstFile(props.contentData.sections)
+  if (firstFile) {
+    currentFile.value = firstFile
   }
 }
 
@@ -514,6 +468,12 @@ const openDrawer = (type) => {
 // 关闭抽屉
 const closeDrawer = () => {
   drawerVisible.value = false
+}
+
+// 选择文件并关闭抽屉
+const selectFileAndCloseDrawer = (file) => {
+  selectFile(file)
+  closeDrawer()
 }
 
 // 抽屉关闭前的处理
@@ -594,115 +554,6 @@ const beforeDrawerClose = (done) => {
   flex: 1;
   overflow-y: auto;
   padding: 10px 0;
-}
-
-.section-container {
-  margin-bottom: 10px;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  cursor: pointer;
-  font-weight: 600;
-  color: var(--secondary-color);
-  transition: all 0.3s ease;
-  background-color: #ffffff;
-  border-left: 4px solid transparent;
-  position: relative;
-  border-radius: 0 8px 8px 0;
-  margin: 0 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
-}
-
-.section-header:hover {
-  background-color: #fff9f0;
-  border-left-color: var(--accent-color);
-  transform: translateX(5px);
-}
-
-.section-header.active {
-  background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
-  border-left-color: var(--accent-color);
-  color: var(--accent-color);
-}
-
-.section-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  right: 20px;
-  height: 1px;
-  background: var(--border-color);
-}
-
-.section-title {
-  font-size: var(--font-size-base);
-}
-
-.arrow-icon {
-  transition: transform 0.3s ease;
-}
-
-.section-header.active .arrow-icon {
-  transform: rotate(180deg);
-}
-
-.files-container {
-  background-color: #f9f9f9;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.file-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 20px 12px 30px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border-left: 3px solid transparent;
-  position: relative;
-  margin: 0 10px;
-  border-radius: 0 8px 8px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-}
-
-.file-item:hover {
-  background-color: #fff5e6;
-  border-left-color: var(--accent-color);
-  transform: translateX(5px);
-}
-
-.file-item.active {
-  background-color: #fff9f0;
-  border-left-color: var(--accent-color);
-  color: var(--accent-color);
-  font-weight: 500;
-}
-
-.file-icon {
-  font-size: 16px;
-  color: var(--text-secondary);
-}
-
-.file-item.active .file-icon {
-  color: var(--accent-color);
-}
-
-.file-title {
-  font-size: var(--font-size-sm);
-  color: var(--text-primary);
-  flex: 1;
-}
-
-.file-item.active .file-title {
-  color: var(--accent-color);
 }
 
 .main-content {
@@ -1134,21 +985,6 @@ const beforeDrawerClose = (done) => {
   opacity: 0.7;
 }
 
-/* 添加过渡动画 */
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 0.3s ease;
-  max-height: 1000px;
-  overflow: hidden;
-}
-
-.slide-enter-from,
-.slide-leave-to {
-  max-height: 0;
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
 /* 内容页脚 */
 .content-footer {
   padding: 20px 30px;
@@ -1317,6 +1153,13 @@ const beforeDrawerClose = (done) => {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 }
 
+.drawer-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .drawer-header {
   display: flex;
   align-items: center;
@@ -1326,13 +1169,10 @@ const beforeDrawerClose = (done) => {
   color: var(--secondary-color);
   font-weight: 700;
   padding: 0;
+  flex: 1;
 }
 
 .close-drawer-wrapper {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
   width: 36px;
   height: 36px;
   display: flex;
@@ -1343,12 +1183,13 @@ const beforeDrawerClose = (done) => {
   transition: all 0.3s ease;
   background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  flex-shrink: 0;
+  margin-left: 15px;
 }
 
 .close-drawer-wrapper:hover {
   background: linear-gradient(135deg, #e0e0e0 0%, #d0d0d0 100%);
-  transform: translateY(-50%) scale(1.05);
+  transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -1387,11 +1228,6 @@ const beforeDrawerClose = (done) => {
 .sections-drawer,
 .toc-drawer {
   padding: 0;
-}
-
-/* 文档目录样式 - 与导航栏样式保持一致 */
-.section-container {
-  margin-bottom: 0;
 }
 
 /* 固钉按钮样式 */
@@ -1544,14 +1380,6 @@ const beforeDrawerClose = (done) => {
     padding: 10px 0;
   }
 
-  .section-header {
-    padding: 12px 15px;
-  }
-
-  .file-item {
-    padding: 10px 15px 10px 25px;
-  }
-
   .content-header {
     padding: 15px 20px;
   }
@@ -1620,7 +1448,6 @@ const beforeDrawerClose = (done) => {
   .close-drawer-wrapper {
     width: 32px;
     height: 32px;
-    right: 12px;
   }
 
   .close-drawer-icon {
@@ -1653,14 +1480,6 @@ const beforeDrawerClose = (done) => {
 
   .page-description {
     font-size: var(--font-size-sm);
-  }
-
-  .section-title {
-    font-size: var(--font-size-sm);
-  }
-
-  .file-title {
-    font-size: var(--font-size-xs);
   }
 
   .content-title {
@@ -1717,7 +1536,6 @@ const beforeDrawerClose = (done) => {
   .close-drawer-wrapper {
     width: 28px;
     height: 28px;
-    right: 10px;
   }
 
   .close-drawer-icon {
@@ -1753,63 +1571,10 @@ const beforeDrawerClose = (done) => {
     padding: 0 10px;
   }
 
-  /* 优化抽屉中的章节标题 */
-  .section-header {
-    padding: 16px 12px;
-    margin: 0 5px 8px 5px;
-    font-size: var(--font-size-base);
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  }
-
-  /* 优化抽屉中的文件项 */
-  .file-item {
-    padding: 14px 15px 14px 25px;
-    margin: 0 5px 5px 5px;
-    border-radius: 6px;
-  }
-
-  .file-title {
-    font-size: var(--font-size-sm);
-  }
-
-  /* 优化抽屉中的目录项 */
-  .toc-item {
-    padding: 12px 15px;
-    margin-bottom: 5px;
-    font-size: var(--font-size-sm);
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-  }
-
-  .toc-level-1 {
-    padding-left: 12px;
-  }
-
-  .toc-level-2 {
-    padding-left: 24px;
-  }
-
-  .toc-level-3 {
-    padding-left: 36px;
-  }
-
-  .toc-level-4 {
-    padding-left: 48px;
-  }
-
-  .toc-level-5 {
-    padding-left: 60px;
-  }
-
-  .toc-level-6 {
-    padding-left: 72px;
-  }
-
   /* 优化抽屉头部 */
   .drawer-header {
     font-size: var(--font-size-xl);
-    padding: 0 20px;
+    padding: 0;
   }
 
   /* 优化空状态页面 */
@@ -1950,14 +1715,6 @@ const beforeDrawerClose = (done) => {
 @media (max-width: 360px) {
   .page-title {
     font-size: var(--font-size-lg);
-  }
-
-  .section-title {
-    font-size: var(--font-size-xs);
-  }
-
-  .file-title {
-    font-size: var(--font-size-xs);
   }
 
   .content-title {
