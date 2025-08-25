@@ -1,3 +1,4 @@
+<!-- src/views/Home.vue -->
 <template>
   <div class="home-container">
     <section class="hero-section">
@@ -466,11 +467,11 @@ const getStepImage = (index) => {
 
 // 进度条状态
 const progressSteps = ref([
-  { title: '开箱', status: 'active' },
-  { title: '准备', status: '' },
-  { title: '激活', status: '' },
-  { title: '创建&备份', status: '' },
-  { title: '体验', status: '' }
+  {title: '开箱', status: 'active'},
+  {title: '准备', status: ''},
+  {title: '激活', status: ''},
+  {title: '创建&备份', status: ''},
+  {title: '体验', status: ''}
 ])
 
 // 进度条固钉相关
@@ -559,6 +560,9 @@ const toggleTip = (index) => {
   if (willBeExpanded && index === activeIndex) {
     updateProgressAndMoveToNext(index);
   }
+
+  // 保存状态到 sessionStorage
+  saveFeaturesState();
 }
 
 // 更新进度条并移动到下一步
@@ -580,6 +584,9 @@ const updateProgressAndMoveToNext = (currentIndex) => {
   if (isAllStepsCompleted()) {
     isPinned.value = false
   }
+
+  // 保存状态到 sessionStorage
+  saveProgressStepsState();
 }
 
 const startLearning = () => {
@@ -663,14 +670,14 @@ const safetyTipClass = computed(() => {
   return "";
 });
 
-// 保存进度到本地存储
+// 保存进度到 sessionStorage
 const saveProgress = () => {
-  localStorage.setItem('checklistProgress', JSON.stringify(checklistItems.value))
+  sessionStorage.setItem('checklistProgress', JSON.stringify(checklistItems.value))
 }
 
-// 从本地存储加载进度
+// 从 sessionStorage 加载进度
 const loadProgress = () => {
-  const saved = localStorage.getItem('checklistProgress')
+  const saved = sessionStorage.getItem('checklistProgress')
   if (saved) {
     try {
       const parsed = JSON.parse(saved)
@@ -681,9 +688,49 @@ const loadProgress = () => {
   }
 }
 
+// 保存 features 状态到 sessionStorage
+const saveFeaturesState = () => {
+  sessionStorage.setItem('homeFeaturesState', JSON.stringify(features.value.map(f => f.showTip)));
+}
+
+// 保存 progressSteps 状态到 sessionStorage
+const saveProgressStepsState = () => {
+  sessionStorage.setItem('homeProgressStepsState', JSON.stringify(progressSteps.value));
+}
+
+// 从 sessionStorage 加载状态
+const loadSessionState = () => {
+  // 加载 features 状态
+  const savedFeaturesState = sessionStorage.getItem('homeFeaturesState');
+  if (savedFeaturesState) {
+    try {
+      const parsed = JSON.parse(savedFeaturesState);
+      features.value.forEach((feature, index) => {
+        if (index < parsed.length) {
+          feature.showTip = parsed[index];
+        }
+      });
+    } catch (e) {
+      console.warn('Failed to load features state:', e);
+    }
+  }
+
+  // 加载 progressSteps 状态
+  const savedProgressStepsState = sessionStorage.getItem('homeProgressStepsState');
+  if (savedProgressStepsState) {
+    try {
+      const parsed = JSON.parse(savedProgressStepsState);
+      progressSteps.value = parsed;
+    } catch (e) {
+      console.warn('Failed to load progress steps state:', e);
+    }
+  }
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
   loadProgress()
+  loadSessionState() // 加载会话状态
 })
 
 onUnmounted(() => {
@@ -1423,8 +1470,12 @@ onUnmounted(() => {
 }
 
 @keyframes rotate {
-  0% { transform: rotateX(0) rotateY(0); }
-  100% { transform: rotateX(360deg) rotateY(360deg); }
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
 }
 
 .floating-elements {
@@ -1462,10 +1513,18 @@ onUnmounted(() => {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) translateX(0); }
-  25% { transform: translateY(-25px) translateX(10px); }
-  50% { transform: translateY(0) translateX(20px); }
-  75% { transform: translateY(15px) translateX(10px); }
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-25px) translateX(10px);
+  }
+  50% {
+    transform: translateY(0) translateX(20px);
+  }
+  75% {
+    transform: translateY(15px) translateX(10px);
+  }
 }
 
 /* Features Section */
@@ -2930,6 +2989,7 @@ onUnmounted(() => {
     font-size: var(--font-size-base);
     padding: 10px;
   }
+
   .large-title {
     font-size: 20px !important;
     padding: 10px;

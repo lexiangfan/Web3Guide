@@ -7,7 +7,7 @@ const pageContents = {
             title: '基础知识',
             files: [
                 {
-                    id: 'file1',
+                    id: 'file1_1',
                     title: '什么是硬件钱包',
                     content: `
             <h2>什么是硬件钱包？</h2>
@@ -55,7 +55,7 @@ const pageContents = {
                     lastUpdated: '2025-08-25'
                 },
                 {
-                    id: 'file2',
+                    id: 'file1_2',
                     title: '什么是助记词',
                     content: `
             <p>助记词是明文私钥的另一种表现形式，最早是由 BIP39 提案提出，其目的是为了帮助用户记忆复杂的私钥。助记词一般由12、15、18、24个单词构成，这些单词都取自一个固定词库，其生成顺序也是按照一定算法而来，所以用户没必要担心随便输入 12 个单词就会生成一个地址。任何人得到了你的助记词，可以不费吹灰之力的夺走你的资产。所以用户在备份助记词之后，一定要注意三点:</p>
@@ -68,7 +68,7 @@ const pageContents = {
                     lastUpdated: '2025-08-25'
                 },
                 {
-                    id: 'file3',
+                    id: 'file1_3',
                     title: '什么是私钥',
                     content: `
                     <h2>什么是私钥？</h2>
@@ -146,7 +146,7 @@ const pageContents = {
                     lastUpdated: '2025-08-25'
                 },
                 {
-                    id: 'file4',
+                    id: 'file1_4',
                     title: '什么是绑定码',
                     content: `
 <p>
@@ -173,7 +173,7 @@ const pageContents = {
                     lastUpdated: '2025-08-25'
                 },
                 {
-                    id: 'fil5',
+                    id: 'file1_5',
                     title: '什么是 PIN 码',
                     content: `
                     <p>当我们谈到数字安全时，PIN 码（个人识别码）是一种常见且重要的保护措施。尤其在使用硬件钱包，如 imKey 时，PIN 码的设置和管理直接关系到我们的资产安全。本文将详细介绍什么是 PIN 码、imKey 硬件钱包中的 PIN 码如何设置及其安全机制，让初级用户也能轻松理解并掌握其使用方法。</p>
@@ -208,7 +208,7 @@ const pageContents = {
                     lastUpdated: '2025-08-25'
                 },
                 {
-                    id: 'fil6',
+                    id: 'file1_6',
                     title: '什么是区块链',
                     content: `
                     <p> <strong> 区块链（Blockchain）是由节点参与的分布式数据库系统，</strong>起源于比特币，最早在 2008 年中本聪提出。区块链是由一串使用密码学方法产生的数据块组成的，每一个区块都包含了上一个区块的哈希值，从创始区块开始连接到当前区块，形成一条区块链。每一个区块都确保按照时间顺序在上一个区块之后产生，否则前一个区块的哈希值是未知的。这些特征使得比特币的双花非常困难。</p>
@@ -222,7 +222,7 @@ const pageContents = {
                     lastUpdated: '2025-08-25'
                 },
                 {
-                    id: 'fil7',
+                    id: 'file1_7',
                     title: '什么是多链钱包',
                     content: `
                     <h2>什么是多链钱包？</h2>
@@ -296,7 +296,7 @@ const pageContents = {
             title: '常见操作',
             files: [
                 {
-                    id: 'file3',
+                    id: 'file2_1',
                     title: '如何发送加密货币',
                     content: `
             <h2>发送加密货币步骤</h2>
@@ -321,7 +321,7 @@ const pageContents = {
                     lastUpdated: '2023-10-03'
                 },
                 {
-                    id: 'file4',
+                    id: 'file2_2',
                     title: '如何接收加密货币',
                     content: `
             <h2>接收加密货币步骤</h2>

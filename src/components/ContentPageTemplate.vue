@@ -1,14 +1,14 @@
 <!-- src/components/ContentPageTemplate.vue -->
 <template>
   <div class="content-page-template">
-    <!-- 侧边栏 - 桌面端显示 -->
-    <div class="sidebar" v-if="!isMobile">
+    <!-- 左侧边栏 - 桌面端显示 -->
+    <div class="sidebar left-sidebar" v-if="!isMobile">
       <div class="sidebar-header">
         <h3><i class="el-icon-folder-opened"></i> 文档目录</h3>
       </div>
       <div class="sidebar-content">
         <TreeMenu
-            :sections="contentData.sections"
+            :sections="processedSections"
             :current-file="currentFile"
             @select-file="selectFile"
         />
@@ -39,7 +39,7 @@
           <h3>欢迎使用文档中心</h3>
           <p>请选择左侧的文档开始阅读</p>
           <el-button
-              v-if="contentData.sections.length > 0 && !currentFile"
+              v-if="processedSections.length > 0 && !currentFile"
               type="primary"
               class="start-button"
               @click="selectFirstFile"
@@ -53,18 +53,20 @@
       <div class="content-footer" v-if="currentFile">
         <div class="navigation-buttons">
           <el-button
+              v-if="hasPreviousFile"
               class="custom-nav-button"
               @click="navigateToPrevious"
-              :disabled="!previousFile"
           >
             <i class="el-icon-arrow-left"></i>
             上一篇
           </el-button>
-          <div class="spacer"></div>
+
+          <div class="spacer" v-if="hasPreviousFile && hasNextFile"></div>
+
           <el-button
+              v-if="hasNextFile"
               class="custom-nav-button"
               @click="navigateToNext"
-              :disabled="!nextFile"
           >
             下一篇
             <i class="el-icon-arrow-right"></i>
@@ -182,7 +184,7 @@
         <!-- 文档目录抽屉内容 -->
         <div v-if="drawerType === 'sections'" class="sections-drawer">
           <TreeMenu
-              :sections="contentData.sections"
+              :sections="processedSections"
               :current-file="currentFile"
               @select-file="selectFileAndCloseDrawer"
           />
@@ -210,7 +212,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed, onBeforeUnmount, watch } from 'vue'
+import { ref, onMounted, computed, onBeforeUnmount, watch, nextTick } from 'vue'
 import { Document, ArrowDown, ArrowUp } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import TreeMenu from '@/components/TreeMenu.vue'
@@ -218,7 +220,10 @@ import TreeMenu from '@/components/TreeMenu.vue'
 const props = defineProps({
   contentData: {
     type: Object,
-    required: true
+    required: true,
+    default: () => ({
+      sections: []
+    })
   }
 })
 
@@ -239,12 +244,48 @@ const activeTocId = ref(null)
 // 滚动百分比
 const scrollPercentage = ref(0)
 
+// 处理后的sections数据
+const processedSections = computed(() => {
+  // 深拷贝原始数据以避免修改props
+  const sections = JSON.parse(JSON.stringify(props.contentData.sections || []))
+
+  // 递归处理sections，为每个section和file添加唯一ID（如果不存在）
+  const processSections = (items, parentId = '') => {
+    return items.map((item, index) => {
+      // 生成唯一ID
+      const itemId = item.id || `${parentId}-${index}`
+
+      // 处理子项
+      if (item.children) {
+        item.children = processSections(item.children, itemId)
+      }
+
+      // 处理文件
+      if (item.files) {
+        item.files = item.files.map((file, fileIndex) => {
+          if (!file.id) {
+            file.id = `${itemId}-file-${fileIndex}`
+          }
+          return file
+        })
+      }
+
+      return {
+        ...item,
+        id: itemId
+      }
+    })
+  }
+
+  return processSections(sections)
+})
+
 // 目录项 - 动态生成
 const tocItems = computed(() => {
   if (!currentFile.value) return []
 
   // 如果文件有预定义的toc，则使用它
-  if (currentFile.value.toc) {
+  if (currentFile.value && currentFile.value.toc && Array.isArray(currentFile.value.toc)) {
     return currentFile.value.toc.map((item, index) => ({
       ...item,
       id: `toc-${index}`
@@ -276,46 +317,46 @@ const tocItems = computed(() => {
 })
 
 // 计算上一篇和下一篇文件
-const previousFile = computed(() => {
-  if (!currentFile.value || !props.contentData.sections) return null
+const allFiles = computed(() => {
+  const files = []
 
-  const allFiles = []
-  const collectFiles = (sections) => {
-    sections.forEach(section => {
-      if (section.files) {
-        allFiles.push(...section.files)
+  const traverse = (items) => {
+    items.forEach(item => {
+      if (item.files) {
+        files.push(...item.files)
       }
-      if (section.children) {
-        collectFiles(section.children)
+
+      if (item.children) {
+        traverse(item.children)
       }
     })
   }
 
-  collectFiles(props.contentData.sections)
+  traverse(processedSections.value)
+  return files
+})
 
-  const currentIndex = allFiles.findIndex(file => file.id === currentFile.value.id)
-  return currentIndex > 0 ? allFiles[currentIndex - 1] : null
+const currentIndex = computed(() => {
+  if (!currentFile.value) return -1
+  return allFiles.value.findIndex(file => file.id === currentFile.value.id)
+})
+
+const hasPreviousFile = computed(() => {
+  return currentIndex.value > 0
+})
+
+const hasNextFile = computed(() => {
+  return currentIndex.value < allFiles.value.length - 1
+})
+
+const previousFile = computed(() => {
+  if (!hasPreviousFile.value) return null
+  return allFiles.value[currentIndex.value - 1]
 })
 
 const nextFile = computed(() => {
-  if (!currentFile.value || !props.contentData.sections) return null
-
-  const allFiles = []
-  const collectFiles = (sections) => {
-    sections.forEach(section => {
-      if (section.files) {
-        allFiles.push(...section.files)
-      }
-      if (section.children) {
-        collectFiles(section.children)
-      }
-    })
-  }
-
-  collectFiles(props.contentData.sections)
-
-  const currentIndex = allFiles.findIndex(file => file.id === currentFile.value.id)
-  return currentIndex < allFiles.length - 1 ? allFiles[currentIndex + 1] : null
+  if (!hasNextFile.value) return null
+  return allFiles.value[currentIndex.value + 1]
 })
 
 // 抽屉相关计算属性
@@ -338,7 +379,7 @@ onMounted(() => {
   handleResize()
 
   // 默认选中第一个文件
-  if (props.contentData.sections.length > 0 && !currentFile.value) {
+  if (processedSections.value.length > 0 && !currentFile.value) {
     selectFirstFile()
   }
 })
@@ -349,12 +390,45 @@ onBeforeUnmount(() => {
 })
 
 // 监听当前文件变化，自动滚动到顶部
-watch(currentFile, () => {
-  if (contentBody.value) {
-    contentBody.value.scrollTop = 0
-    scrollPercentage.value = 0
+watch(currentFile, (newFile, oldFile) => {
+  if (newFile && newFile.id !== oldFile?.id) {
+    // 在DOM更新后执行滚动操作
+    nextTick(() => {
+      if (contentBody.value) {
+        contentBody.value.scrollTop = 0
+        scrollPercentage.value = 0
+      }
+
+      // 更新TOC激活项
+      updateActiveToc()
+
+      // 确保抽屉在导航后可以正常显示
+      if (isMobile.value && drawerVisible.value) {
+        // 强制更新抽屉状态
+        drawerVisible.value = false
+        nextTick(() => {
+          drawerVisible.value = true
+        })
+      }
+    })
   }
 })
+
+// 监听内容数据变化，重新选择文件（如果需要）
+watch(() => props.contentData, (newVal, oldVal) => {
+  if (JSON.stringify(newVal) !== JSON.stringify(oldVal)) {
+    // 如果当前选中的文件不再存在，重新选择第一个文件
+    if (currentFile.value) {
+      const fileExists = allFiles.value.some(file => file.id === currentFile.value.id)
+
+      if (!fileExists) {
+        selectFirstFile()
+      }
+    } else {
+      selectFirstFile()
+    }
+  }
+}, { deep: true })
 
 // 处理窗口大小变化
 const handleResize = () => {
@@ -373,8 +447,15 @@ const handleScroll = () => {
   const percentage = Math.round((scrollTop / (scrollHeight - clientHeight)) * 100)
   scrollPercentage.value = isNaN(percentage) ? 0 : percentage
 
+  updateActiveToc()
+}
+
+// 更新当前活跃的TOC项
+const updateActiveToc = () => {
+  if (!contentBody.value) return
+
   const headings = contentBody.value.querySelectorAll('h1, h2, h3, h4, h5, h6')
-  const scrollPosition = scrollTop + 100
+  const scrollPosition = contentBody.value.scrollTop + 100
 
   // 从后向前查找当前可见的标题
   for (let i = headings.length - 1; i >= 0; i--) {
@@ -390,7 +471,9 @@ const handleScroll = () => {
 
 // 切换文件
 const selectFile = (file) => {
-  currentFile.value = file
+  if (file && file.id !== currentFile.value?.id) {
+    currentFile.value = file
+  }
 }
 
 // 选择第一个文件
@@ -408,7 +491,7 @@ const selectFirstFile = () => {
     return null
   }
 
-  const firstFile = findFirstFile(props.contentData.sections)
+  const firstFile = findFirstFile(processedSections.value)
   if (firstFile) {
     currentFile.value = firstFile
   }
@@ -439,14 +522,14 @@ const scrollToTop = () => {
 
 // 导航到上一篇/下一篇
 const navigateToPrevious = () => {
-  if (previousFile.value) {
-    selectFile(previousFile.value)
+  if (hasPreviousFile.value && previousFile.value) {
+    currentFile.value = previousFile.value
   }
 }
 
 const navigateToNext = () => {
-  if (nextFile.value) {
-    selectFile(nextFile.value)
+  if (hasNextFile.value && nextFile.value) {
+    currentFile.value = nextFile.value
   }
 }
 
@@ -472,7 +555,9 @@ const closeDrawer = () => {
 
 // 选择文件并关闭抽屉
 const selectFileAndCloseDrawer = (file) => {
-  selectFile(file)
+  if (file && file.id !== currentFile.value?.id) {
+    currentFile.value = file
+  }
   closeDrawer()
 }
 

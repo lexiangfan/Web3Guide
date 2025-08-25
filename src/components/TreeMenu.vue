@@ -56,7 +56,8 @@ import { Document, ArrowDown } from '@element-plus/icons-vue'
 const props = defineProps({
   sections: {
     type: Array,
-    required: true
+    required: true,
+    default: () => []
   },
   currentFile: {
     type: Object,
