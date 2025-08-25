@@ -586,3 +586,68 @@ body {
     --el-button-active-bg-color: #1a2222;
     --el-button-active-border-color: #1a2222;
 }
+
+/* 图片自适应样式 - 添加到 global.css 文件中 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* 特殊处理内容区域的图片 */
+.content-body :deep(img) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 确保图片在表格中也能自适应 */
+table img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 对于特定的图标类图片，保持原始尺寸 */
+.icon-img,
+.icon,
+.el-icon,
+[class*="icon"] img {
+    max-width: none;
+    height: auto;
+}
+
+/* 响应式图片容器 */
+.image-container {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 针对不同设备的优化 */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .content-body :deep(img) {
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-body :deep(img) {
+        margin: 6px 0;
+        border-radius: 6px;
+    }
+}
