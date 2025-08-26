@@ -20,11 +20,11 @@ const routes = [
         }
     },
     {
-        path: '/page',
-        name: 'page',
-        component: () => import('@/views/pageTemplate.vue'),
+        path: '/UserManualForOfflineMnemonicBackupTool',
+        name: 'UserManualForOfflineMnemonicBackupTool',
+        component: () => import('@/views/UserManualForOfflineMnemonicBackupTool.vue'),
         meta: {
-            title: 'Web3 测试'
+            title: '助记词离线备份工具使用手册'
         }
     }
 ]

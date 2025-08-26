@@ -37,7 +37,7 @@ const handleSelect = (key) => {
   const routeMap = {
     '1': '/',
     '2': '/page1',
-    '3': '/page'
+    '3': '/'
   }
 
   const targetRoute = routeMap[key] || '/'
@@ -67,7 +67,7 @@ watch(() => router.currentRoute.value, (to) => {
     case '/page1':
       activeIndex.value = '2'
       break
-    case '/page':
+    case '/':
       activeIndex.value = '3'
       break
     default:

@@ -9,10 +9,10 @@ export const pageRegistry = {
             title: '基础知识'
         },
         {
-            id: 'pageTemplate',
-            path: '/page',
-            import: () => import('@/utils/pageTemplate.js'),
-            title: 'Web3 测试'
+            id: 'UserManualForOfflineMnemonicBackupTool',
+            path: '/UserManualForOfflineMnemonicBackupTool',
+            import: () => import('@/utils/UserManualForOfflineMnemonicBackupTool.js'),
+            title: '助记词离线备份工具使用手册'
         }
         // 添加新页面时只需在这里注册
     ],

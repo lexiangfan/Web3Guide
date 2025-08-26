@@ -7,7 +7,7 @@
         <el-aside
             width="260px"
             class="page-nav-aside"
-            v-show="!isMobile"
+            :class="{ 'mobile-hidden': isMobile }"
         >
           <div
               class="page-nav-wrapper"
@@ -151,7 +151,8 @@
         <el-aside
             width="260px"
             class="toc-aside"
-            v-show="!isMobile && tocItems.length > 0"
+            :class="{ 'mobile-hidden': isMobile }"
+            v-show="tocItems.length > 0"
         >
           <div
               class="toc-wrapper"
@@ -173,6 +174,7 @@
                   :current-node-key="activeTocId"
                   highlight-current
                   :expand-on-click-node="false"
+                  :default-expand-all="true"
               />
             </el-scrollbar>
           </div>
@@ -197,6 +199,7 @@
             :current-node-key="activeTocId"
             highlight-current
             :expand-on-click-node="false"
+            :default-expand-all="true"
         />
       </el-drawer>
 
@@ -249,7 +252,14 @@ import {
   CaretTop
 } from '@element-plus/icons-vue'
 import { useRouter, useRoute } from 'vue-router'
-import pageContents from '@/utils/page1.js'
+
+// 定义 props
+const props = defineProps({
+  contentData: {
+    type: Object,
+    required: true
+  }
+})
 
 const router = useRouter()
 const route = useRoute()
@@ -302,21 +312,32 @@ const processedContent = computed(() => {
 
 // 目录项 - 从页面内容中提取标题
 const tocItems = computed(() => {
+  // 使用通过 props 传递的内容数据
+  const pageContents = props.contentData.sections || []
+
   if (!pageContents || !Array.isArray(pageContents)) return []
 
   const toc = []
 
   pageContents.forEach(section => {
+    const sectionItem = {
+      id: section.id,
+      label: section.title,
+      level: 1,
+      children: []
+    }
+
     if (section.children && Array.isArray(section.children)) {
       section.children.forEach(file => {
-            toc.push({
-              id: file.id,
-              label: file.title,
-              level: 2
-            })
-          }
-      )
+        sectionItem.children.push({
+          id: file.id,
+          label: file.title,
+          level: 2
+        })
+      })
     }
+
+    toc.push(sectionItem)
   })
 
   return toc
@@ -330,6 +351,9 @@ const treeProps = {
 
 // 计算上一篇和下一篇文件
 const allFiles = computed(() => {
+  // 使用通过 props 传递的内容数据
+  const pageContents = props.contentData.sections || []
+
   const files = []
 
   const collectFiles = (items) => {
@@ -411,6 +435,12 @@ const handleTocNodeClick = (data) => {
     nextTick(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     })
+  } else {
+    // 如果是章节标题，则滚动到该章节
+    const element = document.getElementById(data.id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 }
 
@@ -424,6 +454,12 @@ const handleMobileTocNodeClick = (data) => {
     nextTick(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     })
+  } else {
+    // 如果是章节标题，则滚动到该章节
+    const element = document.getElementById(data.id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 }
 
@@ -475,15 +511,54 @@ const updateAnchorPosition = () => {
 const handleScroll = () => {
   const pageNavWrapper = document.querySelector('.page-nav-wrapper')
   const tocWrapper = document.querySelector('.toc-wrapper')
+  const footer = document.querySelector('.page-footer')
 
   if (pageNavWrapper && !isMobile.value) {
     // 当页面滚动超过侧边栏原始位置时，固定侧边栏
     isPageNavFixed.value = window.scrollY >= pageNavTop.value - navbarHeight.value
+
+    // 检查是否滚动到页脚附近，调整侧边栏高度
+    if (footer) {
+      const footerTop = footer.getBoundingClientRect().top
+      const windowHeight = window.innerHeight
+      if (footerTop < windowHeight) {
+        // 当接近页脚时，调整侧边栏高度
+        const pageNavWrapper = document.querySelector('.page-nav-wrapper')
+        if (pageNavWrapper) {
+          pageNavWrapper.style.height = `calc(100vh - ${navbarHeight.value}px - ${windowHeight - footerTop}px)`
+        }
+      } else {
+        // 恢复正常高度
+        const pageNavWrapper = document.querySelector('.page-nav-wrapper')
+        if (pageNavWrapper) {
+          pageNavWrapper.style.height = ''
+        }
+      }
+    }
   }
 
   if (tocWrapper && !isMobile.value) {
     // 当页面滚动超过目录原始位置时，固定目录
     isTocFixed.value = window.scrollY >= tocTop.value - navbarHeight.value
+
+    // 检查是否滚动到页脚附近，调整目录高度
+    if (footer) {
+      const footerTop = footer.getBoundingClientRect().top
+      const windowHeight = window.innerHeight
+      if (footerTop < windowHeight) {
+        // 当接近页脚时，调整目录高度
+        const tocWrapper = document.querySelector('.toc-wrapper')
+        if (tocWrapper) {
+          tocWrapper.style.height = `calc(100vh - ${navbarHeight.value}px - ${windowHeight - footerTop}px)`
+        }
+      } else {
+        // 恢复正常高度
+        const tocWrapper = document.querySelector('.toc-wrapper')
+        if (tocWrapper) {
+          tocWrapper.style.height = ''
+        }
+      }
+    }
   }
 
   // 计算阅读进度
@@ -543,8 +618,13 @@ const navigateToNext = () => {
 
 // 监听窗口大小变化
 const handleResize = () => {
+  const oldIsMobile = isMobile.value
   checkIsMobile()
-  updateAnchorPosition()
+
+  // 当屏幕尺寸变化时，重新计算锚点位置
+  nextTick(() => {
+    updateAnchorPosition()
+  })
 }
 
 // 组件挂载时初始化
@@ -949,6 +1029,27 @@ const goToFirstPage = () => {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* 视频容器样式 */
+.content-body .video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 宽高比 */
+  margin: 25px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.content-body .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* 空内容样式 */
 .empty-content {
   text-align: center;
@@ -1132,6 +1233,7 @@ const goToFirstPage = () => {
   top: var(--navbar-height);
   bottom: 0;
   z-index: 10;
+  overflow-y: auto;
 }
 
 .toc-aside {
@@ -1156,6 +1258,9 @@ const goToFirstPage = () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .nav-title,
@@ -1426,6 +1531,10 @@ const goToFirstPage = () => {
 @media (max-width: 768px) {
   .page-nav-aside,
   .toc-aside {
+    display: none;
+  }
+
+  .mobile-hidden {
     display: none;
   }
 
