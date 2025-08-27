@@ -46,7 +46,7 @@ class ContentLoader {
                     this.allContents.push({
                         id: `${pageId}-section-${sectionIndex}`,
                         title: section.title || '无标题章节',
-                        content: '',
+                        content: section.content || '',
                         path: pageRegistry.getPagePath(pageId),
                         type: 'section'
                     })
@@ -77,11 +77,6 @@ class ContentLoader {
         const tmp = document.createElement('div')
         tmp.innerHTML = html
         return tmp.textContent || tmp.innerText || ''
-    }
-
-    // 获取所有内容（供搜索使用）
-    getAllContents() {
-        return this.allContents
     }
 }
 

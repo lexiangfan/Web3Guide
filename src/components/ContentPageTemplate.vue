@@ -249,7 +249,6 @@ import {
   Menu,
   Collection,
   Document,
-  CaretTop
 } from '@element-plus/icons-vue'
 import { useRouter, useRoute } from 'vue-router'
 
@@ -630,7 +629,6 @@ const navigateToNext = () => {
 
 // 监听窗口大小变化
 const handleResize = () => {
-  const oldIsMobile = isMobile.value
   checkIsMobile()
 
   // 当屏幕尺寸变化时，重新计算锚点位置
@@ -669,7 +667,7 @@ onBeforeUnmount(() => {
 })
 
 // 监听路由变化
-watch(() => route.path, (newPath) => {
+watch(() => route.path, () => {
   // 当路由变化时，重置当前文件
   if (allFiles.value.length > 0) {
     currentFile.value = allFiles.value[0]

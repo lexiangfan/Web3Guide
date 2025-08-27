@@ -21,65 +21,39 @@ class SearchService {
         }
 
         const normalizedQuery = query.toLowerCase().trim()
-        return this.searchIndex.filter(item => {
+        const results = this.searchIndex.filter(item => {
             return (
                 (item.title && item.title.toLowerCase().includes(normalizedQuery)) ||
                 (item.content && item.content.toLowerCase().includes(normalizedQuery))
             )
         }).map(item => ({
-            ...item,
-            // 高亮匹配的关键词
-            highlightedTitle: this.highlightMatch(item.title, query),
-            highlightedContent: this.getExcerpt(item.content, query)
+            ...item
         }))
-    }
 
-    // 高亮匹配的关键词
-    highlightMatch(text, query) {
-        if (!text || !query) return text
-        const regex = new RegExp(`(${this.escapeRegExp(query)})`, 'gi')
-        return text.replace(regex, '<mark>$1</mark>')
-    }
+        // 按相关性排序 - 标题匹配优先
+        results.sort((a, b) => {
+            const aTitleMatch = a.title.toLowerCase().includes(normalizedQuery) ? 1 : 0
+            const bTitleMatch = b.title.toLowerCase().includes(normalizedQuery) ? 1 : 0
 
-    // 转义正则表达式特殊字符
-    escapeRegExp(string) {
-        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-    }
+            // 标题匹配优先
+            if (aTitleMatch !== bTitleMatch) {
+                return bTitleMatch - aTitleMatch
+            }
 
-    // 获取内容摘要
-    getExcerpt(content, query, length = 100) {
-        if (!content) return ''
+            // 如果都是标题匹配或都不是，按内容匹配数排序
+            const aContentMatches = (a.content.match(new RegExp(normalizedQuery, 'gi')) || []).length
+            const bContentMatches = (b.content.match(new RegExp(normalizedQuery, 'gi')) || []).length
 
-        const normalizedContent = content.toLowerCase()
-        const normalizedQuery = query.toLowerCase()
-        const queryIndex = normalizedContent.indexOf(normalizedQuery)
+            // 内容匹配次数多的优先
+            if (aContentMatches !== bContentMatches) {
+                return bContentMatches - aContentMatches
+            }
 
-        if (queryIndex === -1) {
-            // 如果没找到查询词，返回开头部分内容
-            return content.length > length ? content.substring(0, length) + '...' : content
-        }
+            // 最后按标题长度排序（标题短的更精确）
+            return a.title.length - b.title.length
+        })
 
-        // 计算摘录的起始位置
-        const start = Math.max(0, queryIndex - Math.floor(length / 2))
-        const end = Math.min(content.length, start + length)
-        let excerpt = content.substring(start, end)
-
-        // 如果不是从开头截取，添加前缀
-        if (start > 0) {
-            excerpt = '...' + excerpt
-        }
-
-        // 如果不是到结尾截取，添加后缀
-        if (end < content.length) {
-            excerpt = excerpt + '...'
-        }
-
-        return excerpt
-    }
-
-    // 获取搜索索引
-    getSearchIndex() {
-        return this.searchIndex
+        return results.slice(0, 20) // 限制结果数量
     }
 }
 
