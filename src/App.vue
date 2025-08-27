@@ -33,10 +33,14 @@ const handleResize = () => {
 
 // 优化路由处理逻辑
 const handleSelect = (key) => {
-  // 根据菜单项索引确定目标路由
+  if (key === '2') {
+    // 直接打开外部链接
+    window.open('https://imkey.im', '_blank');
+    return;
+  }
+
   const routeMap = {
     '1': '/',
-    '2': 'https://imkey.im',
     '3': '/page1'
   }
 
@@ -63,9 +67,6 @@ watch(() => router.currentRoute.value, (to) => {
   switch (to.path) {
     case '/':
       activeIndex.value = '1'
-      break
-    case 'https://imkey.im':
-      activeIndex.value = '2'
       break
     case '/page1':
       activeIndex.value = '3'
@@ -187,13 +188,12 @@ onUnmounted(() => {
 
 <style scoped>
 .navbar {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   padding: 0;
   height: var(--navbar-height);
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.95) linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   position: relative;
   z-index: 1000;
 }

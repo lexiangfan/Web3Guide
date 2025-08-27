@@ -1,6 +1,6 @@
 <!-- src/views/Home.vue -->
 <template>
-  <div class="home-container">
+  <div :class="['home-container', $attrs.class || '']">
     <section class="hero-section">
       <div class="hero-content">
         <div class="hero-badge">
@@ -193,7 +193,7 @@
     </section>
 
     <div class="must-see-full-width">
-      <img :src="must" alt="新手必读" class="must-see-banner">
+      <img :src="must_s" alt="新手必读" class="must-see-banner">
     </div>
 
     <div class="checklist-section">
@@ -351,6 +351,7 @@ import step5 from'@/public/images/step5.svg'
 import greenHand from'@/public/images/greenHand.png'
 import imKeyCom from'@/public/images/imKeyCom.png'
 import must from'@/public/images/must.png'
+import must_s from'@/public/images/must.svg'
 import question from'@/public/images/question.png'
 import more from'@/public/images/more.png'
 import CustomDialog from "@/components/CustomDialog.vue";
@@ -390,7 +391,7 @@ const features = ref([
 </ul>
     `,
     showTip: false,
-    link: `<a href="/page" style="color: #409eff; text-decoration: none; font-size: 16px;">点击了解更多 &raquo;</a>`,
+    link: `<a href="https://imkey.im" style="color: #409eff; text-decoration: none; font-size: 16px;">点击了解更多 &raquo;</a>`,
     image: true
   },
   {
@@ -409,6 +410,7 @@ const features = ref([
 </ul>
     `,
     showTip: false,
+    link: `<a href="https://imkey.im" style="color: #409eff; text-decoration: none; font-size: 16px;">点击了解更多 &raquo;</a>`,
     image: true
   },
   {
@@ -429,6 +431,7 @@ const features = ref([
 </ul>
     `,
     showTip: false,
+    link: `<a href="https://imkey.im" style="color: #409eff; text-decoration: none; font-size: 16px;">点击了解更多 &raquo;</a>`,
     image: true
   },
   {
@@ -449,6 +452,7 @@ const features = ref([
 </ul>
     `,
     showTip: false,
+    link: `<a href="https://imkey.im" style="color: #409eff; text-decoration: none; font-size: 16px;">点击了解更多 &raquo;</a>`,
     image: true
   },
   {
@@ -471,6 +475,7 @@ const features = ref([
 </ul>
     `,
     showTip: false,
+    link: `<a href="https://imkey.im" style="color: #409eff; text-decoration: none; font-size: 16px;">点击了解更多 &raquo;</a>`,
     image: true
   }
 ])
@@ -719,8 +724,8 @@ onUnmounted(() => {
 
 .feature-bottom-content {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 15px;
   margin-top: auto;
   width: 100%;
@@ -1808,9 +1813,8 @@ onUnmounted(() => {
 .progress-section {
   padding: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: transparent;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #e0e0e0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   position: relative;
@@ -1872,7 +1876,7 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(12px, 2vw, 16px);
+  font-size: clamp(10px, 1.5vw, 14px);
   color: #666;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
   cursor: pointer;
@@ -1880,7 +1884,7 @@ onUnmounted(() => {
   line-height: 1;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: 2px solid #ffffff;
-  font-weight: 600;
+  font-weight: 400;
   transform: scale(1);
   box-sizing: border-box;
 }
@@ -1893,6 +1897,7 @@ onUnmounted(() => {
   animation: pulse 2s infinite;
   border-color: #ffffff;
   z-index: 3;
+  font-weight: 500;
 }
 
 .progress-bar .step.completed {
@@ -1900,12 +1905,14 @@ onUnmounted(() => {
   color: white;
   box-shadow: 0 4px 12px rgba(42, 53, 53, 0.4);
   border-color: #ffffff;
+  font-weight: 500;
 }
 
 .progress-bar .step:hover:not(.active):not(.completed) {
   transform: scale(1.05);
   background: linear-gradient(135deg, #d4b68c 0%, #BA955C 100%);
   color: white;
+  font-weight: 500;
 }
 
 /* 步骤间的连接线状态 */
@@ -1949,6 +1956,7 @@ onUnmounted(() => {
     width: 40px;
     height: 40px;
     font-size: clamp(10px, 1.8vw, 14px);
+    font-weight: 400;
   }
 }
 
@@ -1965,7 +1973,8 @@ onUnmounted(() => {
   .progress-bar .step {
     width: 30px !important;
     height: 30px !important;
-    font-size: 9px !important;
+    font-size: 10px !important;
+    font-weight: 400;
   }
 
   .hero-title {
@@ -2262,6 +2271,7 @@ onUnmounted(() => {
   display: none;
   flex-direction: column;
   box-sizing: border-box;
+  border-radius: 16px;
 }
 
 /* 图像区域 */
@@ -2571,7 +2581,7 @@ onUnmounted(() => {
 }
 
 .model-faq-container .info-title {
-  font-size: 20px;
+  font-size: 24px;
   box-sizing: border-box;
 }
 
@@ -2628,7 +2638,8 @@ onUnmounted(() => {
   .checklist-section {
     gap: 25px;
     margin: 25px 0;
-    padding: 0 15px; /* 移动端边距调整 */
+    padding: 0 15px;
+    width: 100%;
   }
 
   .checklist-container,
@@ -2868,10 +2879,41 @@ onUnmounted(() => {
     width: 100%;
     height: 140px;
   }
+
+  /* 移动端标题居中 */
+  .checklist-container .info-image,
+  .model-faq-container .info-image.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .checklist-container .info-image .info-title,
+  .model-faq-container .info-image.mobile-header .info-title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .model-faq-container .info-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .model-faq-container .info-image.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .model-faq-container .info-image.mobile-header .info-title {
+    text-align: center;
+    width: 100%;
+  }
 }
 
-/* 修改部分：调整more-section样式 */
-/* 取消margin和padding的容器 */
 .more-section-container {
   width: 100%;
   margin: 0;
@@ -2903,7 +2945,7 @@ onUnmounted(() => {
   font-weight: bold;
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  border-radius: 0;
+  border-radius: 16px;
 }
 
 /* 移动端适配 */
@@ -2918,17 +2960,17 @@ onUnmounted(() => {
   .more-content {
     font-size: var(--font-size-base);
     padding: 12px;
-    border-radius: 0;
+    border-radius: 12px;
   }
 
   .large-title {
-    font-size: 20px !important;
+    font-size: clamp(20px, 3vw, 48px);
     padding: 12px;
   }
 
   .large-text,
   .more-content {
-    font-size: 24px;
+    font-size: 28px;
     padding: 12px;
   }
 }
@@ -2944,11 +2986,11 @@ onUnmounted(() => {
   .more-content {
     font-size: var(--font-size-sm);
     padding: 10px;
-    border-radius: 0;
+    border-radius: 10px;
   }
 
   .large-title {
-    font-size: 18px !important;
+    font-size: clamp(16px, 2.5vw, 24px);
     padding: 10px;
   }
 
@@ -2961,12 +3003,15 @@ onUnmounted(() => {
 }
 
 .large-title {
-  font-size: 24px !important;
+  font-size: clamp(24px, 2.6vw, 48px);
   padding: 15px;
 }
 
 .large-text {
-  font-size: 20px;
+  font-size: clamp(24px, 2.6vw, 48px);
+  line-height: 1.3;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .contact-section {
@@ -3116,7 +3161,8 @@ onUnmounted(() => {
   .progress-bar .step {
     width: 40px;
     height: 40px;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 400;
   }
 }
 
@@ -3299,6 +3345,7 @@ onUnmounted(() => {
     width: 35px;
     height: 35px;
     font-size: 12px;
+    font-weight: 400;
   }
 
   .progress-bar::before {
@@ -3312,14 +3359,13 @@ onUnmounted(() => {
 
   .info-card {
     border-radius: 12px;
-    padding: 15px;
+    padding: 0;
   }
 
   .checklist-container,
   .faq-container,
   .model-faq-container {
     border-radius: 12px;
-    padding: 15px;
   }
 
   .info-content {
@@ -3327,7 +3373,7 @@ onUnmounted(() => {
   }
 
   .info-title {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .checklist-item {
@@ -3451,10 +3497,6 @@ onUnmounted(() => {
     font-size: 11px;
   }
 
-  .feature-image-right {
-    width: 60px;
-  }
-
   .progress-bar {
     margin: 10px 0;
     padding: 6px 8px;
@@ -3464,6 +3506,7 @@ onUnmounted(() => {
     width: 30px;
     height: 30px;
     font-size: 10px;
+    font-weight: 400;
   }
 
   .progress-bar::before {
@@ -3537,6 +3580,81 @@ onUnmounted(() => {
     width: 32px;
     height: 32px;
     padding: 6px;
+  }
+
+  /* 移动端优化 */
+  .hero-badge {
+    margin-bottom: 10px;
+  }
+
+  .badge-text {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+    margin: 10px 0 15px;
+  }
+
+  .gradient-text {
+    font-size: 12px;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .section-header h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .section-header p {
+    font-size: 14px;
+  }
+
+  .feature-card {
+    padding: 15px 12px;
+  }
+
+  .feature-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .feature-description {
+    font-size: 12px;
+  }
+
+  .checklist-item {
+    padding: 6px 8px;
+    margin-bottom: 8px;
+  }
+
+  .check-text {
+    font-size: 12px;
+  }
+
+  .item-icon {
+    width: 50%;
+    height: 25px;
+  }
+
+  .contact-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .contact-link {
+    padding: 6px 10px;
+    font-size: 12px;
   }
 }
 </style>

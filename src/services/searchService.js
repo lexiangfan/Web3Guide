@@ -37,8 +37,13 @@ class SearchService {
     // 高亮匹配的关键词
     highlightMatch(text, query) {
         if (!text || !query) return text
-        const regex = new RegExp(`(${query})`, 'gi')
+        const regex = new RegExp(`(${this.escapeRegExp(query)})`, 'gi')
         return text.replace(regex, '<mark>$1</mark>')
+    }
+
+    // 转义正则表达式特殊字符
+    escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
     }
 
     // 获取内容摘要

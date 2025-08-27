@@ -23,6 +23,7 @@ export const pageRegistry = {
         for (const page of this.pages) {
             try {
                 const module = await page.import()
+                // 修正：确保正确获取默认导出
                 pageData[page.id] = module.default || module
             } catch (error) {
                 console.error(`Failed to load page data for ${page.id}:`, error)

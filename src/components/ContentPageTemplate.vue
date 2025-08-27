@@ -302,16 +302,18 @@ const processedContent = computed(() => {
 
   let content = currentFile.value.content
 
+  // 为图片添加懒加载属性，但避免重复添加
   content = content.replace(/<img([^>]*?)src=(['"])([^'"]*?)\2([^>]*?)>/g, (match, beforeSrc, quote, src, afterSrc) => {
+    // 检查是否已经包含loading属性
     if (match.includes('loading=')) {
       return match
     }
     return `<img${beforeSrc}src=${quote}${src}${quote} loading="lazy"${afterSrc}>`
   })
 
-  // 为视频添加懒加载
+  // 为iframe添加懒加载属性，但避免重复添加
   content = content.replace(/<iframe([^>]*?)src=(['"])([^'"]*?)\2([^>]*?)>/g, (match, beforeSrc, quote, src, afterSrc) => {
-    // 如果已经包含loading属性，则跳过
+    // 检查是否已经包含loading属性
     if (match.includes('loading=')) {
       return match
     }
@@ -1700,9 +1702,9 @@ const goToFirstPage = () => {
     font-size: 18px;
   }
 
-  /* 优化小屏幕上的导航按钮 */
+  /* 优化小屏幕上的导航按钮布局 */
   .page-navigation {
-    margin: 30px 0;
+    margin: 40px 0 20px;
     padding: 0 10px;
   }
 
@@ -1723,7 +1725,7 @@ const goToFirstPage = () => {
   }
 
   .nav-badge :deep(.el-badge__content) {
-    padding: 4px 8px;
+    padding: 3px 6px;
     font-size: 12px;
   }
 }
