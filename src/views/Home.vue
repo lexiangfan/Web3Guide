@@ -133,15 +133,8 @@
         <h2>“一步步开箱，安全不会出错”</h2>
       </div>
 
-      <section
-          class="progress-section-wrapper"
-          :class="{ 'pinned-wrapper': isPinned }"
-      >
-        <div
-            class="progress-section"
-            :class="{ pinned: isPinned }"
-            ref="progressSectionRef"
-        >
+      <section class="progress-section-wrapper">
+        <div class="progress-section">
           <div class="progress-bar">
             <div
                 v-for="(step, index) in progressSteps"
@@ -176,12 +169,24 @@
           <div v-if="feature.showTip" class="feature-tip">
             <div class="tip-content" v-html="feature.tip"></div>
           </div>
-          <div class="feature-link" @click.stop v-html="feature.link"></div>
-          <div v-if="feature.image" class="feature-image-right">
-            <img
-                :src="getStepImage(index)"
-                :alt="`Step ${index + 1}: ${feature.title}`"
-                style="width: 100%; max-width: 100px; height: auto;">
+          <div class="feature-content-wrapper">
+            <div class="feature-bottom-content">
+              <a
+                  v-if="feature.link"
+                  :href="extractHref(feature.link)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="feature-link"
+                  @click.stop
+                  v-html="extractLinkText(feature.link)"
+              ></a>
+              <div v-if="feature.image" class="feature-image-container">
+                <img
+                    :src="getStepImage(index)"
+                    :alt="`Step ${index + 1}: ${feature.title}`"
+                    class="feature-image-aligned">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -193,7 +198,7 @@
 
     <div class="checklist-section">
       <!-- 新手必看：自我检查 -->
-      <div class="info-card checklist-container">
+      <div class="info-card checklist-container no-padding">
         <div class="info-image-wrapper">
           <div class="info-image" :style="{ backgroundImage: `url(${greenHand})` }">
             <h3 class="info-title large-title">新手必看，自我检查</h3>
@@ -243,7 +248,7 @@
       </div>
 
       <!-- 常见问题 (桌面端显示) -->
-      <div class="info-card faq-container">
+      <div class="info-card faq-container no-padding">
         <!-- 左侧内容 -->
         <div class="info-content">
           <ul class="info-list faq-list">
@@ -261,7 +266,7 @@
       </div>
 
       <!-- 常见问题 (移动端显示) -->
-      <div class="info-card model-faq-container">
+      <div class="info-card model-faq-container no-padding">
         <!-- 上方图像区域 -->
         <div class="info-image-wrapper">
           <div class="info-image mobile-header" :style="{ backgroundImage: `url(${question})` }">
@@ -281,11 +286,13 @@
       </div>
     </div>
 
-    <section class="more-section">
-      <div class="more-content" :style="{ backgroundImage: `url(${more})` }">
-        <span class="large-text">不止imToken，连接Rabby，解锁更多 Web3 体验</span>
-      </div>
-    </section>
+    <div class="more-section-container">
+      <section class="more-section">
+        <div class="more-content" :style="{ backgroundImage: `url(${more})` }">
+          <span class="large-text">不止imToken，连接Rabby，解锁更多 Web3 体验</span>
+        </div>
+      </section>
+    </div>
   </div>
 
   <div class="contact-section">
@@ -336,11 +343,11 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import router from "@/router/router.js";
 import { ArrowRight } from '@element-plus/icons-vue'
-import step1 from'@/public/images/step1.png'
-import step2 from'@/public/images/step2.png'
-import step3 from'@/public/images/step3.png'
-import step4 from'@/public/images/step4.png'
-import step5 from'@/public/images/step5.png'
+import step1 from'@/public/images/step1.svg'
+import step2 from'@/public/images/step2.svg'
+import step3 from'@/public/images/step3.svg'
+import step4 from'@/public/images/step4.svg'
+import step5 from'@/public/images/step5.svg'
 import greenHand from'@/public/images/greenHand.png'
 import imKeyCom from'@/public/images/imKeyCom.png'
 import must from'@/public/images/must.png'
@@ -353,6 +360,18 @@ import imKey_logo3 from "@/public/images/logo/imKey_logo3.png"
 import imKey_logo4 from "@/public/images/logo/imKey_logo4.png"
 
 const stepImages = [step1, step2, step3, step4, step5]
+
+// 提取链接的href属性
+const extractHref = (linkHtml) => {
+  const match = linkHtml.match(/href="([^"]*)"/)
+  return match ? match[1] : '#'
+}
+
+// 提取链接文本
+const extractLinkText = (linkHtml) => {
+  const match = linkHtml.match(/>([^<]*)</)
+  return match ? match[1] : '点击了解更多'
+}
 
 const features = ref([
   {
@@ -390,7 +409,6 @@ const features = ref([
 </ul>
     `,
     showTip: false,
-    link: `<a href="/page" style="color: #409eff; text-decoration: none; font-size: 16px;">点击了解更多 &raquo;</a>`,
     image: true
   },
   {
@@ -411,7 +429,6 @@ const features = ref([
 </ul>
     `,
     showTip: false,
-    link: `<a href="/page" style="color: #409eff; text-decoration: none; font-size: 16px;">点击了解更多 &raquo;</a>`,
     image: true
   },
   {
@@ -432,7 +449,6 @@ const features = ref([
 </ul>
     `,
     showTip: false,
-    link: `<a href="/page" style="color: #409eff; text-decoration: none; font-size: 16px;">点击了解更多 &raquo;</a>`,
     image: true
   },
   {
@@ -455,7 +471,6 @@ const features = ref([
 </ul>
     `,
     showTip: false,
-    link: `<a href="/page" style="color: #409eff; text-decoration: none; font-size: 16px;">点击了解更多 &raquo;</a>`,
     image: true
   }
 ])
@@ -473,45 +488,6 @@ const progressSteps = ref([
   {title: '创建&备份', status: ''},
   {title: '体验', status: ''}
 ])
-
-// 进度条固钉相关
-const progressSectionRef = ref(null)
-const isPinned = ref(false)
-const progressOriginalTop = ref(0)
-
-// 检查是否所有步骤已完成
-const isAllStepsCompleted = () => {
-  return progressSteps.value.every(step => step.status === 'completed')
-}
-
-// 处理滚动事件 - 优化固钉逻辑
-const handleScroll = () => {
-  if (!progressSectionRef.value) return
-
-  const navbarHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-height'))
-  const progressSectionRect = progressSectionRef.value.getBoundingClientRect()
-
-  // 记录进度条原始位置（只在初始时记录一次）
-  if (progressOriginalTop.value === 0 && progressSectionRef.value.offsetTop) {
-    progressOriginalTop.value = progressSectionRef.value.offsetTop
-  }
-
-  // 获取页面滚动位置
-  const scrollTop = window.scrollY || window.pageYOffset
-
-  // 当滚动位置在进度条原始位置之前，取消固定
-  if (scrollTop < progressOriginalTop.value) {
-    isPinned.value = false
-    return
-  }
-
-  // 固定条件：滚动超过原始位置、未完成所有步骤、进度条仍在视口中
-  const shouldPin = scrollTop >= progressOriginalTop.value &&
-      !isAllStepsCompleted() &&
-      progressSectionRect.bottom >= navbarHeight
-
-  isPinned.value = shouldPin
-}
 
 const dialogVisible = ref(false)
 const dialogMessage = ref('')
@@ -578,11 +554,6 @@ const updateProgressAndMoveToNext = (currentIndex) => {
   // 重置后续步骤状态（确保它们不是active状态）
   for (let i = currentIndex + 2; i < progressSteps.value.length; i++) {
     progressSteps.value[i].status = '';
-  }
-
-  // 检查是否所有步骤已完成，如果是则取消固钉
-  if (isAllStepsCompleted()) {
-    isPinned.value = false
   }
 
   // 保存状态到 sessionStorage
@@ -728,24 +699,53 @@ const loadSessionState = () => {
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
   loadProgress()
   loadSessionState() // 加载会话状态
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
+  // 移除滚动事件监听器
 })
 </script>
 
 <style scoped>
-.feature-image-right {
-  float: right;
-  margin-left: 10px;
-  margin-right: -5px;
+.feature-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-top: 15px;
+  flex: 1;
+}
+
+.feature-bottom-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 15px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.feature-link {
+  color: #409eff;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.feature-link:hover {
+  text-decoration: underline;
+}
+
+.feature-image-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.feature-image-aligned {
   width: 100px;
-  height: auto;
+  height: 100px;
+  object-fit: contain;
 }
 
 .key-scene {
@@ -1290,7 +1290,7 @@ onUnmounted(() => {
 .hero-section {
   display: flex;
   align-items: center;
-  padding: 140px 0;
+  padding: 100px 0 60px;
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   margin: 0;
   position: relative;
@@ -1331,7 +1331,7 @@ onUnmounted(() => {
 }
 
 .hero-badge {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .badge-text {
@@ -1339,7 +1339,7 @@ onUnmounted(() => {
   display: inline-block;
   background: linear-gradient(135deg, #BA955C 0%, #d4b68c 100%);
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 30px;
   font-weight: 600;
   box-shadow: 0 4px 15px rgba(186, 149, 92, 0.3);
@@ -1384,15 +1384,15 @@ onUnmounted(() => {
 }
 
 .hero-title {
-  font-size: var(--font-size-5xl);
+  font-size: var(--font-size-4xl);
   font-weight: 800;
-  margin: 20px 0 30px;
+  margin: 15px 0 20px;
   line-height: 1.2;
   color: #2A3535;
 }
 
 .gradient-text {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   background: linear-gradient(90deg, #BA955C 0%, #2A3535 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1402,19 +1402,19 @@ onUnmounted(() => {
 
 @media (max-width: 992px) {
   .gradient-text {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
   .gradient-text {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 .hero-actions {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
@@ -1422,11 +1422,11 @@ onUnmounted(() => {
   background-color: #2A3535 !important;
   border-color: #2A3535 !important;
   border-radius: 30px;
-  padding: 14px 28px;
+  padding: 12px 24px;
   font-size: var(--font-size-sm);
   font-weight: 500;
   transition: all 0.3s ease;
-  min-width: 180px;
+  min-width: 160px;
 }
 
 .primary-button:hover {
@@ -1438,14 +1438,14 @@ onUnmounted(() => {
 
 .secondary-button {
   border-radius: 30px;
-  padding: 14px 28px;
+  padding: 12px 24px;
   border: 2px solid #e0e0e0 !important;
   color: #666666 !important;
   font-size: var(--font-size-sm);
   font-weight: 500;
   background: transparent !important;
   transition: all 0.3s ease;
-  min-width: 180px;
+  min-width: 160px;
 }
 
 .secondary-button:hover {
@@ -1465,8 +1465,8 @@ onUnmounted(() => {
 
 .visual-container {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
 }
 
 @keyframes rotate {
@@ -1529,26 +1529,26 @@ onUnmounted(() => {
 
 /* Features Section */
 .features-section {
-  padding: 80px 0;
+  padding: 60px 0 40px;
   margin: 0;
   background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   padding: 0 20px;
 }
 
 .section-header h2 {
-  font-size: var(--font-size-4xl);
-  margin-bottom: 20px;
+  font-size: var(--font-size-3xl);
+  margin-bottom: 15px;
   color: #2A3535;
   font-weight: 800;
 }
 
 .section-header p {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   color: #666666;
   max-width: 600px;
   margin: 0 auto;
@@ -1558,7 +1558,7 @@ onUnmounted(() => {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: auto;
-  gap: 30px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -1593,7 +1593,7 @@ onUnmounted(() => {
 @media (max-width: 992px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 15px;
   }
 
   /* 在中等屏幕上，前两个卡片在第一行，后三个在第二行 */
@@ -1639,7 +1639,7 @@ onUnmounted(() => {
 .feature-card {
   background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
   border-radius: 16px;
-  padding: 40px 30px;
+  padding: 30px 25px;
   text-align: left !important;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
   border: 1px solid #eef2f7;
@@ -1649,6 +1649,8 @@ onUnmounted(() => {
   cursor: pointer;
   transform: translateY(0);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-card:hover {
@@ -1678,7 +1680,7 @@ onUnmounted(() => {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(186, 149, 92, 0.25);
   border-color: rgba(186, 149, 92, 0.3);
-  background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); /* 移除了原来的背景色 */
 }
 
 .feature-card.active::before {
@@ -1687,18 +1689,19 @@ onUnmounted(() => {
 }
 
 .feature-title {
-  font-size: var(--font-size-2xl);
-  margin-bottom: 20px;
+  font-size: var(--font-size-xl);
+  margin-bottom: 15px;
   color: #2A3535;
   font-weight: 700;
   text-align: left;
 }
 
 .feature-description {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   color: #666666;
   line-height: 1.7;
   text-align: left;
+  flex: 1;
 }
 
 /* 响应式设计 */
@@ -1706,15 +1709,15 @@ onUnmounted(() => {
   .hero-section {
     flex-direction: column;
     text-align: center;
-    padding: 60px 0;
+    padding: 50px 0 30px;
   }
 
   .hero-content {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .hero-title {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .hero-actions {
@@ -1722,14 +1725,14 @@ onUnmounted(() => {
   }
 
   .visual-container {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .hero-actions {
@@ -1757,11 +1760,11 @@ onUnmounted(() => {
   }
 
   .section-header h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .section-header p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .features-grid {
@@ -1783,7 +1786,7 @@ onUnmounted(() => {
 @media (max-width: 480px) {
   .primary-button,
   .secondary-button {
-    padding: 12px 20px !important;
+    padding: 10px 20px !important;
     font-size: 14px !important;
     max-width: 100% !important;
   }
@@ -1802,10 +1805,6 @@ onUnmounted(() => {
   box-sizing: border-box;
 }
 
-.progress-section-wrapper.pinned-wrapper {
-  height: 90px; /* 固定时的高度 */
-}
-
 .progress-section {
   padding: 0;
   width: 100%;
@@ -1819,25 +1818,12 @@ onUnmounted(() => {
   box-sizing: border-box;
 }
 
-.progress-section.pinned {
-  position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
-  padding: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-  border-top: 2px solid #BA955C;
-  top: var(--navbar-height);
-  box-sizing: border-box;
-}
-
 .progress-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 0;
-  padding: 15px 20px;
+  margin: 15px 0;
+  padding: 12px 20px;
   position: relative;
   max-width: 1200px;
   margin-left: auto;
@@ -1879,14 +1865,14 @@ onUnmounted(() => {
 .progress-bar .step {
   position: relative;
   z-index: 2;
-  width: clamp(40px, 8vw, 60px);
-  height: clamp(40px, 8vw, 60px);
+  width: clamp(35px, 7vw, 50px);
+  height: clamp(35px, 7vw, 50px);
   border-radius: 50%;
   background-color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(14px, 2.5vw, 18px);
+  font-size: clamp(12px, 2vw, 16px);
   color: #666;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
   cursor: pointer;
@@ -1951,8 +1937,8 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   .progress-bar {
-    margin: 15px 0;
-    padding: 12px 15px;
+    margin: 12px 0;
+    padding: 10px 15px;
   }
 
   .progress-bar::before {
@@ -1960,20 +1946,16 @@ onUnmounted(() => {
   }
 
   .progress-bar .step {
-    width: 45px;
-    height: 45px;
-    font-size: clamp(12px, 2vw, 16px);
-  }
-
-  .progress-section.pinned {
-    padding: 0;
+    width: 40px;
+    height: 40px;
+    font-size: clamp(10px, 1.8vw, 14px);
   }
 }
 
 @media (max-width: 480px) {
   .progress-bar {
     margin: 10px 0;
-    padding: 10px;
+    padding: 8px;
   }
 
   .progress-bar::before {
@@ -1981,82 +1963,22 @@ onUnmounted(() => {
   }
 
   .progress-bar .step {
-    width: 35px !important;
-    height: 35px !important;
-    font-size: 10px !important;
-  }
-
-  .progress-section.pinned {
-    padding: 0;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 9px !important;
   }
 
   .hero-title {
-    font-size: 28px !important;
+    font-size: 24px !important;
   }
 
   .feature-title {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 }
 
-/* 添加闪动边框效果 */
+/* 移除了闪动边框效果 */
 .feature-card:not(.active)::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
-  background: linear-gradient(90deg, #BA955C, #2A3535, #BA955C);
-  background-size: 300% 300%;
-  z-index: -1;
-  animation: borderAnimation 3s ease infinite;
-  opacity: 0.7;
-}
-
-@keyframes borderAnimation {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
-}
-
-.feature-card:not(.active)::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  background: linear-gradient(135deg, #ffffff, #f9f9f9);
-  border-radius: 14px;
-  z-index: -1;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(186, 149, 92, 0.15);
-  border-color: rgba(186, 149, 92, 0.3);
-}
-
-.feature-card.active {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(186, 149, 92, 0.15);
-  border-color: rgba(186, 149, 92, 0.3);
-}
-
-.feature-card.active::before {
-  animation: none;
-  opacity: 0;
-}
-
-.feature-card::after {
   content: "";
   position: absolute;
   top: 0;
@@ -2076,8 +1998,8 @@ onUnmounted(() => {
 
 /* 添加提示信息样式 */
 .feature-tip {
-  margin-top: 20px;
-  padding: 20px;
+  margin-top: 15px;
+  padding: 15px;
   background: linear-gradient(135deg, rgba(186, 149, 92, 0.1), rgba(42, 53, 53, 0.1));
   border-radius: 12px;
   text-align: left;
@@ -2099,7 +2021,7 @@ onUnmounted(() => {
 }
 
 .tip-content {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   color: #2A3535;
 }
 
@@ -2114,12 +2036,8 @@ onUnmounted(() => {
 
 /* 移动端适配 */
 @media (max-width: 768px) {
-  .feature-card:not(.active)::before {
-    animation-duration: 2s;
-  }
-
   .feature-card {
-    padding: 25px 20px !important;
+    padding: 20px 15px !important;
   }
 
   .feature-tip {
@@ -2127,7 +2045,7 @@ onUnmounted(() => {
   }
 
   .tip-content {
-    font-size: var(--font-size-xs);
+    font-size: 12px;
   }
 }
 
@@ -2148,8 +2066,8 @@ onUnmounted(() => {
 }
 
 .checkbox-label input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   accent-color: #BA955C;
   margin-top: 2px;
   cursor: pointer;
@@ -2159,16 +2077,18 @@ onUnmounted(() => {
   width: 100%;
   margin: 40px 0;
   box-sizing: border-box;
+  padding: 0 10px;
 }
 
 .must-see-banner {
   width: 100%;
-  max-height: 300px;
+  max-height: 250px;
   height: auto;
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(186, 149, 92, 0.15);
   transition: all 0.3s ease;
   box-sizing: border-box;
+  border-radius: 16px; /* 添加圆角 */
 }
 
 .must-see-banner:hover {
@@ -2179,23 +2099,27 @@ onUnmounted(() => {
 /* 响应式高度调整 */
 @media (max-width: 768px) {
   .must-see-full-width {
-    margin: 30px 0;
-  }
-
-  .must-see-banner {
-    max-height: 250px;
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .must-see-full-width {
     margin: 25px 0;
+    padding: 0 8px;
   }
 
   .must-see-banner {
     max-height: 200px;
     height: auto;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .must-see-full-width {
+    margin: 20px 0;
+    padding: 0 4px;
+  }
+
+  .must-see-banner {
+    max-height: 150px;
+    height: auto;
+    border-radius: 10px;
   }
 }
 
@@ -2203,11 +2127,20 @@ onUnmounted(() => {
 .checklist-section {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  margin: 40px 0;
+  gap: 30px;
+  margin: 30px 20px;
   box-sizing: border-box;
-  width: 100%;
-  padding: 0 15px;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px; /* 添加左右边距 */
+}
+
+/* 添加容器限制宽度并居中 */
+.checklist-section {
+  max-width: 1200px;
+  margin: 30px auto;
 }
 
 .info-card {
@@ -2219,6 +2152,7 @@ onUnmounted(() => {
   border: 1px solid #eef2f7;
   box-sizing: border-box;
   max-width: 100%;
+  padding: 20px;
 }
 
 .info-card:hover {
@@ -2239,10 +2173,15 @@ onUnmounted(() => {
   max-width: 100%;
 }
 
+/* 新增的无padding类 */
+.no-padding {
+  padding: 0;
+}
+
 /* 桌面端布局 */
 .checklist-container {
   display: flex;
-  min-height: 400px;
+  min-height: 350px;
 }
 
 .checklist-container .info-image-wrapper {
@@ -2280,7 +2219,7 @@ onUnmounted(() => {
 
 .checklist-container .info-content {
   flex: 1;
-  padding: 30px;
+  padding: 15px;
   background: #f9f9f9;
   display: flex;
   flex-direction: column;
@@ -2291,12 +2230,12 @@ onUnmounted(() => {
 /* 桌面端常见问题 */
 .faq-container {
   display: flex;
-  min-height: 400px;
+  min-height: 350px;
 }
 
 .faq-container .info-content {
   flex: 1;
-  padding: 30px;
+  padding: 15px;
   background: #f9f9f9;
   display: flex;
   flex-direction: column;
@@ -2355,7 +2294,7 @@ onUnmounted(() => {
   position: relative;
   z-index: 2;
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   color: white;
   margin: 0;
@@ -2366,11 +2305,11 @@ onUnmounted(() => {
 /* 内容区域 */
 .info-content {
   flex: 1;
-  padding: 30px;
+  padding: 15px;
   background: #f9f9f9;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -2391,7 +2330,7 @@ onUnmounted(() => {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   color: #333;
   flex: 1;
@@ -2402,9 +2341,9 @@ onUnmounted(() => {
 .checklist-item {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 15px;
-  padding: 12px 15px;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -2441,14 +2380,14 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 10px;
+  gap: 8px;
 }
 
 /* 复选框样式 */
 .checkbox-label {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 10px;
   cursor: pointer;
   flex: 1;
   position: relative;
@@ -2462,8 +2401,8 @@ onUnmounted(() => {
 }
 
 .checkmark {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #ddd;
   border-radius: 5px;
   position: relative;
@@ -2496,7 +2435,7 @@ onUnmounted(() => {
 }
 
 .check-text {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   color: #333;
   transition: all 0.3s ease;
@@ -2511,17 +2450,16 @@ onUnmounted(() => {
 
 .item-icon {
   width: 40%;
-  height: 40px;
+  height: 35px;
   object-fit: contain;
   flex-shrink: 0;
   border-radius: 4px;
-  margin-left: 32px;
+  margin-left: 25px;
 }
 
 /* 进度显示 */
 .progress-summary {
-  margin-top: 20px;
-  padding-top: 20px;
+  padding-top: 15px;
   border-top: 1px dashed #ddd;
   box-sizing: border-box;
   width: 100%;
@@ -2529,8 +2467,8 @@ onUnmounted(() => {
 
 /* 添加安全提示样式 */
 .safety-tip {
-  font-size: 14px;
-  margin-bottom: 8px;
+  font-size: 13px;
+  margin-bottom: 6px;
   font-weight: 500;
   box-sizing: border-box;
 }
@@ -2549,23 +2487,23 @@ onUnmounted(() => {
 
 .progress-bar-container {
   width: 100%;
-  height: 10px;
+  height: 8px;
   background-color: #eee;
-  border-radius: 5px;
+  border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   box-sizing: border-box;
 }
 
 .progress-fill {
   height: 100%;
   background: linear-gradient(90deg, #BA955C, #2A3535);
-  border-radius: 5px;
+  border-radius: 4px;
   transition: width 0.5s ease;
 }
 
 .progress-text {
-  font-size: 14px;
+  font-size: 13px;
   color: #666;
   text-align: right;
   font-weight: 500;
@@ -2578,7 +2516,7 @@ onUnmounted(() => {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   color: #333;
   box-sizing: border-box;
@@ -2596,7 +2534,7 @@ onUnmounted(() => {
 
 /* 常见问题列表项 */
 .faq-list li {
-  padding: 12px 15px;
+  padding: 10px 12px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -2618,7 +2556,7 @@ onUnmounted(() => {
 }
 
 .model-faq-container .info-image.mobile-header {
-  height: 120px;
+  height: 100px;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -2633,44 +2571,44 @@ onUnmounted(() => {
 }
 
 .model-faq-container .info-title {
-  font-size: 24px;
+  font-size: 20px;
   box-sizing: border-box;
 }
 
 .model-faq-container .info-content {
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
   width: 100%;
 }
 
 .model-faq-container .info-list {
-  font-size: 15px;
+  font-size: 13px;
   box-sizing: border-box;
   width: 100%;
 }
 
 .model-faq-container .faq-list li {
-  padding: 10px 12px;
-  margin-bottom: 10px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
   box-sizing: border-box;
   width: 100%;
 }
 
 .checklist-list input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   accent-color: #BA955C;
 }
 
 /* 常见问题列表项 */
 .faq-list li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   box-sizing: border-box;
   width: 100%;
 }
 
 .model-faq-list li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   box-sizing: border-box;
   width: 100%;
 }
@@ -2688,9 +2626,9 @@ onUnmounted(() => {
   }
 
   .checklist-section {
-    gap: 30px;
-    margin: 30px 0;
-    padding: 0 10px;
+    gap: 25px;
+    margin: 25px 0;
+    padding: 0 15px; /* 移动端边距调整 */
   }
 
   .checklist-container,
@@ -2701,110 +2639,37 @@ onUnmounted(() => {
 
   .checklist-container .info-image-wrapper {
     width: 100%;
-    height: 200px;
+    height: 180px;
   }
 
   .checklist-container .info-image {
     position: relative;
-    height: 200px;
+    height: 180px;
   }
 
   .checklist-container .info-content,
   .faq-container .info-content,
   .model-faq-container .info-content {
     width: 100%;
+    padding: 12px;
   }
 
   .info-image {
     width: 100%;
-    height: 160px;
-  }
-
-  .info-title {
-    font-size: 20px;
-    padding: 15px;
-  }
-
-  .info-content {
-    padding: 20px;
-  }
-
-  .info-list {
-    font-size: 15px;
-  }
-
-  .info-list li {
-    margin-bottom: 10px;
-  }
-
-  .checkbox-label {
-    gap: 10px;
-  }
-
-  .checkbox-label input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    margin-top: 3px;
-  }
-
-  .faq-list li {
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-
-  .checklist-list,
-  .faq-list {
-    font-size: 14px;
-  }
-
-  .checklist-container .info-image,
-  .model-faq-container .info-image.mobile-header {
-    height: 25vh;
-    min-height: 150px;
-  }
-
-  .checklist-container .info-image,
-  .model-faq-container .info-image.mobile-header {
-    width: 100%;
-  }
-
-  .checklist-item {
-    padding: 10px 12px;
-    margin-bottom: 12px;
-  }
-
-  .check-text {
-    font-size: 15px;
-  }
-
-  .item-icon {
-    width: 60%;
-    height: 80px;
-  }
-}
-
-@media (max-width: 480px) {
-  .checklist-section {
-    gap: 25px;
-    margin: 25px 0;
-    padding: 0 10px;
-  }
-
-  .info-image {
     height: 140px;
   }
 
   .info-title {
     font-size: 18px;
-    padding: 10px;
+    padding: 12px;
   }
 
   .info-content {
-    padding: 15px;
+    padding: 12px;
   }
 
   .info-list {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .info-list li {
@@ -2816,41 +2681,30 @@ onUnmounted(() => {
   }
 
   .checkbox-label input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
     margin-top: 3px;
   }
 
   .faq-list li {
     padding: 8px;
-    font-size: 14px;
-  }
-
-  .model-faq-container .info-image.mobile-header {
-    height: 100px;
-  }
-
-  .model-faq-container .info-title {
-    font-size: 18px;
-  }
-
-  .model-faq-container .info-content {
-    padding: 15px;
-  }
-
-  .model-faq-container .info-list {
-    font-size: 14px;
+    margin-bottom: 8px;
   }
 
   .checklist-list,
   .faq-list {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .checklist-container .info-image,
   .model-faq-container .info-image.mobile-header {
     height: 25vh;
-    min-height: 120px;
+    min-height: 130px;
+  }
+
+  .checklist-container .info-image,
+  .model-faq-container .info-image.mobile-header {
+    width: 100%;
   }
 
   .checklist-item {
@@ -2859,16 +2713,101 @@ onUnmounted(() => {
   }
 
   .check-text {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .item-icon {
     width: 60%;
-    height: 40px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checklist-section {
+    gap: 20px;
+    margin: 20px 0;
+    padding: 0 10px; /* 小屏幕边距调整 */
+  }
+
+  .info-image {
+    height: 120px;
+  }
+
+  .info-title {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .info-content {
+    padding: 10px;
+  }
+
+  .info-list {
+    font-size: 12px;
+  }
+
+  .info-list li {
+    margin-bottom: 6px;
+  }
+
+  .checkbox-label {
+    gap: 6px;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    margin-top: 3px;
+  }
+
+  .faq-list li {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .model-faq-container .info-image.mobile-header {
+    height: 80px;
+  }
+
+  .model-faq-container .info-title {
+    font-size: 16px;
+  }
+
+  .model-faq-container .info-content {
+    padding: 10px;
+  }
+
+  .model-faq-container .info-list {
+    font-size: 12px;
+  }
+
+  .checklist-list,
+  .faq-list {
+    font-size: 11px;
+  }
+
+  .checklist-container .info-image,
+  .model-faq-container .info-image.mobile-header {
+    height: 25vh;
+    min-height: 100px;
+  }
+
+  .checklist-item {
+    padding: 6px 8px;
+    margin-bottom: 8px;
+  }
+
+  .check-text {
+    font-size: 12px;
+  }
+
+  .item-icon {
+    width: 60%;
+    height: 30px;
   }
 
   .progress-text {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 
@@ -2877,7 +2816,7 @@ onUnmounted(() => {
   .faq-container {
     display: flex;
     gap: 0;
-    min-height: 40vh;
+    min-height: 35vh;
   }
 
   .checklist-container .info-image-wrapper {
@@ -2894,13 +2833,13 @@ onUnmounted(() => {
 
   .checklist-container .info-content {
     width: 50%;
-    padding: 30px;
+    padding: 15px;
   }
 
   .faq-container .info-image {
     flex: 1;
     width: 50%;
-    height: 40vh;
+    height: 35vh;
     aspect-ratio: 1/1;
     background-size: cover;
     background-position: center;
@@ -2909,12 +2848,12 @@ onUnmounted(() => {
   .faq-container .info-content {
     flex: 1;
     width: 50%;
-    padding: 30px;
+    padding: 15px;
   }
 
   .info-title {
-    font-size: 32px;
-    padding: 20px;
+    font-size: 28px;
+    padding: 15px;
   }
 }
 
@@ -2927,14 +2866,25 @@ onUnmounted(() => {
   .checklist-container .info-image,
   .faq-container .info-image {
     width: 100%;
-    height: 160px;
+    height: 140px;
   }
+}
+
+/* 修改部分：调整more-section样式 */
+/* 取消margin和padding的容器 */
+.more-section-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .more-section {
   width: 100%;
-  height: 25vh;
+  height: 33vh;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .more-content {
@@ -2947,75 +2897,82 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: bold;
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 0;
 }
 
 /* 移动端适配 */
 @media (max-width: 768px) {
   .more-section {
-    height: 25vh;
-    min-height: 150px;
+    height: 20vh;
+    min-height: 120px;
+    margin: 0;
+    padding: 0;
   }
 
   .more-content {
-    font-size: var(--font-size-lg);
-    padding: 15px;
+    font-size: var(--font-size-base);
+    padding: 12px;
+    border-radius: 0;
   }
 
   .large-title {
-    font-size: 24px !important;
-    padding: 15px;
+    font-size: 20px !important;
+    padding: 12px;
   }
 
   .large-text,
   .more-content {
-    font-size: 32px;
-    padding: 15px;
+    font-size: 24px;
+    padding: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .more-section {
-    height: 25vh;
-    min-height: 120px;
+    height: 20vh;
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
   }
 
   .more-content {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
     padding: 10px;
+    border-radius: 0;
   }
 
   .large-title {
-    font-size: 20px !important;
+    font-size: 18px !important;
     padding: 10px;
   }
 
   .large-text,
   .more-content {
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px;
   }
 
 }
 
 .large-title {
-  font-size: 28px !important;
-  padding: 20px;
+  font-size: 24px !important;
+  padding: 15px;
 }
 
 .large-text {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .contact-section {
   text-align: left;
-  padding: 60px 80px;
-  margin-top: 60px;
+  padding: 40px 60px;
+  margin-top: 40px;
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   border-top: 1px solid #e0e0e0;
   position: relative;
@@ -3035,10 +2992,10 @@ onUnmounted(() => {
 }
 
 .contact-title {
-  font-size: var(--font-size-4xl);
+  font-size: var(--font-size-xl);
   font-weight: 700;
   color: #2A3535;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   line-height: 1.5;
   position: relative;
   display: inline-block;
@@ -3048,7 +3005,7 @@ onUnmounted(() => {
 .contact-title::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -8px;
   left: 0;
   width: 80px;
   height: 4px;
@@ -3060,9 +3017,9 @@ onUnmounted(() => {
 .contact-links {
   display: flex;
   justify-content: left;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 30px;
   box-sizing: border-box;
   width: 100%;
 }
@@ -3070,17 +3027,17 @@ onUnmounted(() => {
 .contact-link {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   color: #2A3535;
   text-decoration: none;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: 12px;
   background-color: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border: 1px solid #eee;
-  min-width: 200px;
+  min-width: 180px;
   box-sizing: border-box;
 }
 
@@ -3095,12 +3052,12 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 8px;
+  padding: 6px;
   box-sizing: border-box;
 }
 
@@ -3117,32 +3074,32 @@ onUnmounted(() => {
 
 @media (max-width: 1200px) {
   .contact-title {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
   }
 }
 
 @media (max-width: 992px) {
   .contact-title {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
   }
 }
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
 
   .contact-links {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 12px;
+    margin-top: 25px;
   }
 
   .contact-link {
     width: 100%;
     max-width: 300px;
-    padding: 10px 14px;
+    padding: 8px 12px;
     min-width: unset;
   }
 
@@ -3153,39 +3110,39 @@ onUnmounted(() => {
   }
 
   .feature-card {
-    padding: 25px 20px;
+    padding: 20px 15px;
   }
 
   .progress-bar .step {
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
   .contact-section {
-    padding: 25px 10px;
+    padding: 20px 10px;
   }
 
   .contact-links {
-    gap: 12px;
-    margin-top: 25px;
+    gap: 10px;
+    margin-top: 20px;
   }
 
   .contact-link {
-    padding: 8px 12px;
+    padding: 6px 10px;
     min-width: 100%;
   }
 
   .icon-wrapper {
-    width: 28px;
-    height: 28px;
-    padding: 5px;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
   }
 
   .contact-title {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
   }
 
   .contact-link {
@@ -3214,7 +3171,7 @@ onUnmounted(() => {
 /* 小屏幕优化 */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 80px 20px 40px;
+    padding: 60px 20px 30px;
     text-align: center;
   }
 
@@ -3224,28 +3181,28 @@ onUnmounted(() => {
   }
 
   .hero-badge {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   .badge-text {
-    font-size: 12px;
-    padding: 8px 16px;
+    font-size: 11px;
+    padding: 6px 12px;
   }
 
   .hero-title {
-    font-size: 28px;
-    margin: 15px 0 20px;
+    font-size: 24px;
+    margin: 12px 0 15px;
     line-height: 1.3;
   }
 
   .gradient-text {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.4;
   }
 
   .hero-actions {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     align-items: center;
   }
 
@@ -3253,23 +3210,23 @@ onUnmounted(() => {
   .secondary-button {
     width: 100%;
     max-width: 280px;
-    padding: 12px 20px;
-    font-size: 16px;
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
   .hero-visual {
-    margin-top: 30px;
+    margin-top: 25px;
     justify-content: center;
   }
 
   .visual-container {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
   }
 
   .key-scene {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
   }
 
   .key-wrapper {
@@ -3277,27 +3234,27 @@ onUnmounted(() => {
   }
 
   .features-section {
-    padding: 50px 0 30px;
+    padding: 40px 0 20px;
   }
 
   .section-header {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding: 0 15px;
   }
 
   .section-header h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 12px;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 15px;
     padding: 0 15px;
   }
 
   .feature-card {
-    padding: 25px 20px;
+    padding: 20px 15px;
     border-radius: 12px;
   }
 
@@ -3307,203 +3264,35 @@ onUnmounted(() => {
   }
 
   .feature-title {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    margin-bottom: 12px;
   }
 
   .feature-description {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .feature-tip {
-    padding: 15px;
-    margin-top: 15px;
+    padding: 12px;
+    margin-top: 12px;
   }
 
   .tip-content {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .feature-image-right {
-    width: 80px;
-    margin-top: 10px;
+    width: 70px;
+    margin-top: 8px;
   }
 
   .progress-section {
     padding: 0 10px;
   }
 
-  .progress-section.pinned {
-    top: var(--navbar-height);
-    padding: 0 10px;
-  }
-
-  .progress-bar {
-    margin: 15px 0;
-    padding: 10px 15px;
-  }
-
-  .progress-bar .step {
-    width: 40px;
-    height: 40px;
-    font-size: 14px;
-  }
-
-  .progress-bar::before {
-    height: 4px;
-  }
-
-  .checklist-section {
-    gap: 30px;
-    margin: 30px 0;
-  }
-
-  .info-card {
-    border-radius: 12px;
-  }
-
-  .checklist-container,
-  .faq-container,
-  .model-faq-container {
-    border-radius: 12px;
-  }
-
-  .info-content {
-    padding: 20px 15px;
-  }
-
-  .info-title {
-    font-size: 22px;
-  }
-
-  .checklist-item {
-    padding: 10px;
-    margin-bottom: 12px;
-    gap: 10px;
-  }
-
-  .check-text {
-    font-size: 15px;
-  }
-
-  .item-icon {
-    width: 60%;
-    height: 80px;
-  }
-
-  .progress-summary {
-    margin-top: 15px;
-    padding-top: 15px;
-  }
-
-  .safety-tip {
-    font-size: 13px;
-    margin-bottom: 6px;
-  }
-
-  .progress-text {
-    font-size: 13px;
-  }
-
-  .faq-list li {
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 15px;
-  }
-
-  .contact-section {
-    padding: 40px 20px;
-    margin-top: 40px;
-  }
-
-  .contact-title {
-    font-size: 24px;
-    margin-bottom: 25px;
-    text-align: left;
-    width: 100%;
-  }
-
-  .contact-links {
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-  }
-
-  .contact-link {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px 15px;
-    min-width: 250px;
-    font-size: 15px;
-  }
-
-  .icon-wrapper {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 70px 15px 30px;
-  }
-
-  .hero-title {
-    font-size: 24px;
-  }
-
-  .gradient-text {
-    font-size: 13px;
-  }
-
-  .primary-button,
-  .secondary-button {
-    padding: 10px 16px;
-    font-size: 15px;
-    max-width: 240px;
-  }
-
-  .visual-container,
-  .key-scene {
-    width: 240px;
-    height: 240px;
-  }
-
-  .features-section {
-    padding: 40px 0 20px;
-  }
-
-  .section-header h2 {
-    font-size: 22px;
-  }
-
-  .feature-card {
-    padding: 20px 15px;
-  }
-
-  .feature-title {
-    font-size: 18px;
-  }
-
-  .feature-description {
-    font-size: 14px;
-  }
-
-  .feature-tip {
-    padding: 12px;
-  }
-
-  .tip-content {
-    font-size: 13px;
-  }
-
-  .feature-image-right {
-    width: 70px;
-  }
-
   .progress-bar {
     margin: 12px 0;
-    padding: 8px 10px;
+    padding: 8px 12px;
   }
 
   .progress-bar .step {
@@ -3513,7 +3302,7 @@ onUnmounted(() => {
   }
 
   .progress-bar::before {
-    height: 3px;
+    height: 4px;
   }
 
   .checklist-section {
@@ -3521,8 +3310,20 @@ onUnmounted(() => {
     margin: 25px 0;
   }
 
+  .info-card {
+    border-radius: 12px;
+    padding: 15px;
+  }
+
+  .checklist-container,
+  .faq-container,
+  .model-faq-container {
+    border-radius: 12px;
+    padding: 15px;
+  }
+
   .info-content {
-    padding: 15px 12px;
+    padding: 12px;
   }
 
   .info-title {
@@ -3536,53 +3337,206 @@ onUnmounted(() => {
   }
 
   .check-text {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .item-icon {
     width: 60%;
-    height: 40px;
+    height: 60px;
+  }
+
+  .progress-summary {
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  .safety-tip {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  .progress-text {
+    font-size: 11px;
   }
 
   .faq-list li {
     padding: 8px;
     margin-bottom: 8px;
-    font-size: 14px;
-  }
-
-  .progress-text {
-    font-size: 12px;
-  }
-
-  .safety-tip {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .contact-section {
-    padding: 30px 15px;
+    padding: 30px 20px;
     margin-top: 30px;
   }
 
   .contact-title {
     font-size: 20px;
     margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
   }
 
   .contact-links {
+    justify-content: center;
     gap: 12px;
     margin-top: 25px;
   }
 
   .contact-link {
+    width: 100%;
+    max-width: 300px;
     padding: 8px 12px;
     min-width: 220px;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .icon-wrapper {
-    width: 28px;
-    height: 28px;
-    padding: 5px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 50px 15px 25px;
+  }
+
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .gradient-text {
+    font-size: 12px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    padding: 8px 16px;
+    font-size: 13px;
+    max-width: 220px;
+  }
+
+  .visual-container,
+  .key-scene {
+    width: 200px;
+    height: 200px;
+  }
+
+  .features-section {
+    padding: 30px 0 15px;
+  }
+
+  .section-header h2 {
+    font-size: 18px;
+  }
+
+  .feature-card {
+    padding: 15px 12px;
+  }
+
+  .feature-title {
+    font-size: 16px;
+  }
+
+  .feature-description {
+    font-size: 12px;
+  }
+
+  .feature-tip {
+    padding: 10px;
+  }
+
+  .tip-content {
+    font-size: 11px;
+  }
+
+  .feature-image-right {
+    width: 60px;
+  }
+
+  .progress-bar {
+    margin: 10px 0;
+    padding: 6px 8px;
+  }
+
+  .progress-bar .step {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .progress-bar::before {
+    height: 3px;
+  }
+
+  .checklist-section {
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .info-content {
+    padding: 10px;
+  }
+
+  .info-title {
+    font-size: 18px;
+  }
+
+  .checklist-item {
+    padding: 6px;
+    margin-bottom: 8px;
+    gap: 6px;
+  }
+
+  .check-text {
+    font-size: 12px;
+  }
+
+  .item-icon {
+    width: 60%;
+    height: 30px;
+  }
+
+  .faq-list li {
+    padding: 6px;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .progress-text {
+    font-size: 10px;
+  }
+
+  .safety-tip {
+    font-size: 10px;
+  }
+
+  .contact-section {
+    padding: 20px 15px;
+    margin-top: 20px;
+  }
+
+  .contact-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .contact-links {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .contact-link {
+    padding: 6px 10px;
+    min-width: 200px;
+    font-size: 12px;
+  }
+
+  .icon-wrapper {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
   }
 }
 </style>

@@ -1,0 +1,18 @@
+<svg width="116" height="84" viewBox="0 0 116 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.6">
+        <path d="M2 47.8472V4C2 2.89543 2.89543 2 4 2H76.2011C77.3057 2 78.2011 2.89543 78.2011 4V47.8472C78.2011 48.9518 77.3057 49.8472 76.2011 49.8472H4C2.89543 49.8472 2 48.9518 2 47.8472Z" stroke="black" stroke-width="3" stroke-linecap="round"/>
+        <path d="M79.8338 24.0264H106.473C108.94 24.0264 113.873 25.2103 113.873 29.9462C113.873 31.3039 113.873 34.559 113.873 38.8259M41.355 53.6255C41.355 59.5453 41.355 72.2729 41.355 75.8248C41.355 79.2397 45.0029 81.1042 47.038 81.6813C47.1953 81.7259 47.3509 81.7446 47.5144 81.7446C65.8553 81.7446 103.238 81.7446 107.953 81.7446C112.689 81.7446 113.873 77.7981 113.873 75.8248C113.873 66.3237 113.873 49.4428 113.873 38.8259M79.8338 38.8259H113.873" stroke="black" stroke-width="3" stroke-linecap="round"/>
+        <path d="M88.7136 55.1084H103.513" stroke="black" stroke-width="3" stroke-linecap="round"/>
+        <path d="M65.0347 66.9453H103.513" stroke="black" stroke-width="3" stroke-linecap="round"/>
+        <mask id="path-5-inside-1_19_189" fill="white">
+            <rect x="37.4421" y="9.08887" width="31.8981" height="15.9491" rx="2"/>
+        </mask>
+        <rect x="37.4421" y="9.08887" width="31.8981" height="15.9491" rx="2" stroke="black" stroke-width="6" mask="url(#path-5-inside-1_19_189)"/>
+        <circle cx="24.1515" cy="36.5553" r="2.9303" stroke="black" stroke-width="3"/>
+        <circle cx="52.5052" cy="36.5553" r="2.9303" stroke="black" stroke-width="3"/>
+        <circle cx="38.3282" cy="36.5553" r="2.9303" stroke="black" stroke-width="3"/>
+        <circle cx="66.6823" cy="36.5553" r="2.9303" stroke="black" stroke-width="3"/>
+        <path d="M89.72 5.54424L95.6073 12.2727C95.7835 12.474 96.087 12.501 96.296 12.3338L109.213 2" stroke="black" stroke-width="3" stroke-linecap="round"/>
+        <path d="M89.7196 5.1898L86.954 7.26399C86.7239 7.4366 86.6865 7.76735 86.8723 7.98696L94.9949 17.5864C95.1668 17.7896 95.4679 17.8225 95.6796 17.6611L111.654 5.49054C111.872 5.32408 111.915 5.01255 111.75 4.79282L109.656 2" stroke="black" stroke-width="3" stroke-linecap="round"/>
+    </g>
+</svg>

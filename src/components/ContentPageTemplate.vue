@@ -253,7 +253,6 @@ import {
 } from '@element-plus/icons-vue'
 import { useRouter, useRoute } from 'vue-router'
 
-// 定义 props
 const props = defineProps({
   contentData: {
     type: Object,
@@ -264,7 +263,6 @@ const props = defineProps({
 const router = useRouter()
 const route = useRoute()
 
-// 响应式数据
 const treeRef = ref(null)
 const mobileTreeRef = ref(null)
 const contentBodyInner = ref(null)
@@ -282,32 +280,45 @@ const tocOffset = ref(0)
 const activeTocId = ref('')
 const scrollTimeout = ref(null)
 const readingProgress = ref(0)
-const navbarHeight = ref(60) // 默认导航栏高度
-const showBackTop = ref(false) // 返回顶部按钮显示状态
-
-// 当前选中的文件
+const navbarHeight = ref(60)
+const showBackTop = ref(false)
 const currentFile = ref(null)
 
-// 获取所有页面路由
 const pageRoutes = computed(() => {
   return router.options.routes.filter(r => r.meta && r.meta.title)
 })
 
-// 当前路由路径
 const currentRoutePath = computed(() => {
   return route.path
 })
 
-// 当前页面标题（来自路由meta）
 const currentPageTitle = computed(() => {
   const currentRoute = pageRoutes.value.find(r => r.path === currentRoutePath.value)
   return currentRoute ? currentRoute.meta.title : ''
 })
 
-// 处理后的内容
 const processedContent = computed(() => {
   if (!currentFile.value || !currentFile.value.content) return ''
-  return currentFile.value.content
+
+  let content = currentFile.value.content
+
+  content = content.replace(/<img([^>]*?)src=(['"])([^'"]*?)\2([^>]*?)>/g, (match, beforeSrc, quote, src, afterSrc) => {
+    if (match.includes('loading=')) {
+      return match
+    }
+    return `<img${beforeSrc}src=${quote}${src}${quote} loading="lazy"${afterSrc}>`
+  })
+
+  // 为视频添加懒加载
+  content = content.replace(/<iframe([^>]*?)src=(['"])([^'"]*?)\2([^>]*?)>/g, (match, beforeSrc, quote, src, afterSrc) => {
+    // 如果已经包含loading属性，则跳过
+    if (match.includes('loading=')) {
+      return match
+    }
+    return `<iframe${beforeSrc}src=${quote}${src}${quote} loading="lazy"${afterSrc}>`
+  })
+
+  return content
 })
 
 // 目录项 - 从页面内容中提取标题
@@ -343,7 +354,6 @@ const tocItems = computed(() => {
   return toc
 })
 
-// 使用符合 Element Plus 类型要求的 props 定义
 const treeProps = {
   label: 'label',
   children: 'children'
@@ -1000,6 +1010,13 @@ const goToFirstPage = () => {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  /* 懒加载样式 */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.content-body img[lazy="loaded"] {
+  opacity: 1;
 }
 
 .content-body img:hover {
@@ -1048,6 +1065,13 @@ const goToFirstPage = () => {
   width: 100%;
   height: 100%;
   border: none;
+  /* 懒加载样式 */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.content-body .video-container iframe[lazy="loaded"] {
+  opacity: 1;
 }
 
 /* 空内容样式 */

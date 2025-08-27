@@ -36,8 +36,8 @@ const handleSelect = (key) => {
   // 根据菜单项索引确定目标路由
   const routeMap = {
     '1': '/',
-    '2': '/page1',
-    '3': '/'
+    '2': 'https://imkey.im',
+    '3': '/page1'
   }
 
   const targetRoute = routeMap[key] || '/'
@@ -64,10 +64,10 @@ watch(() => router.currentRoute.value, (to) => {
     case '/':
       activeIndex.value = '1'
       break
-    case '/page1':
+    case 'https://imkey.im':
       activeIndex.value = '2'
       break
-    case '/':
+    case '/page1':
       activeIndex.value = '3'
       break
     default:
@@ -146,7 +146,7 @@ onUnmounted(() => {
           >
             <el-menu-item index="1">一步步开始</el-menu-item>
             <el-menu-item index="2">新手帮助</el-menu-item>
-            <el-menu-item index="3">发现更多</el-menu-item>
+            <el-menu-item index="3">新手手册</el-menu-item>
           </el-menu>
         </div>
 
@@ -299,10 +299,10 @@ onUnmounted(() => {
 
 .navbar-center .el-menu-item {
   color: var(--text-secondary);
-  font-weight: 500;
+  font-weight: 400; /* 修改为更细的字体 */
   height: var(--navbar-height);
   line-height: var(--navbar-height);
-  font-size: var(--font-size-base);
+  font-size: 14px; /* 修改为更小的字体 */
   padding: 0 25px;
   position: relative;
   transition: all 0.3s ease;
@@ -354,7 +354,7 @@ onUnmounted(() => {
 
 .navbar-center .el-menu-item.is-active {
   color: var(--secondary-color) !important;
-  font-weight: 600;
+  font-weight: 500; /* 激活状态稍微加粗 */
   background: linear-gradient(135deg, rgba(186, 149, 92, 0.05), rgba(42, 53, 53, 0.05)) !important;
   text-shadow: 0 0 1px rgba(42, 53, 53, 0.2);
 }
@@ -496,7 +496,7 @@ onUnmounted(() => {
     line-height: 55px;
     text-align: center;
     padding: 0 25px;
-    font-size: var(--font-size-base);
+    font-size: 14px; /* 移动端也使用较小字体 */
     border-bottom: 1px solid var(--border-color);
     transition: all 0.3s ease;
     position: relative;
@@ -520,7 +520,7 @@ onUnmounted(() => {
   .navbar-center .el-menu-item.is-active {
     background: linear-gradient(90deg, rgba(186, 149, 92, 0.1), rgba(42, 53, 53, 0.1));
     color: var(--secondary-color) !important;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .navbar-center .el-menu-item::after {
@@ -579,7 +579,7 @@ onUnmounted(() => {
   }
 
   .navbar-center .el-menu-item {
-    font-size: var(--font-size-sm);
+    font-size: 13px; /* 更小屏幕使用更小字体 */
     padding: 0 20px;
     height: 50px;
     line-height: 50px;

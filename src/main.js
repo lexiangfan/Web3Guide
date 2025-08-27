@@ -3,6 +3,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import App from './App.vue'
 import router from './router/router.js'
+import lazyLoad from './ directives/lazyLoad.js'
 
 // 自动扫描并注册views目录下的页面组件
 const pages = import.meta.glob('@/views/*.vue')
@@ -53,7 +54,7 @@ setMobileHeight()
 
 app.use(ElementPlus)
 app.use(router)
+app.directive('lazy', lazyLoad)
 app.mount('#app')
 
-// 导出页面模块以供其他组件使用
 export { pages }
