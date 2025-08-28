@@ -233,7 +233,7 @@ const pageContents = [
 <strong>我需要密盒 S1 吗？</strong>
 <p>
 根据行业知名安全公司慢雾的《
- <a href="https://web3caff.com/archives/98153"> 2024 Q2 MistTrack 被盗表单分析</a>报告总结，私钥泄露是 2024 年第二季度被盗事件的主要原因。导致私钥泄露的关键因素是用户未离线备份助记词或下载了假钱包。为此，我们强烈推荐密盒 S1。
+ <a href="https://web3caff.com/archives/98153" target="_blank"> 2024 Q2 MistTrack 被盗表单分析</a>报告总结，私钥泄露是 2024 年第二季度被盗事件的主要原因。导致私钥泄露的关键因素是用户未离线备份助记词或下载了假钱包。为此，我们强烈推荐密盒 S1。
 </p>
 <p>
 密盒 S1 通体由 304 不锈钢精密制造，相比纸张备份助记词，是更安全的离线保管助记词通用方案，不仅可以保护数字资产免受网络黑客的攻击，同时具有有效抵抗各种物理损坏的能力，包括火灾、浸水、腐蚀以及坠落冲击等。
@@ -248,10 +248,10 @@ const pageContents = [
 <img src="${imKeyS1User2}" alt="imKeyS1User2">    
 <p>
 为了你的资产安全，我们推荐使用
- <a href="https://shop42404838.m.youzan.com/wscshop/showcase/feature?alias=2xL8D9kBdt&banner_id=f.77421469~image_ad.2~0~zSCTleYM&reft=1721718357142&spm=g.711638544_f.77421469"> 不锈钢密盒</a>进行离线备份助记词，其防水、防火、防腐蚀特性为助记词提供可靠保护。
+ <a href="https://shop42404838.m.youzan.com/wscshop/showcase/feature?alias=2xL8D9kBdt&banner_id=f.77421469~image_ad.2~0~zSCTleYM&reft=1721718357142&spm=g.711638544_f.77421469" target="_blank"> 不锈钢密盒</a>进行离线备份助记词，其防水、防火、防腐蚀特性为助记词提供可靠保护。
 </p>    
 <p>密盒 S1 购买链接：</p>
-<a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?scan=1&activity=none&from=kdt&qr=directgoods_711638544&shopAutoEnter=1">https://j.youzan.com/USDlfF</a>
+<a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?scan=1&activity=none&from=kdt&qr=directgoods_711638544&shopAutoEnter=1" target="_blank">https://j.youzan.com/USDlfF</a>
                 
                 
                 `
