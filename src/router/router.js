@@ -6,7 +6,7 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home,
+        component: () => import('@/views/Home.vue'),
         meta: {
             title: '一步步开始'
         }
