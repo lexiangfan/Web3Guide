@@ -123,7 +123,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i=[{id:"section1",title:"基础知�
           <p>
 绑定码由 8 位随机的数字或字母组成，用于 imKey 与
 <a href="http://token.im/" target="_blank"> imToken 客户端</a> /
-<a href="https://support.imkey.im/hc/zh-cn/articles/360055273013-imKey-Manager-%E6%98%AF%E4%BB%80%E4%B9%88-"> imKey Manager</a> 一对一绑定，防止非授权客户端访问 imKey。请务必妥善备份绑定码，以便 imKey 后续重新绑定。绑定码由 imKey 自动生成的，无法人为修改。
+<a href="https://support.imkey.im/hc/zh-cn/articles/360055273013-imKey-Manager-%E6%98%AF%E4%BB%80%E4%B9%88-" target="_blank"> imKey Manager</a> 一对一绑定，防止非授权客户端访问 imKey。请务必妥善备份绑定码，以便 imKey 后续重新绑定。绑定码由 imKey 自动生成的，无法人为修改。
 </p>
 <p>注：如果你遇到解除配对 / 退出 imToken 身份 / 卸载 imToken 客户端 / 更换手机等情况，则需要用到绑定码重新绑定。</p>
 
