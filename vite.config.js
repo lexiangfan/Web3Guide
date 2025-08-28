@@ -17,17 +17,4 @@ export default defineConfig({
   server:{
     open: true
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          // 将第三方库单独打包
-          'element-plus': ['element-plus'],
-          // 将较大的工具库单独打包
-          'vue-libraries': ['vue', 'vue-router'],
-        }
-      }
-    },
-    chunkSizeWarningLimit: 1000 // 调整警告阈值到1000kB
-  }
 })

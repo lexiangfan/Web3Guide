@@ -1,4 +1,3 @@
-<!-- src/views/Home.vue -->
 <template>
   <div :class="['home-container', $attrs.class || '']">
     <section class="hero-section">
@@ -33,97 +32,6 @@
           >
             访问 imKey 官网
           </el-button>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="visual-container">
-          <div class="key-scene">
-            <div class="key-wrapper">
-              <div class="key-3d">
-                <!-- 钥匙外壳 -->
-                <div class="key-case">
-                  <div class="case-surface front">
-                    <div class="case-reflection"></div>
-                  </div>
-                  <div class="case-surface back"></div>
-                  <div class="case-surface top"></div>
-                  <div class="case-surface bottom"></div>
-                  <div class="case-surface left"></div>
-                  <div class="case-surface right"></div>
-                  <div class="case-inner-hole"></div>
-                </div>
-
-                <!-- 钥匙头部 (带凹槽和纹理) -->
-                <div class="key-head">
-                  <div class="head-surface front">
-                    <div class="head-detail detail-1"></div>
-                    <div class="head-detail detail-2"></div>
-                    <div class="head-groove-main"></div>
-                  </div>
-                  <div class="head-surface back"></div>
-                  <div class="head-surface top"></div>
-                  <div class="head-surface bottom"></div>
-                  <div class="head-surface left"></div>
-                  <div class="head-surface right"></div>
-                </div>
-
-                <!-- 钥匙杆部 (带纹理) -->
-                <div class="key-shaft">
-                  <div class="shaft-surface front">
-                    <div class="shaft-line line-1"></div>
-                    <div class="shaft-line line-2"></div>
-                    <div class="shaft-line line-3"></div>
-                  </div>
-                  <div class="shaft-surface back"></div>
-                  <div class="shaft-surface top"></div>
-                  <div class="shaft-surface bottom"></div>
-                  <div class="shaft-surface left"></div>
-                  <div class="shaft-surface right"></div>
-                </div>
-
-                <!-- 钥匙齿部 (更复杂的形状) -->
-                <div class="key-teeth">
-                  <div class="tooth tooth-1">
-                    <div class="tooth-edge"></div>
-                  </div>
-                  <div class="tooth tooth-2">
-                    <div class="tooth-edge"></div>
-                  </div>
-                  <div class="tooth tooth-3">
-                    <div class="tooth-edge"></div>
-                  </div>
-                  <div class="tooth tooth-4">
-                    <div class="tooth-edge"></div>
-                  </div>
-                  <div class="tooth tooth-5">
-                    <div class="tooth-edge"></div>
-                  </div>
-                </div>
-
-                <!-- 钥匙装饰环 (更立体) -->
-                <div class="key-ring">
-                  <div class="ring-surface front">
-                    <div class="ring-inner-hole"></div>
-                  </div>
-                  <div class="ring-surface back"></div>
-                  <div class="ring-surface top"></div>
-                  <div class="ring-surface bottom"></div>
-                  <div class="ring-surface left"></div>
-                  <div class="ring-surface right"></div>
-                  <div class="ring-inner-glow"></div>
-                </div>
-
-                <!-- 钥匙光泽效果 -->
-                <div class="key-highlight highlight-1"></div>
-                <div class="key-highlight highlight-2"></div>
-              </div>
-            </div>
-          </div>
-          <div class="floating-elements">
-            <div class="floating-element element-1"></div>
-            <div class="floating-element element-2"></div>
-            <div class="floating-element element-3"></div>
-          </div>
         </div>
       </div>
     </section>
@@ -252,16 +160,20 @@
         <!-- 左侧内容 -->
         <div class="info-content">
           <ul class="info-list faq-list">
-            <li>什么是助记词？</li>
-            <li>如果钱包丢了怎么办？</li>
-            <li>支持哪些币种？</li>
-            <li>如何验证我的钱包是真品？</li>
+            <li>Q1: 什么是数字钱包？它真的像银行账户一样吗？</li>
+            <li>Q2: 什么是助记词？为什么要妥善保存？</li>
+            <li>Q3: 热钱包和冷钱包有什么区别？</li>
+            <li>Q4: 我为什么需要硬件钱包？</li>
+            <li>Q5: 如果我丢失了硬件钱包，资产会不会没了？</li>
+            <li>Q6: 蓝牙/USB 连接会不会泄露私钥？</li>
           </ul>
         </div>
 
         <!-- 右侧图像区域 -->
-        <div class="info-image" :style="{ backgroundImage: `url(${question})` }">
-          <h3 class="info-title large-title">常见问题，一看就懂</h3>
+        <div class="info-image-wrapper">
+          <div class="info-image" :style="{ backgroundImage: `url(${question})` }">
+            <h3 class="info-title large-title">常见问题，一看就懂</h3>
+          </div>
         </div>
       </div>
 
@@ -277,10 +189,12 @@
         <!-- 下方内容区域 -->
         <div class="info-content">
           <ul class="info-list faq-list">
-            <li>什么是助记词？</li>
-            <li>如果钱包丢了怎么办？</li>
-            <li>支持哪些币种？</li>
-            <li>如何验证我的钱包是真品？</li>
+            <li>Q1: 什么是数字钱包？它真的像银行账户一样吗？</li>
+            <li>Q2: 什么是助记词？为什么要妥善保存？</li>
+            <li>Q3: 热钱包和冷钱包有什么区别？</li>
+            <li>Q4: 我为什么需要硬件钱包？</li>
+            <li>Q5: 如果我丢失了硬件钱包，资产会不会没了？</li>
+            <li>Q6: 蓝牙/USB 连接会不会泄露私钥？</li>
           </ul>
         </div>
       </div>
@@ -341,7 +255,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
-import router from "@/router/router.js";
+import router from "@/router/router.js"
 import { ArrowRight } from '@element-plus/icons-vue'
 import step1 from'@/public/images/step1.svg'
 import step2 from'@/public/images/step2.svg'
@@ -354,11 +268,12 @@ import must from'@/public/images/must.png'
 import must_s from'@/public/images/must.svg'
 import question from'@/public/images/question.png'
 import more from'@/public/images/more.png'
-import CustomDialog from "@/components/CustomDialog.vue";
+import CustomDialog from "@/components/CustomDialog.vue"
 import imKey_logo from "@/public/images/logo/imKey_logo1.png"
 import imKey_logo2 from "@/public/images/logo/imKey_logo2.png"
 import imKey_logo3 from "@/public/images/logo/imKey_logo3.png"
 import imKey_logo4 from "@/public/images/logo/imKey_logo4.png"
+import imKeyProductImage from "@/public/images/more.png"
 
 const stepImages = [step1, step2, step3, step4, step5]
 
@@ -753,534 +668,12 @@ onUnmounted(() => {
   object-fit: contain;
 }
 
-.key-scene {
-  width: 350px;
-  height: 350px;
-  perspective: 1500px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* 在桌面端让钥匙变大 */
-@media (min-width: 769px) {
-  .key-scene {
-    width: 450px;
-    height: 450px;
-  }
-
-  .key-wrapper {
-    transform: scale(1.4);
-  }
-}
-
-.key-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.key-3d {
-  position: relative;
-  transform-style: preserve-3d;
-  animation: rotateKey 30s infinite linear;
-  transform: rotateX(15deg);
-}
-
-@keyframes rotateKey {
-  0% {
-    transform: rotateX(15deg) rotateY(0) rotateZ(0);
-    filter: drop-shadow(0 0 10px rgba(186, 149, 92, 0.5));
-  }
-  100% {
-    transform: rotateX(15deg) rotateY(360deg) rotateZ(360deg);
-    filter: drop-shadow(0 0 20px rgba(186, 149, 92, 0.8));
-  }
-}
-
-/* 钥匙外壳 */
-.key-case {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateX(-35px);
-  transform-style: preserve-3d;
-}
-
-.case-surface {
-  position: absolute;
-  box-shadow: 0 0 15px rgba(138, 109, 66, 0.8);
-}
-
-.case-surface.front {
-  width: 65px;
-  height: 65px;
-  transform: translateZ(15px);
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #f8f0e5, #e6d5bb 40%, #d4b68c 70%, #c2a070);
-  overflow: hidden;
-}
-
-.case-reflection {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  top: 15px;
-  left: 15px;
-  filter: blur(3px);
-}
-
-.case-surface.back {
-  width: 65px;
-  height: 65px;
-  transform: translateZ(-15px) rotateY(180deg);
-  border-radius: 50%;
-  background: radial-gradient(circle at 70% 70%, #c2a070, #d4b68c 40%, #e6d5bb 70%, #f8f0e5);
-}
-
-.case-surface.top {
-  width: 65px;
-  height: 30px;
-  transform: translateY(-15px) rotateX(90deg);
-  border-radius: 50% 50% 0 0;
-  background: linear-gradient(to bottom, #f8f0e5, #e6d5bb, #d4b68c);
-}
-
-.case-surface.bottom {
-  width: 65px;
-  height: 30px;
-  transform: translateY(15px) rotateX(-90deg);
-  border-radius: 0 0 50% 50%;
-  background: linear-gradient(to top, #c2a070, #d4b68c, #e6d5bb);
-}
-
-.case-surface.left {
-  width: 30px;
-  height: 65px;
-  transform: translateX(-15px) rotateY(-90deg);
-  border-radius: 50% 0 0 50%;
-  background: linear-gradient(to right, #c2a070, #d4b68c, #e6d5bb);
-}
-
-.case-surface.right {
-  width: 30px;
-  height: 65px;
-  transform: translateX(15px) rotateY(90deg);
-  border-radius: 0 50% 50% 0;
-  background: linear-gradient(to left, #c2a070, #d4b68c, #e6d5bb);
-}
-
-.case-inner-hole {
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  background: rgba(0, 0, 0, 0.9);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateZ(16px);
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
-}
-
-/* 钥匙头部 */
-.key-head {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-style: preserve-3d;
-}
-
-.head-surface {
-  position: absolute;
-  box-shadow: 0 0 12px rgba(186, 149, 92, 0.6);
-}
-
-.head-surface.front {
-  width: 55px;
-  height: 55px;
-  transform: translateZ(12px);
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #e6c9a1, #d4b68c 40%, #BA955C 70%, #8a6d42);
-  overflow: hidden;
-}
-
-.head-detail {
-  position: absolute;
-  background: rgba(138, 109, 66, 0.3);
-  border-radius: 50%;
-}
-
-.head-detail.detail-1 {
-  width: 12px;
-  height: 12px;
-  top: 15px;
-  left: 15px;
-}
-
-.head-detail.detail-2 {
-  width: 8px;
-  height: 8px;
-  bottom: 12px;
-  right: 10px;
-}
-
-.head-groove-main {
-  position: absolute;
-  width: 25px;
-  height: 6px;
-  background: rgba(138, 109, 66, 0.6);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 3px;
-  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
-}
-
-.head-surface.back {
-  width: 55px;
-  height: 55px;
-  transform: translateZ(-12px) rotateY(180deg);
-  border-radius: 50%;
-  background: radial-gradient(circle at 70% 70%, #8a6d42, #BA955C 40%, #d4b68c 70%, #e6c9a1);
-}
-
-.head-surface.top {
-  width: 55px;
-  height: 24px;
-  transform: translateY(-12px) rotateX(90deg);
-  border-radius: 50% 50% 0 0;
-  background: linear-gradient(to bottom, #e6c9a1, #d4b68c, #BA955C);
-}
-
-.head-surface.bottom {
-  width: 55px;
-  height: 24px;
-  transform: translateY(12px) rotateX(-90deg);
-  border-radius: 0 0 50% 50%;
-  background: linear-gradient(to top, #8a6d42, #BA955C, #d4b68c);
-}
-
-.head-surface.left {
-  width: 24px;
-  height: 55px;
-  transform: translateX(-12px) rotateY(-90deg);
-  border-radius: 50% 0 0 50%;
-  background: linear-gradient(to right, #8a6d42, #BA955C, #d4b68c);
-}
-
-.head-surface.right {
-  width: 24px;
-  height: 55px;
-  transform: translateX(12px) rotateY(90deg);
-  border-radius: 0 50% 50% 0;
-  background: linear-gradient(to left, #8a6d42, #BA955C, #d4b68c);
-}
-
-/* 钥匙杆部 */
-.key-shaft {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateX(50px);
-  transform-style: preserve-3d;
-}
-
-.shaft-surface {
-  position: absolute;
-  box-shadow: 0 0 8px rgba(186, 149, 92, 0.4);
-}
-
-.shaft-surface.front {
-  width: 110px;
-  height: 10px;
-  transform: translateZ(3px);
-  border-radius: 3px;
-  background: linear-gradient(to right, #e6c9a1, #d4b68c 30%, #BA955C 50%, #8a6d42 70%, #5a4525);
-  overflow: hidden;
-}
-
-.shaft-line {
-  position: absolute;
-  height: 1px;
-  background: rgba(90, 69, 37, 0.4);
-}
-
-.shaft-line.line-1 {
-  width: 80px;
-  top: 3px;
-  left: 15px;
-}
-
-.shaft-line.line-2 {
-  width: 60px;
-  top: 5px;
-  left: 25px;
-}
-
-.shaft-line.line-3 {
-  width: 70px;
-  top: 7px;
-  left: 20px;
-}
-
-.shaft-surface.back {
-  width: 110px;
-  height: 10px;
-  transform: translateZ(-3px) rotateY(180deg);
-  border-radius: 3px;
-  background: linear-gradient(to left, #e6c9a1, #d4b68c 30%, #BA955C 50%, #8a6d42 70%, #5a4525);
-}
-
-.shaft-surface.top {
-  width: 110px;
-  height: 6px;
-  transform: translateY(-3px) rotateX(90deg);
-  border-radius: 3px;
-  background: linear-gradient(to bottom, #e6c9a1, #d4b68c, #BA955C);
-}
-
-.shaft-surface.bottom {
-  width: 110px;
-  height: 6px;
-  transform: translateY(3px) rotateX(-90deg);
-  border-radius: 3px;
-  background: linear-gradient(to top, #5a4525, #8a6d42, #BA955C);
-}
-
-.shaft-surface.left {
-  width: 6px;
-  height: 10px;
-  transform: translateX(-3px) rotateY(-90deg);
-  border-radius: 2px;
-  background: linear-gradient(to right, #5a4525, #8a6d42, #BA955C);
-}
-
-.shaft-surface.right {
-  width: 6px;
-  height: 10px;
-  transform: translateX(113px) rotateY(90deg);
-  border-radius: 2px;
-  background: linear-gradient(to left, #5a4525, #8a6d42, #BA955C);
-}
-
-/* 钥匙齿部 */
-.key-teeth {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateX(105px);
-  transform-style: preserve-3d;
-}
-
-.tooth {
-  position: absolute;
-  transform-style: preserve-3d;
-}
-
-.tooth-1 {
-  width: 6px;
-  height: 14px;
-  transform: translateX(0) translateY(-7px);
-  background: linear-gradient(to bottom, #d4b68c, #BA955C, #8a6d42);
-  border-radius: 0 0 2px 2px;
-  box-shadow: 0 1px 4px rgba(90, 69, 37, 0.6);
-}
-
-.tooth-2 {
-  width: 7px;
-  height: 18px;
-  transform: translateX(15px) translateY(-9px);
-  background: linear-gradient(to bottom, #d4b68c, #BA955C, #5a4525);
-  border-radius: 0 0 3px 3px;
-  box-shadow: 0 1px 4px rgba(90, 69, 37, 0.6);
-}
-
-.tooth-3 {
-  width: 8px;
-  height: 12px;
-  transform: translateX(32px) translateY(-6px);
-  background: linear-gradient(to bottom, #e6c9a1, #d4b68c, #8a6d42);
-  border-radius: 0 0 3px 3px;
-  box-shadow: 0 1px 4px rgba(90, 69, 37, 0.6);
-}
-
-.tooth-4 {
-  width: 6px;
-  height: 16px;
-  transform: translateX(48px) translateY(-8px);
-  background: linear-gradient(to bottom, #d4b68c, #BA955C, #5a4525);
-  border-radius: 0 0 2px 2px;
-  box-shadow: 0 1px 4px rgba(90, 69, 37, 0.6);
-}
-
-.tooth-5 {
-  width: 7px;
-  height: 13px;
-  transform: translateX(62px) translateY(-6.5px);
-  background: linear-gradient(to bottom, #e6c9a1, #BA955C, #8a6d42);
-  border-radius: 0 0 3px 3px;
-  box-shadow: 0 1px 4px rgba(90, 69, 37, 0.6);
-}
-
-.tooth-edge {
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.3);
-  top: 2px;
-  border-radius: 1px;
-}
-
-/* 钥匙装饰环 */
-.key-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateX(-45px);
-  transform-style: preserve-3d;
-}
-
-.ring-surface {
-  position: absolute;
-  box-shadow: 0 0 15px rgba(186, 149, 92, 0.7);
-}
-
-.ring-surface.front {
-  width: 30px;
-  height: 40px;
-  transform: translateZ(4px);
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #f0d9b9, #e0c49a 40%, #c9a774 70%, #a18355);
-  overflow: hidden;
-}
-
-.ring-inner-hole {
-  position: absolute;
-  width: 18px;
-  height: 28px;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
-}
-
-.ring-surface.back {
-  width: 30px;
-  height: 40px;
-  transform: translateZ(-4px) rotateY(180deg);
-  border-radius: 50%;
-  background: radial-gradient(circle at 70% 70%, #a18355, #c9a774 40%, #e0c49a 70%, #f0d9b9);
-}
-
-.ring-surface.top {
-  width: 30px;
-  height: 8px;
-  transform: translateY(-20px) rotateX(90deg);
-  border-radius: 50%;
-  background: linear-gradient(to bottom, #f0d9b9, #e0c49a, #c9a774);
-}
-
-.ring-surface.bottom {
-  width: 30px;
-  height: 8px;
-  transform: translateY(20px) rotateX(-90deg);
-  border-radius: 50%;
-  background: linear-gradient(to top, #a18355, #c9a774, #e0c49a);
-}
-
-.ring-surface.left {
-  width: 8px;
-  height: 40px;
-  transform: translateX(-15px) rotateY(-90deg);
-  border-radius: 50%;
-  background: linear-gradient(to right, #a18355, #c9a774, #e0c49a);
-}
-
-.ring-surface.right {
-  width: 8px;
-  height: 40px;
-  transform: translateX(15px) rotateY(90deg);
-  border-radius: 50%;
-  background: linear-gradient(to left, #a18355, #c9a774, #e0c49a);
-}
-
-.ring-inner-glow {
-  position: absolute;
-  width: 20px;
-  height: 30px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* 钥匙光泽效果 */
-.key-highlight {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  filter: blur(2px);
-}
-
-.highlight-1 {
-  width: 15px;
-  height: 15px;
-  top: 20%;
-  left: 25%;
-  transform: translateZ(15px);
-}
-
-.highlight-2 {
-  width: 8px;
-  height: 20px;
-  top: 40%;
-  left: 60%;
-  transform: translateZ(5px);
-}
-
-/* 浮动元素 */
-.floating-elements {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.floating-element {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #BA955C 0%, #d4b68c 100%);
-  opacity: 0.8;
-  box-shadow: 0 4px 15px rgba(186, 149, 92, 0.3);
-  animation: float 4s ease-in-out infinite;
-}
-
 @keyframes float {
   0%, 100% {
-    transform: translateY(0) translateX(0);
-    box-shadow: 0 4px 15px rgba(186, 149, 92, 0.3);
-  }
-  25% {
-    transform: translateY(-25px) translateX(10px);
-    box-shadow: 0 8px 20px rgba(186, 149, 92, 0.5);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(0) translateX(20px);
-    box-shadow: 0 4px 15px rgba(186, 149, 92, 0.3);
-  }
-  75% {
-    transform: translateY(15px) translateX(10px);
-    box-shadow: 0 6px 18px rgba(186, 149, 92, 0.4);
+    transform: translateY(-10px);
   }
 }
 
@@ -1288,42 +681,27 @@ onUnmounted(() => {
 .home-container {
   width: 100%;
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: var(--navbar-height) 0 0;
 }
 
 .hero-section {
   display: flex;
   align-items: center;
-  padding: 100px 0 60px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background-image: url('@/public/images/more.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
   position: relative;
   overflow: hidden;
+  height: 42vh;
 }
 
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(186, 149, 92, 0.1) 0%, rgba(186, 149, 92, 0.05) 100%);
-  z-index: 0;
-}
-
+/* 移除了原来的渐变背景相关的伪元素 */
+.hero-section::before,
 .hero-section::after {
-  content: "";
-  position: absolute;
-  bottom: -80px;
-  left: -30px;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(42, 53, 53, 0.1) 0%, rgba(42, 53, 53, 0.05) 100%);
-  z-index: 0;
+  display: none;
 }
 
 .hero-content {
@@ -1331,8 +709,10 @@ onUnmounted(() => {
   max-width: 600px;
   position: relative;
   z-index: 1;
-  padding: 0 20px;
   margin-left: 6%;
+  background-color: transparent;
+  padding: 30px;
+  border-radius: 16px;
 }
 
 .hero-badge {
@@ -1415,6 +795,11 @@ onUnmounted(() => {
   .gradient-text {
     font-size: 14px;
   }
+
+  .hero-content {
+    margin: 0 20px;
+    padding: 20px;
+  }
 }
 
 .hero-actions {
@@ -1445,7 +830,7 @@ onUnmounted(() => {
   border-radius: 30px;
   padding: 12px 24px;
   border: 2px solid #e0e0e0 !important;
-  color: #666666 !important;
+  color: #ffffff !important;
   font-size: var(--font-size-sm);
   font-weight: 500;
   background: transparent !important;
@@ -1472,64 +857,9 @@ onUnmounted(() => {
   position: relative;
   width: 350px;
   height: 350px;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotateX(0) rotateY(0);
-  }
-  100% {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-
-.floating-elements {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.floating-element {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #BA955C 0%, #d4b68c 100%);
-  opacity: 0.8;
-  box-shadow: 0 4px 15px rgba(186, 149, 92, 0.3);
-}
-
-.element-1 {
-  top: 15%;
-  left: 15%;
-  animation: float 4s ease-in-out infinite;
-}
-
-.element-2 {
-  top: 75%;
-  right: 20%;
-  animation: float 4s ease-in-out infinite 0.8s;
-}
-
-.element-3 {
-  bottom: 25%;
-  left: 10%;
-  animation: float 4s ease-in-out infinite 1.6s;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) translateX(0);
-  }
-  25% {
-    transform: translateY(-25px) translateX(10px);
-  }
-  50% {
-    transform: translateY(0) translateX(20px);
-  }
-  75% {
-    transform: translateY(15px) translateX(10px);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Features Section */
@@ -1778,13 +1108,9 @@ onUnmounted(() => {
   }
 
   /* 移动端保持原始大小 */
-  .key-scene {
+  .visual-container {
     width: 280px;
     height: 280px;
-  }
-
-  .key-wrapper {
-    transform: scale(1);
   }
 }
 
@@ -1826,12 +1152,10 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 15px 0;
   padding: 12px 20px;
   position: relative;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 15px auto;
   box-sizing: border-box;
 }
 
@@ -2136,20 +1460,18 @@ onUnmounted(() => {
 .checklist-section {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin: 30px 20px;
+  gap: 20px;
   box-sizing: border-box;
   width: calc(100% - 40px);
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto;
   padding: 0 20px; /* 添加左右边距 */
 }
 
 /* 添加容器限制宽度并居中 */
 .checklist-section {
   max-width: 1200px;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .info-card {
@@ -2161,7 +1483,7 @@ onUnmounted(() => {
   border: 1px solid #eef2f7;
   box-sizing: border-box;
   max-width: 100%;
-  padding: 20px;
+  padding: 12px;
 }
 
 .info-card:hover {
@@ -2190,7 +1512,7 @@ onUnmounted(() => {
 /* 桌面端布局 */
 .checklist-container {
   display: flex;
-  min-height: 350px;
+  min-height: 120px; /* 减小高度 */
 }
 
 .checklist-container .info-image-wrapper {
@@ -2228,7 +1550,7 @@ onUnmounted(() => {
 
 .checklist-container .info-content {
   flex: 1;
-  padding: 15px;
+  padding: 6px; /* 减小内边距 */
   background: #f9f9f9;
   display: flex;
   flex-direction: column;
@@ -2239,12 +1561,12 @@ onUnmounted(() => {
 /* 桌面端常见问题 */
 .faq-container {
   display: flex;
-  min-height: 350px;
+  min-height: 350px; /* 增加高度 */
 }
 
 .faq-container .info-content {
   flex: 1;
-  padding: 15px;
+  padding: 14px; /* 增加内边距 */
   background: #f9f9f9;
   display: flex;
   flex-direction: column;
@@ -2252,19 +1574,46 @@ onUnmounted(() => {
   box-sizing: border-box;
 }
 
-.faq-container .info-image {
+.faq-container .info-image-wrapper {
   flex: 1;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.faq-container .info-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  position: relative;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
 }
+
+.faq-container .info-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(42, 53, 53, 0.6);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .info-title {
+    font-size: 24px;
+    padding: 12px;
+  }
+}
+
 
 /* 移动端常见问题 */
 .model-faq-container {
@@ -2276,17 +1625,18 @@ onUnmounted(() => {
 
 /* 图像区域 */
 .info-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  position: relative;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .info-image::before {
@@ -2315,11 +1665,11 @@ onUnmounted(() => {
 /* 内容区域 */
 .info-content {
   flex: 1;
-  padding: 15px;
+  padding: 10px;
   background: #f9f9f9;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -2351,12 +1701,12 @@ onUnmounted(() => {
 .checklist-item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 12px;
-  padding: 10px 12px;
+  gap: 6px;
+  margin-bottom: 8px;
+  padding: 6px 8px;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -2366,7 +1716,7 @@ onUnmounted(() => {
 
 .checklist-item:hover {
   transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(186, 149, 92, 0.15);
+  box-shadow: 0 4px 10px rgba(186, 149, 92, 0.15);
 }
 
 .checklist-item::before {
@@ -2390,14 +1740,14 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 8px;
+  gap: 4px;
 }
 
 /* 复选框样式 */
 .checkbox-label {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 6px;
   cursor: pointer;
   flex: 1;
   position: relative;
@@ -2411,10 +1761,10 @@ onUnmounted(() => {
 }
 
 .checkmark {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 2px solid #ddd;
-  border-radius: 5px;
+  border-radius: 4px;
   position: relative;
   transition: all 0.3s ease;
   flex-shrink: 0;
@@ -2424,10 +1774,10 @@ onUnmounted(() => {
 .checkmark::after {
   content: "";
   position: absolute;
-  left: 6px;
-  top: 2px;
-  width: 6px;
-  height: 12px;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
@@ -2445,7 +1795,7 @@ onUnmounted(() => {
 }
 
 .check-text {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5;
   color: #333;
   transition: all 0.3s ease;
@@ -2460,16 +1810,16 @@ onUnmounted(() => {
 
 .item-icon {
   width: 40%;
-  height: 35px;
+  height: 30px;
   object-fit: contain;
   flex-shrink: 0;
   border-radius: 4px;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
 /* 进度显示 */
 .progress-summary {
-  padding-top: 15px;
+  padding-top: 10px;
   border-top: 1px dashed #ddd;
   box-sizing: border-box;
   width: 100%;
@@ -2477,8 +1827,8 @@ onUnmounted(() => {
 
 /* 添加安全提示样式 */
 .safety-tip {
-  font-size: 13px;
-  margin-bottom: 6px;
+  font-size: 12px;
+  margin-bottom: 4px;
   font-weight: 500;
   box-sizing: border-box;
 }
@@ -2497,23 +1847,23 @@ onUnmounted(() => {
 
 .progress-bar-container {
   width: 100%;
-  height: 8px;
+  height: 6px;
   background-color: #eee;
-  border-radius: 4px;
+  border-radius: 3px;
   overflow: hidden;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   box-sizing: border-box;
 }
 
 .progress-fill {
   height: 100%;
   background: linear-gradient(90deg, #BA955C, #2A3535);
-  border-radius: 4px;
+  border-radius: 3px;
   transition: width 0.5s ease;
 }
 
 .progress-text {
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
   text-align: right;
   font-weight: 500;
@@ -2526,8 +1876,8 @@ onUnmounted(() => {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.6;
   color: #333;
   box-sizing: border-box;
   width: 100%;
@@ -2537,21 +1887,22 @@ onUnmounted(() => {
 .faq-list li {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   box-sizing: border-box;
   width: 100%;
 }
 
 /* 常见问题列表项 */
 .faq-list li {
-  padding: 10px 12px;
+  padding: 10px 12px; /* 增加内边距 */
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease;
   cursor: pointer;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 10px; /* 增加间距 */
 }
 
 .faq-list li:hover {
@@ -2566,7 +1917,7 @@ onUnmounted(() => {
 }
 
 .model-faq-container .info-image.mobile-header {
-  height: 100px;
+  height: 120px;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -2612,13 +1963,13 @@ onUnmounted(() => {
 
 /* 常见问题列表项 */
 .faq-list li {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   box-sizing: border-box;
   width: 100%;
 }
 
 .model-faq-list li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   box-sizing: border-box;
   width: 100%;
 }
@@ -2636,9 +1987,9 @@ onUnmounted(() => {
   }
 
   .checklist-section {
-    gap: 25px;
-    margin: 25px 0;
-    padding: 0 15px;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 0 12px;
     width: 100%;
   }
 
@@ -2667,7 +2018,7 @@ onUnmounted(() => {
 
   .info-image {
     width: 100%;
-    height: 140px;
+    height: 150px;
   }
 
   .info-title {
@@ -2684,11 +2035,11 @@ onUnmounted(() => {
   }
 
   .info-list li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .checkbox-label {
-    gap: 8px;
+    gap: 6px;
   }
 
   .checkbox-label input[type="checkbox"] {
@@ -2698,8 +2049,8 @@ onUnmounted(() => {
   }
 
   .faq-list li {
-    padding: 8px;
-    margin-bottom: 8px;
+    padding: 6px;
+    margin-bottom: 6px;
   }
 
   .checklist-list,
@@ -2710,7 +2061,7 @@ onUnmounted(() => {
   .checklist-container .info-image,
   .model-faq-container .info-image.mobile-header {
     height: 25vh;
-    min-height: 130px;
+    min-height: 150px;
   }
 
   .checklist-container .info-image,
@@ -2719,8 +2070,8 @@ onUnmounted(() => {
   }
 
   .checklist-item {
-    padding: 8px 10px;
-    margin-bottom: 10px;
+    padding: 6px 8px;
+    margin-bottom: 8px;
   }
 
   .check-text {
@@ -2729,19 +2080,19 @@ onUnmounted(() => {
 
   .item-icon {
     width: 60%;
-    height: 60px;
+    height: 50px;
   }
 }
 
 @media (max-width: 480px) {
   .checklist-section {
-    gap: 20px;
-    margin: 20px 0;
-    padding: 0 10px; /* 小屏幕边距调整 */
+    gap: 12px;
+    margin: 12px 0;
+    padding: 0 8px; /* 小屏幕边距调整 */
   }
 
   .info-image {
-    height: 120px;
+    height: 130px;
   }
 
   .info-title {
@@ -2758,11 +2109,11 @@ onUnmounted(() => {
   }
 
   .info-list li {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
   .checkbox-label {
-    gap: 6px;
+    gap: 5px;
   }
 
   .checkbox-label input[type="checkbox"] {
@@ -2772,12 +2123,12 @@ onUnmounted(() => {
   }
 
   .faq-list li {
-    padding: 6px;
+    padding: 5px;
     font-size: 12px;
   }
 
   .model-faq-container .info-image.mobile-header {
-    height: 80px;
+    height: 100px;
   }
 
   .model-faq-container .info-title {
@@ -2800,12 +2151,12 @@ onUnmounted(() => {
   .checklist-container .info-image,
   .model-faq-container .info-image.mobile-header {
     height: 25vh;
-    min-height: 100px;
+    min-height: 120px;
   }
 
   .checklist-item {
-    padding: 6px 8px;
-    margin-bottom: 8px;
+    padding: 5px 6px;
+    margin-bottom: 6px;
   }
 
   .check-text {
@@ -2827,7 +2178,7 @@ onUnmounted(() => {
   .faq-container {
     display: flex;
     gap: 0;
-    min-height: 35vh;
+    min-height: 25vh;
   }
 
   .checklist-container .info-image-wrapper {
@@ -2844,27 +2195,30 @@ onUnmounted(() => {
 
   .checklist-container .info-content {
     width: 50%;
-    padding: 15px;
+    padding: 6px; /* 减小内边距 */
+  }
+
+  .faq-container .info-image-wrapper {
+    width: 50%;
   }
 
   .faq-container .info-image {
-    flex: 1;
-    width: 50%;
-    height: 35vh;
-    aspect-ratio: 1/1;
-    background-size: cover;
-    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .faq-container .info-content {
     flex: 1;
     width: 50%;
-    padding: 15px;
+    padding: 14px; /* 增加内边距 */
   }
 
   .info-title {
-    font-size: 28px;
-    padding: 15px;
+    font-size: 24px;
+    padding: 10px;
   }
 }
 
@@ -2877,7 +2231,7 @@ onUnmounted(() => {
   .checklist-container .info-image,
   .faq-container .info-image {
     width: 100%;
-    height: 140px;
+    height: 150px;
   }
 
   /* 移动端标题居中 */
@@ -2912,6 +2266,24 @@ onUnmounted(() => {
     text-align: center;
     width: 100%;
   }
+}
+
+/* 修改背景图自适应样式 */
+.checklist-container .info-image,
+.faq-container .info-image,
+.model-faq-container .info-image.mobile-header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* 修复常见问题背景图片自适应问题 */
+.faq-container .info-image,
+.model-faq-container .info-image.mobile-header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .more-section-container {
@@ -2964,13 +2336,13 @@ onUnmounted(() => {
   }
 
   .large-title {
-    font-size: clamp(20px, 3vw, 48px);
+    font-size: clamp(18px, 5vw, 24px);
     padding: 12px;
   }
 
   .large-text,
   .more-content {
-    font-size: 28px;
+    font-size: clamp(16px, 4vw, 20px);
     padding: 12px;
   }
 }
@@ -2990,25 +2362,25 @@ onUnmounted(() => {
   }
 
   .large-title {
-    font-size: clamp(16px, 2.5vw, 24px);
+    font-size: clamp(16px, 5vw, 20px);
     padding: 10px;
   }
 
   .large-text,
   .more-content {
-    font-size: 16px;
+    font-size: clamp(14px, 4vw, 18px);
     padding: 10px;
   }
-
 }
 
 .large-title {
-  font-size: clamp(24px, 2.6vw, 48px);
+  font-size: clamp(20px, 4vw, 28px);
   padding: 15px;
+  line-height: 1.3;
 }
 
 .large-text {
-  font-size: clamp(24px, 2.6vw, 48px);
+  font-size: clamp(20px, 4vw, 28px);
   line-height: 1.3;
   letter-spacing: 1px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -3270,15 +2642,6 @@ onUnmounted(() => {
     height: 250px;
   }
 
-  .key-scene {
-    width: 250px;
-    height: 250px;
-  }
-
-  .key-wrapper {
-    transform: scale(1);
-  }
-
   .features-section {
     padding: 40px 0 20px;
   }
@@ -3353,8 +2716,8 @@ onUnmounted(() => {
   }
 
   .checklist-section {
-    gap: 25px;
-    margin: 25px 0;
+    gap: 15px;
+    margin: 15px 0;
   }
 
   .info-card {
@@ -3369,7 +2732,7 @@ onUnmounted(() => {
   }
 
   .info-content {
-    padding: 12px;
+    padding: 10px;
   }
 
   .info-title {
@@ -3377,9 +2740,9 @@ onUnmounted(() => {
   }
 
   .checklist-item {
-    padding: 8px;
-    margin-bottom: 10px;
-    gap: 8px;
+    padding: 6px;
+    margin-bottom: 8px;
+    gap: 6px;
   }
 
   .check-text {
@@ -3388,17 +2751,17 @@ onUnmounted(() => {
 
   .item-icon {
     width: 60%;
-    height: 60px;
+    height: 50px;
   }
 
   .progress-summary {
-    margin-top: 12px;
-    padding-top: 12px;
+    margin-top: 10px;
+    padding-top: 10px;
   }
 
   .safety-tip {
     font-size: 11px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 
   .progress-text {
@@ -3406,8 +2769,8 @@ onUnmounted(() => {
   }
 
   .faq-list li {
-    padding: 8px;
-    margin-bottom: 8px;
+    padding: 6px;
+    margin-bottom: 6px;
     font-size: 13px;
   }
 
@@ -3432,7 +2795,7 @@ onUnmounted(() => {
   .contact-link {
     width: 100%;
     max-width: 300px;
-    padding: 8px 12px;
+    padding: 6px 10px;
     min-width: 220px;
     font-size: 13px;
   }
@@ -3461,12 +2824,6 @@ onUnmounted(() => {
     padding: 8px 16px;
     font-size: 13px;
     max-width: 220px;
-  }
-
-  .visual-container,
-  .key-scene {
-    width: 200px;
-    height: 200px;
   }
 
   .features-section {
@@ -3514,12 +2871,12 @@ onUnmounted(() => {
   }
 
   .checklist-section {
-    gap: 20px;
-    margin: 20px 0;
+    gap: 12px;
+    margin: 12px 0;
   }
 
   .info-content {
-    padding: 10px;
+    padding: 8px;
   }
 
   .info-title {
@@ -3527,9 +2884,9 @@ onUnmounted(() => {
   }
 
   .checklist-item {
-    padding: 6px;
-    margin-bottom: 8px;
-    gap: 6px;
+    padding: 5px;
+    margin-bottom: 6px;
+    gap: 5px;
   }
 
   .check-text {
@@ -3538,12 +2895,12 @@ onUnmounted(() => {
 
   .item-icon {
     width: 60%;
-    height: 30px;
+    height: 25px;
   }
 
   .faq-list li {
-    padding: 6px;
-    margin-bottom: 6px;
+    padding: 5px;
+    margin-bottom: 5px;
     font-size: 12px;
   }
 
@@ -3571,7 +2928,7 @@ onUnmounted(() => {
   }
 
   .contact-link {
-    padding: 6px 10px;
+    padding: 5px 8px;
     min-width: 200px;
     font-size: 12px;
   }
@@ -3579,7 +2936,7 @@ onUnmounted(() => {
   .icon-wrapper {
     width: 32px;
     height: 32px;
-    padding: 6px;
+    padding: 5px;
   }
 
   /* 移动端优化 */
@@ -3634,8 +2991,8 @@ onUnmounted(() => {
   }
 
   .checklist-item {
-    padding: 6px 8px;
-    margin-bottom: 8px;
+    padding: 5px 6px;
+    margin-bottom: 6px;
   }
 
   .check-text {
@@ -3644,7 +3001,7 @@ onUnmounted(() => {
 
   .item-icon {
     width: 50%;
-    height: 25px;
+    height: 20px;
   }
 
   .contact-title {
@@ -3653,7 +3010,7 @@ onUnmounted(() => {
   }
 
   .contact-link {
-    padding: 6px 10px;
+    padding: 5px 8px;
     font-size: 12px;
   }
 }
