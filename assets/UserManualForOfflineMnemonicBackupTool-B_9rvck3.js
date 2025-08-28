@@ -1,4 +1,4 @@
-const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/imKeyL1ProUse-DharRH78.png",s="/Web3Guide/assets/imKeyL1Pro-BReruCF_.png",l="/Web3Guide/assets/imKeyP1All-CgCc4lWB.png",r="/Web3Guide/assets/imKeyP1User1-B7AotFCi.png",t="/Web3Guide/assets/imKeyP1User2-BJa2A3YN.png",o="/Web3Guide/assets/imKeyP1User3-5UnW3sBv.png",a="/Web3Guide/assets/imKeyP1UserPW-6zbF4KwC.png",p="/Web3Guide/assets/imKeyP1UserSC-CSppPtYl.png",n="/Web3Guide/assets/imKeyS1All-DrE5h5eJ.png",m="/Web3Guide/assets/imKeyS1User-Dzb3V6wX.png",c="/Web3Guide/assets/imKeyS1User2-ebkxedfY.png",d="/Web3Guide/assets/img_1-CilqYHKH.png",y=[{id:"section1",title:"助记词离线备份工具使用手册",content:"",children:[{id:"file1_1",title:"什么是 imKey 冲压版 L1 Pro，如何使用？",content:`
+const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/imKeyL1ProUse-DharRH78.png",s="/Web3Guide/assets/imKeyL1Pro-BReruCF_.png",l="/Web3Guide/assets/imKeyP1All-CgCc4lWB.png",r="/Web3Guide/assets/imKeyP1User1-B7AotFCi.png",t="/Web3Guide/assets/imKeyP1User2-BJa2A3YN.png",a="/Web3Guide/assets/imKeyP1User3-5UnW3sBv.png",o="/Web3Guide/assets/imKeyP1UserPW-6zbF4KwC.png",p="/Web3Guide/assets/imKeyP1UserSC-CSppPtYl.png",n="/Web3Guide/assets/imKeyS1All-DrE5h5eJ.png",m="/Web3Guide/assets/imKeyS1User-Dzb3V6wX.png",c="/Web3Guide/assets/imKeyS1User2-ebkxedfY.png",d="/Web3Guide/assets/img_1-CilqYHKH.png",y=[{id:"section1",title:"助记词离线备份工具使用手册",content:"",children:[{id:"file1_1",title:"什么是 imKey 冲压版 L1 Pro，如何使用？",content:`
                 <p>【imKey 冲压板 L1 Pro 使用教程】 </p>
 <div class="video-container">
     <iframe 
@@ -110,14 +110,14 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 <p>贴上不可逆封条贴纸并存放在安全的地方，防止窥探。</p>
 <img src="${r}" alt="imKeyP1User1">
 <img src="${t}" alt="imKeyP1User2">
-<img src="${o}" alt="imKeyP1User3">
+<img src="${a}" alt="imKeyP1User3">
 </li>
 </ol>
 
 <h3>密码保管最佳实践</h3>
 <p>密盒 P1 盒体的 A/B 两面均可使用，能保管多达 128 个字符的密钥信息，可以保管 2 套助记词/私钥。</p>
 <p>密盒 P1 的字符块集包含字母块（大小写 A-Z）、数字块（0-9）和 ASCII 字符块，除了可用于保管助记词，还可用于保管 PIN 码、私钥、绑定码和其他密码等各类信息。</p>
-<img src="${a}" alt="imKeyP1UserPW">
+<img src="${o}" alt="imKeyP1UserPW">
 <span style="color: #999">注：地址可保存最后 8 位用于不同钱包的区分。</span>
 
 <h3>自定义加密</h3>
@@ -198,7 +198,7 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 <strong>我需要密盒 S1 吗？</strong>
 <p>
 根据行业知名安全公司慢雾的《
- <a href="https://web3caff.com/archives/98153"> 2024 Q2 MistTrack 被盗表单分析</a>报告总结，私钥泄露是 2024 年第二季度被盗事件的主要原因。导致私钥泄露的关键因素是用户未离线备份助记词或下载了假钱包。为此，我们强烈推荐密盒 S1。
+ <a href="https://web3caff.com/archives/98153" target="_blank"> 2024 Q2 MistTrack 被盗表单分析</a>报告总结，私钥泄露是 2024 年第二季度被盗事件的主要原因。导致私钥泄露的关键因素是用户未离线备份助记词或下载了假钱包。为此，我们强烈推荐密盒 S1。
 </p>
 <p>
 密盒 S1 通体由 304 不锈钢精密制造，相比纸张备份助记词，是更安全的离线保管助记词通用方案，不仅可以保护数字资产免受网络黑客的攻击，同时具有有效抵抗各种物理损坏的能力，包括火灾、浸水、腐蚀以及坠落冲击等。
@@ -213,10 +213,10 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 <img src="${c}" alt="imKeyS1User2">    
 <p>
 为了你的资产安全，我们推荐使用
- <a href="https://shop42404838.m.youzan.com/wscshop/showcase/feature?alias=2xL8D9kBdt&banner_id=f.77421469~image_ad.2~0~zSCTleYM&reft=1721718357142&spm=g.711638544_f.77421469"> 不锈钢密盒</a>进行离线备份助记词，其防水、防火、防腐蚀特性为助记词提供可靠保护。
+ <a href="https://shop42404838.m.youzan.com/wscshop/showcase/feature?alias=2xL8D9kBdt&banner_id=f.77421469~image_ad.2~0~zSCTleYM&reft=1721718357142&spm=g.711638544_f.77421469" target="_blank"> 不锈钢密盒</a>进行离线备份助记词，其防水、防火、防腐蚀特性为助记词提供可靠保护。
 </p>    
 <p>密盒 S1 购买链接：</p>
-<a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?scan=1&activity=none&from=kdt&qr=directgoods_711638544&shopAutoEnter=1">https://j.youzan.com/USDlfF</a>
+<a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?scan=1&activity=none&from=kdt&qr=directgoods_711638544&shopAutoEnter=1" target="_blank">https://j.youzan.com/USDlfF</a>
                 
                 
                 `}]}];export{y as default};
