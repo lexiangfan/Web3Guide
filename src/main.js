@@ -5,9 +5,8 @@ import 'element-plus/dist/index.css'
 import App from './App.vue'
 import router from './router/router.js'
 import lazyLoad from '@/directives/lazyLoad.js'
-import contentLoader from '@/services/contentLoader.js'
-import searchService from '@/services/searchService.js'
 
+const pages = import.meta.glob('@/views/*.vue')
 const app = createApp(App)
 
 // 移动端适配 - 处理地址栏影响
@@ -56,28 +55,7 @@ app.use(ElementPlus)
 app.use(router)
 app.directive('lazy', lazyLoad)
 
-// 修改初始化搜索的逻辑
-const initializeSearch = async () => {
-    try {
-        // 等待路由准备就绪
-        await router.isReady();
-        // 加载所有页面内容并初始化搜索索引
-        const allPageContents = await contentLoader.loadAllPageContents()
-        searchService.initializeAllContents(allPageContents)
-        console.log('搜索内容初始化完成，共加载', allPageContents.length, '条内容')
-    } catch (error) {
-        console.error('搜索内容初始化失败:', error)
-    }
-}
-
-// 在应用挂载后初始化搜索
-router.isReady().then(() => {
-    // 延迟一段时间确保所有内容加载完成
-    setTimeout(() => {
-        initializeSearch().catch(error => {
-            console.error('初始化搜索时发生未捕获错误:', error)
-        })
-    }, 1000)
-})
 
 app.mount('#app')
+
+export { pages }

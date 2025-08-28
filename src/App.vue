@@ -87,7 +87,9 @@ const initializeContent = async () => {
     searchService.resetIndex();
     // 加载所有页面内容并初始化搜索索引
     const allPageContents = await contentLoader.loadAllPageContents();
+    console.log('Loaded page contents:', allPageContents); // 调试信息
     searchService.initializeAllContents(allPageContents);
+    console.log('Search index content:', searchService.getContentIndex()); // 调试信息
     console.log('Successfully initialized all content for search');
   } catch (error) {
     console.error('Failed to initialize content:', error);

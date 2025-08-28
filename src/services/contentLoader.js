@@ -1,83 +1,45 @@
-// src/services/contentLoader.js
-import { pageRegistry } from '@/services/pageRegistry.js'
-
+// services/contentLoader.js
 class ContentLoader {
-    constructor() {
-        this.allContents = []
-    }
-
-    // 加载所有页面内容
     async loadAllPageContents() {
-        // 重置内容数组
-        this.allContents = []
+        const pageContents = {};
 
         try {
-            // 获取所有页面数据
-            const allPageData = await pageRegistry.getAllPageData()
+            // 使用动态导入确保在构建时正确处理路径
+            const modules = {
+                '/page1': () => import('../utils/page1.js'),
+                '/UserManualForOfflineMnemonicBackupTool': () => import('../utils/UserManualForOfflineMnemonicBackupTool.js'),
+            };
 
-            // 处理每个页面的内容
-            for (const [pageId, pageData] of Object.entries(allPageData)) {
-                this.processPageContent(pageId, pageData)
-            }
+            // 并行加载所有模块
+            const loadPromises = Object.entries(modules).map(async ([path, loader]) => {
+                try {
+                    const module = await loader();
+                    const content = module.default || module.pageContents || module.content;
 
-            return this.allContents
-        } catch (error) {
-            console.error('加载页面内容失败:', error)
-            return []
-        }
-    }
+                    if (content) {
+                        const titles = {
+                            '/': 'Web3 新手小白向导',
+                            '/page1': '基础知识',
+                            '/UserManualForOfflineMnemonicBackupTool': '助记词离线备份工具使用手册'
+                        };
 
-    // 处理单个页面内容
-    processPageContent(pageId, pageData) {
-        try {
-            // 处理页面的主标题和描述
-            this.allContents.push({
-                id: `${pageId}-main`,
-                title: pageData.title || pageRegistry.getPageTitle(pageId) || '无标题',
-                content: pageData.description || '',
-                path: pageRegistry.getPagePath(pageId),
-                type: 'page'
-            })
-
-            // 处理各个章节内容
-            if (pageData.sections && Array.isArray(pageData.sections)) {
-                pageData.sections.forEach((section, sectionIndex) => {
-                    // 处理章节标题
-                    this.allContents.push({
-                        id: `${pageId}-section-${sectionIndex}`,
-                        title: section.title || '无标题章节',
-                        content: section.content || '',
-                        path: pageRegistry.getPagePath(pageId),
-                        type: 'section'
-                    })
-
-                    // 处理章节中的子内容
-                    if (section.children && Array.isArray(section.children)) {
-                        section.children.forEach((child, childIndex) => {
-                            this.allContents.push({
-                                id: child.id || `${pageId}-section-${sectionIndex}-child-${childIndex}`,
-                                title: child.title || '无标题文件',
-                                content: this.stripHtmlTags(child.content || ''),
-                                path: `${pageRegistry.getPagePath(pageId)}#${child.id}`,
-                                type: 'file',
-                                lastUpdated: child.lastUpdated
-                            })
-                        })
+                        pageContents[path] = {
+                            content: content,
+                            title: titles[path] || '未知页面'
+                        };
                     }
-                })
-            }
-        } catch (error) {
-            console.error(`处理页面内容失败 ${pageId}:`, error)
-        }
-    }
+                } catch (error) {
+                    console.warn(`Failed to load content for ${path}:`, error);
+                }
+            });
 
-    // 移除HTML标签，只保留纯文本内容
-    stripHtmlTags(html) {
-        if (!html) return ''
-        const tmp = document.createElement('div')
-        tmp.innerHTML = html
-        return tmp.textContent || tmp.innerText || ''
+            await Promise.all(loadPromises);
+        } catch (error) {
+            console.warn('Failed to load page contents:', error);
+        }
+
+        return pageContents;
     }
 }
 
-export default new ContentLoader()
+export default new ContentLoader();
