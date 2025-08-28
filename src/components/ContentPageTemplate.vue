@@ -655,12 +655,16 @@ onMounted(() => {
     // 初始化进度计算
     calculateReadingProgress()
   }, 100)
+
+  // 监听搜索结果选择事件
+  window.addEventListener('search-result-selected', handleSearchResultSelected)
 })
 
 // 组件卸载前移除事件监听
 onBeforeUnmount(() => {
   window.removeEventListener('resize', handleResize)
   window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('search-result-selected', handleSearchResultSelected)
   if (scrollTimeout.value) {
     clearTimeout(scrollTimeout.value)
   }
@@ -679,11 +683,11 @@ watch(currentFile, (newFile, oldFile) => {
   if (newFile && newFile.id !== oldFile?.id) {
     // 在DOM更新后执行滚动操作
     nextTick(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-      readingProgress.value = 0
+      window.scrollTo({ top: 0, behavior: 'smooth' },
+      readingProgress.value = 0,
 
       // 更新TOC激活项
-      detectCurrentSection()
+      detectCurrentSection())
     })
   }
 })
@@ -712,6 +716,22 @@ onBeforeUnmount(() => {
 const goToFirstPage = () => {
   if (pageRoutes.value.length > 0) {
     router.push(pageRoutes.value[0].path)
+  }
+}
+
+// 处理搜索结果选择事件
+const handleSearchResultSelected = (event) => {
+  const { fileId } = event.detail
+  if (fileId) {
+    // 查找对应的文件
+    const file = allFiles.value.find(f => f.id === fileId)
+    if (file) {
+      currentFile.value = file
+      // 滚动到顶部
+      nextTick(() => {
+        window.scrollTo({ top: 0 })
+      })
+    }
   }
 }
 </script>

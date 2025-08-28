@@ -196,61 +196,19 @@ export default {
         // 获取目标路径
         let targetPath = result.pagePath || '/';
 
-        // 检查是否需要路由跳转
-        const isSameRoute = router.currentRoute.value.path === targetPath;
-
-        // 跳转到元素的函数
-        const scrollToElement = () => {
-          // 确保DOM已更新
+        // 直接跳转到目标页面，不进行页面内滚动
+        router.push(targetPath).then(() => {
+          // 在页面跳转后，设置当前文件为搜索结果对应的文件
+          // 通过事件总线或全局状态管理来实现
           setTimeout(() => {
-            if (result.id) {
-              const targetElement = document.getElementById(result.id);
-              if (targetElement) {
-                // 直接跳转到目标元素位置
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-                // 添加高亮效果
-                targetElement.classList.add('search-highlight');
-                setTimeout(() => {
-                  targetElement.classList.remove('search-highlight');
-                }, 2000);
-              } else {
-                // 如果找不到元素，尝试在所有内容中查找
-                const allContent = document.querySelector('.content-body');
-                if (allContent) {
-                  // 在内容中查找包含搜索词的元素
-                  const elements = allContent.querySelectorAll('*');
-                  for (let el of elements) {
-                    if (el.textContent && el.textContent.includes(searchText.value)) {
-                      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                      el.classList.add('search-highlight');
-                      setTimeout(() => {
-                        el.classList.remove('search-highlight');
-                      }, 2000);
-                      break;
-                    }
-                  }
-                }
-              }
-            }
+            // 发送自定义事件，通知 ContentPageTemplate 组件设置当前文件
+            window.dispatchEvent(new CustomEvent('search-result-selected', {
+              detail: { fileId: result.id }
+            }));
           }, 100);
-        };
-
-        if (isSameRoute) {
-          // 同一路由下直接跳转到元素
-          scrollToElement();
-        } else {
-          // 不同路由先跳转路由
-          router.push(targetPath).then(() => {
-            // 等待页面完全加载后再滚动
-            setTimeout(() => {
-              scrollToElement();
-            }, 300);
-          }).catch(err => {
-            console.error('路由跳转失败:', err);
-            scrollToElement();
-          });
-        }
+        }).catch(err => {
+          console.error('路由跳转失败:', err);
+        });
       } catch (error) {
         console.error('跳转过程中发生错误:', error);
       }

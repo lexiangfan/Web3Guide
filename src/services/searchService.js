@@ -27,7 +27,6 @@ class SearchService {
     }
 
     // 添加页面内容到索引
-    // 替换整个 addContents 方法（从第26行开始）
     addContents(contents, pagePath, pageTitle = '') {
         // 检查是否已经索引过该路径的内容
         if (this.indexedPaths.has(pagePath)) {
