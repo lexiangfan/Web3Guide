@@ -7,6 +7,7 @@ import searchService from "@/services/searchService.js"
 import contentLoader from "@/services/contentLoader.js"
 import '@/assets/global.css'
 import imKey from "@/public/images/imKey.svg"
+import {Key} from "@element-plus/icons-vue";
 
 const activeIndex = ref('1')
 const isMobileMenuCollapsed = ref(true)

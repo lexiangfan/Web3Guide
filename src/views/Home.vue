@@ -30,7 +30,7 @@
               class="secondary-button"
               @click="goToImKey"
           >
-            访问 imKey 官网
+            访问 imKey 官网<el-icon><TopRight /></el-icon>
           </el-button>
         </div>
       </div>
@@ -159,14 +159,19 @@
       <div class="info-card faq-container no-padding">
         <!-- 左侧内容 -->
         <div class="info-content">
-          <ul class="info-list faq-list">
-            <li>Q1: 什么是数字钱包？它真的像银行账户一样吗？</li>
-            <li>Q2: 什么是助记词？为什么要妥善保存？</li>
-            <li>Q3: 热钱包和冷钱包有什么区别？</li>
-            <li>Q4: 我为什么需要硬件钱包？</li>
-            <li>Q5: 如果我丢失了硬件钱包，资产会不会没了？</li>
-            <li>Q6: 蓝牙/USB 连接会不会泄露私钥？</li>
-          </ul>
+          <div class="faq-list">
+            <div v-for="(faq, index) in faqs" :key="index" class="faq-item">
+              <div class="faq-question" @click="toggleFaq(index)">
+                <span class="faq-text">{{ faq.question }}</span>
+                <el-icon class="faq-icon" :class="{ 'rotated': faq.expanded }">
+                  <ArrowDownBold />
+                </el-icon>
+              </div>
+              <transition name="slide-fade">
+                <div v-show="faq.expanded" class="faq-answer" v-html="faq.answer"></div>
+              </transition>
+            </div>
+          </div>
         </div>
 
         <!-- 右侧图像区域 -->
@@ -188,14 +193,19 @@
 
         <!-- 下方内容区域 -->
         <div class="info-content">
-          <ul class="info-list faq-list">
-            <li>Q1: 什么是数字钱包？它真的像银行账户一样吗？</li>
-            <li>Q2: 什么是助记词？为什么要妥善保存？</li>
-            <li>Q3: 热钱包和冷钱包有什么区别？</li>
-            <li>Q4: 我为什么需要硬件钱包？</li>
-            <li>Q5: 如果我丢失了硬件钱包，资产会不会没了？</li>
-            <li>Q6: 蓝牙/USB 连接会不会泄露私钥？</li>
-          </ul>
+          <div class="faq-list">
+            <div v-for="(faq, index) in faqs" :key="index" class="faq-item">
+              <div class="faq-question" @click="toggleFaq(index)">
+                <span class="faq-text">{{ faq.question }}</span>
+                <el-icon class="faq-icon" :class="{ 'rotated': faq.expanded }">
+                  <ArrowDownBold />
+                </el-icon>
+              </div>
+              <transition name="slide-fade">
+                <div v-show="faq.expanded" class="faq-answer" v-html="faq.answer"></div>
+              </transition>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -256,7 +266,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import router from "@/router/router.js"
-import { ArrowRight } from '@element-plus/icons-vue'
+import {ArrowDownBold, ArrowRight, TopRight} from '@element-plus/icons-vue'
 import step1 from'@/public/images/step1.svg'
 import step2 from'@/public/images/step2.svg'
 import step3 from'@/public/images/step3.svg'
@@ -616,6 +626,54 @@ const loadSessionState = () => {
       console.warn('Failed to load progress steps state:', e);
     }
   }
+}
+
+// 常见问题数据
+const faqs = ref([
+  {
+    question: "Q1: 什么是数字钱包？它真的像银行账户一样吗？",
+    answer: "A：数字钱包更像一个钥匙串或身份凭证管理器，而不是传统意义上银行账户。它本身不直接存放你的加密货币，而是存储一组用于访问和管理你在区块链上资产的钥匙（专业术语叫私钥）。你的币始终存在于区块链上，钱包只是提供一个让你能够访问和控制代币的操作接口。",
+    expanded: false
+  },
+  {
+    question: "Q2: 什么是助记词？为什么要妥善保存？",
+    answer: `
+<p>A: 助记词是一组由 <strong> 12、18 或 24 个英文单词 </strong>组成的随机词组，是你钱包的主钥匙，等同于资产的所有权。手机丢失或 App 删除时，只要有助记词，就能恢复钱包。但助记词也是最敏感的信息——一旦泄露，就可能导致资产瞬间被盗，且无法追回。</p>
+<p>因此，妥善保存助记词是保护资产安全的第一道也是最后一道防线。切记 <strong> 不要拍照、不要上传云端、不要交给任何第三方</strong>。最安全的方式是离线保存，例如使用 <strong> 助记词密盒 </strong>或其他物理方式进行长期备份。 <strong>，是私钥的一种人类可读的备份形式。</strong> </p>
+`,
+    expanded: false
+  },
+  {
+    question: "Q3: 热钱包和冷钱包有什么区别？",
+    answer: `
+<p>A: </p>
+<ul>
+<li>热钱包： 指私钥联网的钱包（如手机软件钱包、浏览器插件钱包、中心化交易所钱包）。使用方便，适合小额、高频交易或与 DApp 交互。</li>
+<li>冷钱包： 指私钥完全离线、不联网的钱包（如硬件钱包）。安全性最高，适合存储大额或长期不动的资产。</li>
+</ul>
+`,
+    expanded: false
+  },
+  {
+    question: "Q4: 我为什么需要硬件钱包？",
+    answer: "A: 硬件钱包能让私钥始终离线保存，避免病毒和远程攻击。它就像「保险箱」，是保护核心资产最安全的方式。",
+    expanded: false
+  },
+  {
+    question: "Q5: 如果我丢失了硬件钱包，资产会不会没了？",
+    answer: "A: 不会。只要助记词安全保存，你可以在新的设备里恢复钱包。真正的风险是助记词泄露，而不是设备丢失。",
+    expanded: false
+  },
+  {
+    question: "Q6: 蓝牙/USB 连接会不会泄露私钥？",
+    answer: "A:不会。硬件钱包只签名交易，私钥始终存储在安全芯片里，不会通过蓝牙/USB 传输。",
+    expanded: false
+  }
+])
+
+// 切换FAQ展开状态
+const toggleFaq = (index) => {
+  faqs.value[index].expanded = !faqs.value[index].expanded
 }
 
 onMounted(() => {
@@ -1893,21 +1951,79 @@ onUnmounted(() => {
 }
 
 /* 常见问题列表项 */
-.faq-list li {
-  padding: 10px 12px; /* 增加内边距 */
-  background: white;
+.faq-item {
+  margin-bottom: 10px;
+  border: 1px solid #eaeaea;
   border-radius: 6px;
+  background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease;
-  cursor: pointer;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 10px; /* 增加间距 */
+  overflow: hidden;
 }
 
-.faq-list li:hover {
+.faq-item:hover {
   background: #fff9f0;
-  transform: translateX(5px);
+  border-color: #BA955C;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #2A3535;
+  transition: background-color 0.2s;
+}
+
+.faq-question:hover {
+  background-color: #fafafa;
+}
+
+.faq-text {
+  flex: 1;
+  text-align: left;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.faq-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 15px 15px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: left;
+  border-top: 1px solid #eee;
+  background-color: #fafafa;
+}
+
+/* 优化FAQ展开动画 */
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
 }
 
 .model-faq-container .info-image-wrapper {
