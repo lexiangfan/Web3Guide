@@ -1,5 +1,4 @@
-import{C as i}from"./ContentPageTemplate-WYlBf_hr.js";import{_ as n,c as l,d as a,r as o,o as s}from"./index-YvfE9WIS.js";const r="/Web3Guide/assets/imKeyPadding-C7jU6FqV.png",g="/Web3Guide/assets/imKeyPadding2-TsHydHLX.png",p="/Web3Guide/assets/imKeyPadding3-OLodW0aR.png",d=[{id:"section1",title:"imKey Pro 开箱与设备检查教程",content:"",children:[{id:"file1_1",title:"imKey Pro 开箱与设备检查教程",content:`
-          <h2>什么是硬件钱包？</h2>
+const t="/Web3Guide/assets/imKeyPadding-C7jU6FqV.png",i="/Web3Guide/assets/imKeyPadding2-TsHydHLX.png",l="/Web3Guide/assets/imKeyPadding3-OLodW0aR.png",s=[{id:"section1",title:"imKey Pro 开箱与设备检查教程",content:"",children:[{id:"file1_1",title:"imKey Pro 开箱与设备检查教程",content:`
           <p>
 imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>，安全等级达到 <strong> 军工级 CC EAL 6+ 标准</strong>，是业内公认的高安全级别硬件钱包。
 </p>
@@ -35,17 +34,17 @@ imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>�
 <li>检查快递外箱
 <ul> <li>  是否为 imKey 定制包装盒，印有 logo。</li>
 <li>  包装完整，无拆封痕迹。</li></ul>
-<img src="${r}" alt="imKeyPadding">
+<img src="${t}" alt="imKeyPadding">
 </li>
 <li>检查产品包装
 <ul> <li>  外层塑封完好。</li>
 <li>  两侧 <strong> 不可逆封条 </strong>完整，若撕开会显示字母。</li></ul>
-<img src="${g}" alt="imKeyPadding2">
+<img src="${i}" alt="imKeyPadding2">
 </li>
 <li>检查开机界面
 <ul> <li> <p>初次启动应依次显示：</p> <p><strong>选择语言 → 显示蓝牙名称。</strong></p></li>
 <li>  如果直接进入其他界面，可能说明设备已被激活或篡改。</li></ul>
-<img src="${p}" alt="imKeyPadding3">
+<img src="${l}" alt="imKeyPadding3">
 </li>
 <li>验证激活流程
 <ul> <li>  将设备连接至 <strong> imToken App</strong>。</li>
@@ -122,4 +121,4 @@ imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>�
 <li>自己创助记词</li>
 </ol>
 <p>做到这三点，你就能大幅降低供应链风险，确保使用到的 imKey Pro 是一台真正安全的硬件钱包。</p>
-        `}]}],m={name:"open",components:{ContentPageTemplate:i},computed:{formattedContentData(){return{sections:d}}}},c={class:"page-container"};function h(_,u,f,y,b,t){const e=o("ContentPageTemplate");return s(),l("div",c,[a(e,{"content-data":t.formattedContentData},null,8,["content-data"])])}const k=n(m,[["render",h],["__scopeId","data-v-e4cfb5ec"]]);export{k as default};
+        `}]}];export{s as default};
