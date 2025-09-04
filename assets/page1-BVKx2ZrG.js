@@ -1,4 +1,4 @@
-const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
+const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",e="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",t="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",o="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",n=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
           <h2>什么是硬件钱包？</h2>
           <p>
           硬件钱包是一种专门用于生成和存储私钥的电子设备，其核心是使用安全芯片来保护私钥的安全。在加密数字资产领域，私钥是资产所有权的唯一凭证，因此保护私钥的安全至关重要。硬件钱包通过将私钥完全隔离在离线环境中，避免了私钥暴露在网络中的风险，从而显著降低了被盗的可能性。
@@ -406,4 +406,24 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i=[{id:"section1",title:"基础知�
                 <p>EVM 兼容链提供了一个类似 EVM 的代码执行环境，便于以太坊开发者将智能合约迁移至兼容链，而不必为其再从头开始编写智能合约的代码。</p>
                 <p>当前主流的 EVM 兼容链有 BSC（Binance Smart Chain），Polygon(Matic)，OKX Chain 等。</p>
                 
-                `}]}];export{i as default};
+                `}]},{id:"section2",title:"imKey 钱包管理",content:"",children:[{id:"file2_1",title:"如何添加账户？",content:`
+                <ol>
+                <li>
+                <p>点击「我」-「钱包管理」，选择已经配对的 imKey 硬件钱包点「添加账户」按钮进行添加。</p>
+                <img src="${i}" alt="page2_1_1">
+</li>
+                <li>
+                <p>硬件钱包 imKey 默认支持 Ethereum（ETH）和 Bitcoin（BTC），如需添加其他网络，请先确保手机蓝牙已成功与 imKey 硬件钱包连接，接着在 imKey 管理界面上找到 「应用管理」，安装需添加的网络
+                <span style="color: #999">（这里以添加 TRX 公链为列）</span>。</p>
+                <img src="${e}" alt="page2_1_2">
+</li>
+                <li>
+                <p>安装好所需公链后返回「imKey 管理」，点击「添加账户」进行账户添加。完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的所有账户。</p>
+                <img src="${t}" alt="page2_1_3">
+</li>
+</ol>
+
+<h2>如何切换账户</h2>
+<p>在钱包资产首页，点击左上角的账户名称即可查看所有已添加的账户。如需切换账户，在「选择账户」页中点击对应账户即可。</p>
+<img src="${o}" alt="page2_1_4">
+                `}]}];export{n as default};
