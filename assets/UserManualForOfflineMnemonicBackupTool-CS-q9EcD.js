@@ -1,4 +1,46 @@
-const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/imKeyL1ProUse-DharRH78.png",s="/Web3Guide/assets/imKeyL1Pro-BReruCF_.png",l="/Web3Guide/assets/imKeyP1All-CgCc4lWB.png",r="/Web3Guide/assets/imKeyP1User1-B7AotFCi.png",t="/Web3Guide/assets/imKeyP1User2-BJa2A3YN.png",a="/Web3Guide/assets/imKeyP1User3-5UnW3sBv.png",o="/Web3Guide/assets/imKeyP1UserPW-6zbF4KwC.png",p="/Web3Guide/assets/imKeyP1UserSC-CSppPtYl.png",n="/Web3Guide/assets/imKeyS1All-DrE5h5eJ.png",m="/Web3Guide/assets/imKeyS1User-Dzb3V6wX.png",c="/Web3Guide/assets/imKeyS1User2-ebkxedfY.png",d="/Web3Guide/assets/img_1-CilqYHKH.png",y=[{id:"section1",title:"助记词离线备份工具使用手册",content:"",children:[{id:"file1_1",title:"什么是 imKey 冲压版 L1 Pro，如何使用？",content:`
+const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/imKeyL1ProUse-DharRH78.png",l="/Web3Guide/assets/imKeyL1Pro-BReruCF_.png",s="/Web3Guide/assets/imKeyP1All-CgCc4lWB.png",r="/Web3Guide/assets/imKeyP1User1-B7AotFCi.png",t="/Web3Guide/assets/imKeyP1User2-BJa2A3YN.png",o="/Web3Guide/assets/imKeyP1User3-5UnW3sBv.png",a="/Web3Guide/assets/imKeyP1UserPW-6zbF4KwC.png",p="/Web3Guide/assets/imKeyP1UserSC-CSppPtYl.png",n="/Web3Guide/assets/imKeyS1All-DrE5h5eJ.png",m="/Web3Guide/assets/imKeyS1User-Dzb3V6wX.png",c="/Web3Guide/assets/imKeyS1User2-ebkxedfY.png",d="/Web3Guide/assets/img_1-CilqYHKH.png",g=[{id:"section1",title:"助记词离线备份工具使用手册",content:"",children:[{id:"file1_1",title:"如何正确备份助记词？",content:`
+                <p>助记词是你钱包的唯一钥匙，一旦泄露或丢失，资产将无法找回。</p>
+                <p>以下是最安全、可靠的备份方式👇</p>
+                
+                <h2>❌ 错误的备份方式</h2>
+                <ul>
+                <li><strong>手机相册 / 截图</strong>
+                <ul><li>  容易被上传到云端，被黑客窃取。</li></ul>
+                </li>
+                <li><strong>电脑 / 网盘 / 邮件存储</strong>
+                <ul><li>  网络环境下均存在被攻击风险。</li></ul>
+                </li>
+                <li><strong>纸张保存</strong>
+                <ul><li>  易被他人翻拍或损坏（火灾、受潮、遗失）。</li></ul>
+                </li>
+</ul>
+
+                <h2>✅ 正确的备份方式</h2>
+                <h3>1. 使用助记词密盒</h3>
+                <ul>
+                <li>将助记词刻录在不锈钢密盒中，完全离线存储。</li>
+                <li>防火、防水、防腐蚀，长期保存不易损坏。</li>
+                <li>物理加固，不会因意外或老化而失效。</li>
+                </ul>
+                <h3>2. 分散存放</h3>
+                <ul>
+                <li>如果有条件，可将密盒或备份拆分存放在不同安全地点（例如家中保险柜、银行保险箱）。</li>
+                <li>避免单点失效或被一次性盗取。</li>
+                </ul>
+                <h3>3. 确保完全离线</h3>
+                <ul>
+                <li> <strong> 永远不要</strong>在任何联网设备上再次输入助记词，包括网站、第三方软件、聊天工具，甚至是热钱包恢复。</li>
+</ul>
+
+                <h2>🔐 小贴士</h2>
+                <ul>
+                <li>初次写下助记词后，请仔细核对，确保拼写无误。</li>
+                <li>定期检查你的备份是否完好（密盒是否完整、存放位置是否安全）。</li>
+                <li>切勿告诉任何人你的助记词，即使对方自称官方客服。</li>
+</ul>
+                <p>👉 <strong> 正确的备份方式 = 永久离线存储 + 物理防护 + 安全分散</strong></p>
+                <p>立即使用 <strong> 助记词密盒</strong>，让你的钱包多一层坚不可摧的防火墙。</p>
+                `},{id:"file1_2",title:"什么是 imKey 冲压版 L1 Pro，如何使用？",content:`
                 <p>【imKey 冲压板 L1 Pro 使用教程】 </p>
 <div class="video-container">
     <iframe 
@@ -46,7 +88,7 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 </li>
 <li>
 冲压完成后，将冲压板存放在安全的地方，防止窥探、丟失。
-<img src="${s}" alt="imKeyL1Pro">
+<img src="${l}" alt="imKeyL1Pro">
 <p>温馨提示： <span style="color: darkred"> 如果你对助记词备份进行了二次加密，请务必记录好你自定义的加密规则，并将其与钱包分别存放于不同的地方进行保管。</span></p>
 </li>
 </ol>
@@ -60,7 +102,7 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 <h3>总结</h3>
 <p>imKey 助记词冲压板 L1 Pro 是一款安全可靠的助记词保管工具，采用 304 不锈钢制造，具备防水、防火和耐腐蚀特性，完全离线使用，有效保护你的数字资产安全。使用简便，适合于各类加密货币钱包的助记词备份和管理。</p>
 <a href="https://www.imtoken.org/" target="_blank">密盒 L1 Pro购买链接</a>
-        `},{id:"file1_2",title:"什么是密盒 P1，如何使用？",content:`
+        `},{id:"file1_3",title:"什么是密盒 P1，如何使用？",content:`
                 <ol><li> <a href="https://shop42404838.m.youzan.com/wscgoods/detail/36bm6keap5t1a33?dc_ps=3340498535169757189.200001" target="_blank"> 密盒 P1 </a>是一款袖珍型密钥保管工具，内含一套不锈钢钢板和一套字符块，能保管多达 128 个字符的密钥信息。可用于组装和存储助记词、私钥和绑定码等密钥信息，支持备份 1Password、Google 密码管理器等生成的密码</li></ol>
                 
                 <h3>密盒 P1 使用视频教程</h3>
@@ -77,7 +119,7 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 </div>
 
 <h3>基本信息</h3>
-<img src="${l}" alt="imKeyP1All">
+<img src="${s}" alt="imKeyP1All">
 <ul>
 <li>密盒尺寸: 86mm x 86mm x 6mm</li>
 <li>密盒重量: 260g</li>
@@ -110,14 +152,14 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 <p>贴上不可逆封条贴纸并存放在安全的地方，防止窥探。</p>
 <img src="${r}" alt="imKeyP1User1">
 <img src="${t}" alt="imKeyP1User2">
-<img src="${a}" alt="imKeyP1User3">
+<img src="${o}" alt="imKeyP1User3">
 </li>
 </ol>
 
 <h3>密码保管最佳实践</h3>
 <p>密盒 P1 盒体的 A/B 两面均可使用，能保管多达 128 个字符的密钥信息，可以保管 2 套助记词/私钥。</p>
 <p>密盒 P1 的字符块集包含字母块（大小写 A-Z）、数字块（0-9）和 ASCII 字符块，除了可用于保管助记词，还可用于保管 PIN 码、私钥、绑定码和其他密码等各类信息。</p>
-<img src="${o}" alt="imKeyP1UserPW">
+<img src="${a}" alt="imKeyP1UserPW">
 <span style="color: #999">注：地址可保存最后 8 位用于不同钱包的区分。</span>
 
 <h3>自定义加密</h3>
@@ -141,7 +183,7 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 <a href="https://shop42404838.m.youzan.com/wscgoods/detail/36bm6keap5t1a33?scan=1&activity=none&from=kdt&qr=directgoods_1615698499&shopAutoEnter=1" target="_blank">https://j.youzan.com/IXAUfF</a>
                 
                 
-                `},{id:"file1_3",title:"什么是密盒 S1，如何使用？",content:`
+                `},{id:"file1_4",title:"什么是密盒 S1，如何使用？",content:`
                 <p>
                 <a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?banner_id=f.88725471~goods.10~1~RIqvipvp&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.0.0_c5f020898ee34f1a88f0de441934a379&slg=0&components_style_layout=2&reft=1696753167981_1696753175605&spm=f.77421469_f.88725471" target="_blank">密盒 S1 </a>
                 是一款高性价比的助记词保管工具，通体由 304 级不锈钢打造，AB 两面可以存放 2 套 12 位的助记词。与传统的纸质抄写相比，密盒 S1 具有防水、防火、防腐蚀的特性。
@@ -219,4 +261,4 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 <a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?scan=1&activity=none&from=kdt&qr=directgoods_711638544&shopAutoEnter=1" target="_blank">https://j.youzan.com/USDlfF</a>
                 
                 
-                `}]}];export{y as default};
+                `}]}];export{g as default};

@@ -1,4 +1,4 @@
-const t="/Web3Guide/assets/imKeyPadding-C7jU6FqV.png",i="/Web3Guide/assets/imKeyPadding2-TsHydHLX.png",l="/Web3Guide/assets/imKeyPadding3-OLodW0aR.png",s=[{id:"section1",title:"imKey Pro 开箱与设备检查教程",content:"",children:[{id:"file1_1",title:"imKey Pro 开箱与设备检查教程",content:`
+const t="/Web3Guide/assets/imKeyPadding-C7jU6FqV.png",i="/Web3Guide/assets/imKeyPadding2-TsHydHLX.png",l="/Web3Guide/assets/imKeyPadding3-OLodW0aR.png",d=[{id:"section1",title:"imKey Pro 开箱与设备检查教程",content:"",children:[{id:"file1_1",title:"imKey Pro 开箱与设备检查教程",content:`
           <p>
 imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>，安全等级达到 <strong> 军工级 CC EAL 6+ 标准</strong>，是业内公认的高安全级别硬件钱包。
 </p>
@@ -66,26 +66,26 @@ imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>�
 </li>
 <li>
 <p>输入 SN 码并查看结果：</p>
-<table>
+<table style="border-collapse: collapse; width: 100%;">
 <tr>
-<th>验证结果</th>
-<th>正常情况</th>
-<th>异常风险</th>
+<th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">验证结果</th>
+<th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">正常情况</th>
+<th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">异常风险</th>
 </tr>
 <tr>
-<td>✅ 验证通过，未激活</td>
-<td>官方正品，全新状态</td>
-<td>无异常，可放心使用</td>
+<td style="border: 1px solid #ddd; padding: 8px;">✅ 验证通过，未激活</td>
+<td style="border: 1px solid #ddd; padding: 8px;">官方正品，全新状态</td>
+<td style="border: 1px solid #ddd; padding: 8px;">无异常，可放心使用</td>
 </tr>
 <tr>
-<td>⚠️ 已激活</td>
-<td>显示已激活</td>
-<td>若激活时间与订单时间不符，请立即停用</td>
+<td style="border: 1px solid #ddd; padding: 8px;">⚠️ 已激活</td>
+<td style="border: 1px solid #ddd; padding: 8px;">显示已激活</td>
+<td style="border: 1px solid #ddd; padding: 8px;">若激活时间与订单时间不符，请立即停用</td>
 </tr>
 <tr>
-<td>❌ 验证失败</td>
-<td>不应出现</td>
-<td>设备可能异常，请立即停用并联系官方</td>
+<td style="border: 1px solid #ddd; padding: 8px;">❌ 验证失败</td>
+<td style="border: 1px solid #ddd; padding: 8px;">不应出现</td>
+<td style="border: 1px solid #ddd; padding: 8px;">设备可能异常，请立即停用并联系官方</td>
 </tr>
 </table>
 </li>
@@ -121,4 +121,4 @@ imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>�
 <li>自己创助记词</li>
 </ol>
 <p>做到这三点，你就能大幅降低供应链风险，确保使用到的 imKey Pro 是一台真正安全的硬件钱包。</p>
-        `}]}];export{s as default};
+        `}]}];export{d as default};

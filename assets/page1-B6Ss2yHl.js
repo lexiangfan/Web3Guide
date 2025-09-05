@@ -1,4 +1,4 @@
-const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",e="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",t="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",o="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",n=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
+const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",e="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",t="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",p="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",o="/Web3Guide/assets/page2_2_1-CzEi4zS6.png",n="/Web3Guide/assets/page2_2_2-G2U36qAM.png",u="/Web3Guide/assets/page2_2_3-C8jMHvqv.png",s="/Web3Guide/assets/page2_2_4-CJNBFie-.png",g="/Web3Guide/assets/page2_2_5-BCOMN-Kx.png",r=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
           <h2>什么是硬件钱包？</h2>
           <p>
           硬件钱包是一种专门用于生成和存储私钥的电子设备，其核心是使用安全芯片来保护私钥的安全。在加密数字资产领域，私钥是资产所有权的唯一凭证，因此保护私钥的安全至关重要。硬件钱包通过将私钥完全隔离在离线环境中，避免了私钥暴露在网络中的风险，从而显著降低了被盗的可能性。
@@ -425,5 +425,39 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i="/Web3Guide/assets/page2_1_1-DhV1
 
 <h2>如何切换账户</h2>
 <p>在钱包资产首页，点击左上角的账户名称即可查看所有已添加的账户。如需切换账户，在「选择账户」页中点击对应账户即可。</p>
-<img src="${o}" alt="page2_1_4">
-                `}]}];export{n as default};
+<img src="${p}" alt="page2_1_4">
+                `},{id:"file2_2",title:"如何添加派生地址教程",content:`
+                <p>imToken 2.15.0 版本支持派生地址功能，imKey 也同步支持这一功能。如果你想使用多个地址来增强安全性和提高隐私性时，推荐使用派生地址功能。</p>
+                
+                <h2>imKey 如何添加派生地址</h2>
+                <p>为了在 imKey 硬件钱包中通过地址派生添加账户，你有两个选项：采用默认设置或进行自定义配置。在开始此过程前，<strong>请确保你的手机蓝牙已经成功连接到 imKey 硬件钱包</strong>，以保证操作顺畅进行。</p>
+                
+                <h3>默认添加方式：</h3>
+                <ol>
+                <li>
+                <p>点「我」-「钱包管理」-选择配对的 imKey，点击「添加账户」</p>
+                <img src="${o}" alt="page2_2_1">
+</li>
+                <li>
+                <p>选择需要添加的账户点「+」-「确认」，完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的账户。<span>（这里以添加 ETH 地址为例）</span></p>
+                <img src="${n}" alt="page2_2_2">
+</li>
+</ol>
+
+<h3>自定义添加方式：</h3>
+<ol>
+<li>
+<p>点「我」-「钱包管理」-选择配对的 imKey「添加账户」</p>
+<img src="${u}" alt="page2_2_3">
+</li>
+<li>
+<p>选择需要添加的账户点击右上角的三个点，选择「高级模式」-「自定义」-「BIP44」</p>
+<img src="${s}" alt="page2_2_4">
+</li>
+<li>
+<p>选择 BIP44 后你可以输入派生路径最后的三个参数生成自定义路径的账户，点击「确认」，完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的账户。<span>（这里以添加 ETH 地址为例）</span></p>
+<img src="${g}" alt="page2_2_5">
+</li>
+</ol>
+<p>请注意，选择自定义的模式时，请务必妥善备份自定义的账户派生路径。若之后删除钱包进行再次恢复时，需输入派生路径才能正常恢复。因为 imToken 不会记录用户自定义路径的任何信息，一旦丢失无法找回。</p>
+                `}]}];export{r as default};
