@@ -1,4 +1,4 @@
-const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",e="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",t="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",p="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",o="/Web3Guide/assets/page2_2_1-CzEi4zS6.png",n="/Web3Guide/assets/page2_2_2-G2U36qAM.png",u="/Web3Guide/assets/page2_2_3-C8jMHvqv.png",s="/Web3Guide/assets/page2_2_4-CJNBFie-.png",g="/Web3Guide/assets/page2_2_5-BCOMN-Kx.png",r=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
+const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",e="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",p="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",t="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",o="/Web3Guide/assets/page2_2_1-CzEi4zS6.png",s="/Web3Guide/assets/page2_2_2-G2U36qAM.png",n="/Web3Guide/assets/page2_2_3-C8jMHvqv.png",r="/Web3Guide/assets/page2_2_4-CJNBFie-.png",a="/Web3Guide/assets/page2_2_5-BCOMN-Kx.png",g="/Web3Guide/assets/page2_3_1-a-KGxGsw.png",u="/Web3Guide/assets/page2_3_2-CaRLRIzZ.png",_="/Web3Guide/assets/page2_3_3-B4xurFWd.png",m="/Web3Guide/assets/page2_3_4-DXKgQZUz.png",c="/Web3Guide/assets/page2_3_5-DoAtP86P.png",h="/Web3Guide/assets/page2_3_6-DzIIt4XB.png",y="/Web3Guide/assets/page2_3_7-BrmxkScW.png",N="/Web3Guide/assets/page2_4_1-BVrdQYTm.png",d="/Web3Guide/assets/page2_4_2-CfkKz9rn.png",K="/Web3Guide/assets/page2_4_3-D22KeLA0.png",P="/Web3Guide/assets/page2_4_4-BYC3YZ4u.png",T="/Web3Guide/assets/page2_4_5-B-dVA_qa.png",I="/Web3Guide/assets/page2_5_1-wAjTQ2-Z.png",b="/Web3Guide/assets/page2_5_2-Do0xGyBB.png",f="/Web3Guide/assets/page2_5_3-B-Ic38KA.png",F="/Web3Guide/assets/page2_6_1-B394_H0Q.png",E="/Web3Guide/assets/page2_6_2-DozNEwgy.png",k="/Web3Guide/assets/page2_7_1-CavVWGj1.png",G="/Web3Guide/assets/page2_7_2-DNQzaL8e.png",B="/Web3Guide/assets/page2_7_3-DnI82E9m.png",W=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
           <h2>什么是硬件钱包？</h2>
           <p>
           硬件钱包是一种专门用于生成和存储私钥的电子设备，其核心是使用安全芯片来保护私钥的安全。在加密数字资产领域，私钥是资产所有权的唯一凭证，因此保护私钥的安全至关重要。硬件钱包通过将私钥完全隔离在离线环境中，避免了私钥暴露在网络中的风险，从而显著降低了被盗的可能性。
@@ -167,7 +167,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i="/Web3Guide/assets/page2_1_1-DhV1
 <li>切勿使用第三方工具提供的 PIN 码；</li>
 <li>为保证钱包资产安全， <strong> 若连续五次输入错误 PIN 码，imKey 会被强制重置，重置后则需要导入助记词找回钱包。</strong></li>
 </ul>
-<img src="${l}" alt="PIN">
+<img src="${i}" alt="PIN">
         `},{id:"file1_6",title:"什么是区块链",content:`
           <p> <strong> 区块链（Blockchain）是由节点参与的分布式数据库系统，</strong>起源于比特币，最早在 2008 年中本聪提出。区块链是由一串使用密码学方法产生的数据块组成的，每一个区块都包含了上一个区块的哈希值，从创始区块开始连接到当前区块，形成一条区块链。每一个区块都确保按照时间顺序在上一个区块之后产生，否则前一个区块的哈希值是未知的。这些特征使得比特币的双花非常困难。</p>
           
@@ -410,7 +410,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i="/Web3Guide/assets/page2_1_1-DhV1
                 <ol>
                 <li>
                 <p>点击「我」-「钱包管理」，选择已经配对的 imKey 硬件钱包点「添加账户」按钮进行添加。</p>
-                <img src="${i}" alt="page2_1_1">
+                <img src="${l}" alt="page2_1_1">
 </li>
                 <li>
                 <p>硬件钱包 imKey 默认支持 Ethereum（ETH）和 Bitcoin（BTC），如需添加其他网络，请先确保手机蓝牙已成功与 imKey 硬件钱包连接，接着在 imKey 管理界面上找到 「应用管理」，安装需添加的网络
@@ -419,13 +419,13 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i="/Web3Guide/assets/page2_1_1-DhV1
 </li>
                 <li>
                 <p>安装好所需公链后返回「imKey 管理」，点击「添加账户」进行账户添加。完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的所有账户。</p>
-                <img src="${t}" alt="page2_1_3">
+                <img src="${p}" alt="page2_1_3">
 </li>
 </ol>
 
 <h2>如何切换账户</h2>
 <p>在钱包资产首页，点击左上角的账户名称即可查看所有已添加的账户。如需切换账户，在「选择账户」页中点击对应账户即可。</p>
-<img src="${p}" alt="page2_1_4">
+<img src="${t}" alt="page2_1_4">
                 `},{id:"file2_2",title:"如何添加派生地址教程",content:`
                 <p>imToken 2.15.0 版本支持派生地址功能，imKey 也同步支持这一功能。如果你想使用多个地址来增强安全性和提高隐私性时，推荐使用派生地址功能。</p>
                 
@@ -440,7 +440,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i="/Web3Guide/assets/page2_1_1-DhV1
 </li>
                 <li>
                 <p>选择需要添加的账户点「+」-「确认」，完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的账户。<span>（这里以添加 ETH 地址为例）</span></p>
-                <img src="${n}" alt="page2_2_2">
+                <img src="${s}" alt="page2_2_2">
 </li>
 </ol>
 
@@ -448,16 +448,196 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",i="/Web3Guide/assets/page2_1_1-DhV1
 <ol>
 <li>
 <p>点「我」-「钱包管理」-选择配对的 imKey「添加账户」</p>
-<img src="${u}" alt="page2_2_3">
+<img src="${n}" alt="page2_2_3">
 </li>
 <li>
 <p>选择需要添加的账户点击右上角的三个点，选择「高级模式」-「自定义」-「BIP44」</p>
-<img src="${s}" alt="page2_2_4">
+<img src="${r}" alt="page2_2_4">
 </li>
 <li>
 <p>选择 BIP44 后你可以输入派生路径最后的三个参数生成自定义路径的账户，点击「确认」，完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的账户。<span>（这里以添加 ETH 地址为例）</span></p>
-<img src="${g}" alt="page2_2_5">
+<img src="${a}" alt="page2_2_5">
 </li>
 </ol>
 <p>请注意，选择自定义的模式时，请务必妥善备份自定义的账户派生路径。若之后删除钱包进行再次恢复时，需输入派生路径才能正常恢复。因为 imToken 不会记录用户自定义路径的任何信息，一旦丢失无法找回。</p>
-                `}]}];export{r as default};
+                `},{id:"file2_3",title:"如何在 imKey 钱包中添加代币",content:`
+                <p>在数字资产管理中，确保钱包中代币的正确显示是至关重要的。imKey 硬件钱包支持多种区块链和网络，为用户提供了强大的资产管理功能。然而，有时转入的代币可能不会自动显示在钱包首页，此时需要手动添加。本文将详细介绍如何手动添加代币，以确保您能够轻松查看和管理你的数字代币。</p>
+                
+                <h2>如何手动添加代币？</h2>
+                <h3>在账户首页点击「+」进入代币管理页面，参考以下添加代币的四种方式：</h3>
+                <p>方式一：点击「我的所有资产」，点击代币右侧「+」添加到账户首页。注：新代币转入时，「+」会有红点标记提醒。</p>
+                <img src="${g}" alt="page2_3_1">
+                <p>方式二：在「热门资产」列表中找到想要添加的代币，点击右侧「+」添加到账户首页。</p>
+                <img src="${u}" alt="page2_3_2">
+                <p>方式三：在上方搜索框内输入 Token 名称 / 合约地址进行搜索添加。</p>
+                <img src="${_}" alt="page2_3_3">
+                <p><strong>搜索代币时的注意事项：</strong></p>
+                <ul>
+                <li>如果未搜索到相关代币，请尝试通过合约地址进行搜索添加。</li>
+                <li>如果搜索到很多同名代币，请根据合约地址判断并选择正确的代币。</li>
+</ul>
+                <p>方式四：选择「自定义代币」，输入代币合约地址并点击右上角的「保存」添加到账户首页。</p>
+                <p><span style="color: #999">注：输入代币合约地址时，Symbol 与 Decimal 的参数会被自动获取。目前，Tron、Cosmos、Osmosis 账户不支持自定义代币功能。</span></p>
+                <img src="${m}" alt="page2_3_4">
+                
+                <h3>调整显示顺序和隐藏</h3>
+                <p>你可以按需调整账户首页的代币显示顺序，或者隐藏不需要的代币。参考步骤：在账户首页，点击「+」-「首页资产管理」</p>
+                <ul>
+                <li>长按代币右侧三条横线上下拖动来调整显示顺序。或者点击「默认方式」按照默认 / 价值 / 名称进行排序。</li>
+                <li>点击代币左侧的「-」-「删除」可取消该代币在资产首页的显示，隐藏不常用的代币。</li>
+</ul>
+                <img src="${c}" alt="page2_3_5">
+                
+                <h2>如何查询代币合约地址</h2>
+                <p>如果你不知道所需添加代币的合约地址，可通过区块浏览器进行查询。这里以以太坊浏览器 Etherscan 为例。</p>
+                <p>1. 打开 imToken 并切换至「浏览」页，搜索并进入「Etherscan」。</p>
+                <p><span style="color: #999">注：如果想搜索其他网络的浏览器，在搜索框内输入网络名称即可看到对应的浏览器 DApp。例如：需要搜索 Arbitrum 浏览器，输入 Arbitrum 即可。</span></p>
+                <img src="${h}" alt="page2_3_6">
+                <p>2. 在搜索框输入代币名称（如 USDT），在搜索结果中选择你需查询的代币，点击进入代币详情页。在 Other Info 模块下的 TOKEN CONTRACT 即为代币合约地址。</p>
+                <img src="${y}" alt="page2_3_7">
+                `},{id:"file2_4",title:"换新手机时，imKey 该如何重新绑定？",content:`
+                                <div class="video-container">
+    <iframe 
+        src="//player.bilibili.com/player.html?isOutside=true&aid=114492537115529&bvid=BV1rmELz3E55&cid=29917185648&p=1" 
+        frameborder="0" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        title="更换手机时， imKey 该如何重新绑定"
+        class="responsive-iframe">
+    </iframe>
+</div>
+
+                <p>换新手机时，重新绑定 imKey 有以下 2 种方法：</p>
+                <ol>
+                <li>使用 PIN 码和绑定码；</li>
+                <li>使用助记词。</li>
+</ol>
+
+                <h2>使用 PIN 码和绑定码重新绑定 imKey，操作方法如下：</h2>
+                <ol>
+                <li>使用 PIN 码打开 imKey；</li>
+                <li>在新手机上下载 imToken；</li>
+                <li>创建或恢复 imToken 钱包后，安装完成后，并打开 imToken，可以选择创建钱包或导入钱包。</li>
+                <li>打开 imToken 点击「我」-「管理钱包」
+                <img src="${N}" alt="page2_4_1">
+                </li>
+                <li>在「钱包管理」页面点击右上方「+」号，选择「连接其他钱包」，进入后选择「imKey」；
+                <img src="${d}" alt="page2_4_2">
+                </li>
+                <li>选择连接设备，出现蓝牙配对请求，输入 imKey 上显示的蓝牙配对码，点击「配对」；
+                <img src="${K}" alt="page2_4_3">
+                </li>
+                <li>输入绑定码，导入钱包；
+                <img src="${P}" alt="page2_4_4">
+                </li>
+                <li>待钱包导入之后，即绑定成功。
+                <img src="${T}" alt="page2_4_5">
+                </li>
+</ol>
+
+                <h2>使用助记词重新绑定 imKey, 操作方法如下（此方法适用于忘记 PIN 码或绑定码的情况）：</h2>
+                <ol>
+                <li>重置 imKey，连续输入 5 次错误的 PIN 码，设置新的 PIN 码，用助记词恢复钱包（注意是将助记词输入 imKey 硬件钱包，请勿将助记词输入 imToken app）；</li>
+                <li>按照第一种方式，打开 imToken，配对 imKey 即可。</li>
+</ol>
+                `},{id:"file2_5",title:"如何在 imKey Pro 恢复钱包",content:`
+                <div class="video-container">
+    <iframe 
+        src="//player.bilibili.com/player.html?isOutside=true&aid=114492771933997&bvid=BV1YJELz8EUZ&cid=29917970886&p=1" 
+        frameborder="0" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        title="如何在 imKey Pro 硬件钱包中恢复钱包"
+        class="responsive-iframe">
+    </iframe>
+</div>
+
+                <p>如果想在 imKey Pro 硬件钱包中使用已有的钱包，可以使用「恢复钱包」 功能。</p>
+                <p>
+                恢复钱包之前，请注意：
+                <strong>将「身份钱包」或 imToken 软件端已「创建 / 导入」的钱包助记词导入硬件设备，imToken 会提示 <a href="https://imkeyofficial.feishu.cn/wiki/wikcndv2c1NnmBFbqKSTn0fSCTf">「钱包已存在，请勿导入相同钱包」</a>；另外，将软件钱包生成的助记词导入硬件设备是没有意义的，因为该助记词在生成时已经触网，硬件设备无法再提供保护； </strong>
+</p>
+
+                <h2>如何在 imKey Pro 恢复钱包？ </h2>
+                <ol>
+                <li>
+                <p>开启 imKey Pro，根据界面提示设置语言和 PIN 码，然后选择「恢复钱包」并按「OK」键确认；</p>
+                <p><span style="color: #999">注：如果 imKey Pro 已导入其他助记词，需要先重置 imKey ，然后进行步骤 1。</span></p>
+                <img src="${I}" alt="page2_5_1">
+</li>
+                <li>
+                <p>选择助记词对应的单词数量并按「OK」键确认；</p>
+                <img src="${b}" alt="page2_5_2">
+</li>
+                <li>
+                <p>输入助记词后，设备会显示「钱包恢复中，预计 2 分钟完成」；</p>
+                <p><span style="color: #999">注：上下按钮切换，OK 确认，C 取消。</span></p>
+                <img src="${f}" alt="page2_5_3">
+</li>
+                <li>待出现「钱包恢复成功」的提示后，与 <a href="https://imkeyofficial.feishu.cn/wiki/OJUXwp58HiwRbekBmDYcoDKnnxb">imToken 绑定</a>即可正常使用。</li>
+</ol>
+                `},{id:"file2_6",title:"设置和修改 PIN 码",content:`
+                <div class="video-container">
+    <iframe 
+        src="//player.bilibili.com/player.html?isOutside=true&aid=114492755156468&bvid=BV1anELzfE9A&cid=29917841802&p=1" 
+        frameborder="0" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        title="如何设置和修改 imKey 的PIN 码"
+        class="responsive-iframe">
+    </iframe>
+</div>
+
+                <h1>PIN 有什么作用？</h1>
+                <ul><li>PIN 码是硬件钱包的开机密码，类似手机的锁屏密码，没有 PIN 码，就无法打开你的 imKey。imKey 在创建或者恢复钱包前必须设置 PIN 码，用来防止设备被他人盗用，这是保护数字资产安全的一种有效措施。同时，imKey 采用物理按钮输入 PIN 码的方式，大大降低了 PIN 码被截获的可能，保证了 PIN 码输入的安全性。</li></ul>
+                <h1>如何设置与修改 PIN 码</h1>
+                <ul>
+                <li>在 imKey 与 imToken 绑定并成功激活后要求设置 PIN 码才能使用 imKey。</li>
+                <li>PIN 码用于日常使用中解锁 imKey，为 imKey 增加了一层安全防护。</li>
+</ul>
+
+                <h3>设置方式</h3>
+                <ol>
+                <li>imKey 的 PIN 码设置要求为 6 - 8 位数字，不支持相同或连续的数字组合。</li>
+                <li>imKey 上显示「<strong>设置 PIN </strong>」进入设置流程。</li>
+                <li>设置每一位的数字，上下按钮切换，点击「<strong>OK</strong>」确认，点击「<strong>C</strong>」取消。
+                <img src="${F}" alt="page2_6_1">
+                </li>
+                <li>重复此过程，直到选择了 PIN 码的所有数字。（如果你想设置 6 位 PIN 码，在第 7 位出现「✔️」符号时点击「<strong>OK</strong>」按钮即可完成设置。如果你想设置 7 位或者 8 位 PIN 码，在显示「✔️」符号时，通过切换按钮切换成数字并确认即可。）</li>
+                <li>再次输入 PIN 码进行确认
+                <img src="${E}" alt="page2_6_2">
+</li>
+</ol>
+
+                <h3>修改 PIN 码</h3>
+                <ul><li>
+                输入 PIN 开启 imKey，点击「<strong>OK</strong>」进入钱包设置界面，选择「<strong>设置</strong>」—「<strong>修改 PIN</strong>」，输入原 PIN 码进行身份确认，然后重新设置 PIN 码即可。
+</li></ul>
+
+                <h3>安全提示</h3>
+                <ol>
+                <li>PIN 码用于解锁 imKey，丢失无法找回，请妥善保管；</li>
+                <li>不支持相同或连续的数字组合；</li>
+                <li>切勿使用随机 PIN 码和第三方工具提供的 PIN 码。</li>
+                <li>为保证钱包资产安全，连续五次输入错误的 PIN 码，imKey 会被强制重置。</li>
+</ol>
+                `},{id:"file2_7",title:"如何解除配对如何解除配对",content:`
+                <p>当用户遗忘硬件设备 imKey 的 PIN 码时，为了恢复访问权限并确保安全，需要硬件重置操作设置一个新的 PIN 码。这个过程不仅会生成一个新的 PIN 码，还会同时生成一个新的绑定码。由于绑定码用于与 imToken 连接，因此，在完成重置之后，先前基于旧绑定码所建立的所有配对都必须先解除，并且需按照新的绑定码流程重新进行配对。</p>
+                <h2>如何解除配对</h2>
+                <ol>
+                <li>打开 imToken app 点「我」-「钱包管理」
+                <img src="${k}" alt="page2_7_1">
+</li>
+                <li>点击配对的硬件钱包
+                <img src="${G}" alt="page2_7_2">
+</li>
+                <li>点击「解除配对」-「确认」
+                <img src="${B}" alt="page2_7_3">
+</li>
+</ol>
+                `},{id:"file2_8",title:"如何解除配对如何解除配对",content:`
+                
+                `}]}];export{W as default};
