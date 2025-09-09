@@ -101,7 +101,7 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 
 <h3>总结</h3>
 <p>imKey 助记词冲压板 L1 Pro 是一款安全可靠的助记词保管工具，采用 304 不锈钢制造，具备防水、防火和耐腐蚀特性，完全离线使用，有效保护你的数字资产安全。使用简便，适合于各类加密货币钱包的助记词备份和管理。</p>
-<a href="https://www.imtoken.org/" target="_blank">密盒 L1 Pro购买链接</a>
+<a href="https://shop42404838.m.youzan.com/wscgoods/detail/2fxvk6tg9pv9q30?banner_id=f.77421469~goods.14~2~P2uiv0DX&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.0.0_e19e0bf7c8cf446b81b8ef725d9a3218&slg=0&components_style_layout=1&reft=1757402811377&spm=f.77421469" target="_blank">密盒 L1 Pro购买链接</a>
         `},{id:"file1_3",title:"什么是密盒 P1，如何使用？",content:`
                 <ol><li> <a href="https://shop42404838.m.youzan.com/wscgoods/detail/36bm6keap5t1a33?dc_ps=3340498535169757189.200001" target="_blank"> 密盒 P1 </a>是一款袖珍型密钥保管工具，内含一套不锈钢钢板和一套字符块，能保管多达 128 个字符的密钥信息。可用于组装和存储助记词、私钥和绑定码等密钥信息，支持备份 1Password、Google 密码管理器等生成的密码</li></ol>
                 
