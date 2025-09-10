@@ -1,4 +1,4 @@
-const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",e="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",p="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",t="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",o="/Web3Guide/assets/page2_2_1-CzEi4zS6.png",s="/Web3Guide/assets/page2_2_2-G2U36qAM.png",n="/Web3Guide/assets/page2_2_3-C8jMHvqv.png",r="/Web3Guide/assets/page2_2_4-CJNBFie-.png",a="/Web3Guide/assets/page2_2_5-BCOMN-Kx.png",g="/Web3Guide/assets/page2_3_1-a-KGxGsw.png",u="/Web3Guide/assets/page2_3_2-CaRLRIzZ.png",_="/Web3Guide/assets/page2_3_3-B4xurFWd.png",m="/Web3Guide/assets/page2_3_4-DXKgQZUz.png",c="/Web3Guide/assets/page2_3_5-DoAtP86P.png",h="/Web3Guide/assets/page2_3_6-DzIIt4XB.png",y="/Web3Guide/assets/page2_3_7-BrmxkScW.png",N="/Web3Guide/assets/page2_4_1-BVrdQYTm.png",d="/Web3Guide/assets/page2_4_2-CfkKz9rn.png",K="/Web3Guide/assets/page2_4_3-D22KeLA0.png",P="/Web3Guide/assets/page2_4_4-BYC3YZ4u.png",T="/Web3Guide/assets/page2_4_5-B-dVA_qa.png",I="/Web3Guide/assets/page2_5_1-wAjTQ2-Z.png",b="/Web3Guide/assets/page2_5_2-Do0xGyBB.png",f="/Web3Guide/assets/page2_5_3-B-Ic38KA.png",F="/Web3Guide/assets/page2_6_1-B394_H0Q.png",E="/Web3Guide/assets/page2_6_2-DozNEwgy.png",k="/Web3Guide/assets/page2_7_1-CavVWGj1.png",G="/Web3Guide/assets/page2_7_2-DNQzaL8e.png",B="/Web3Guide/assets/page2_7_3-DnI82E9m.png",W=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
+const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",e="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",t="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",p="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",r="/Web3Guide/assets/page2_2_1-CzEi4zS6.png",o="/Web3Guide/assets/page2_2_2-G2U36qAM.png",s="/Web3Guide/assets/page2_2_3-C8jMHvqv.png",a="/Web3Guide/assets/page2_2_4-CJNBFie-.png",n="/Web3Guide/assets/page2_2_5-BCOMN-Kx.png",g="/Web3Guide/assets/page2_3_1-a-KGxGsw.png",m="/Web3Guide/assets/page2_3_2-CaRLRIzZ.png",y="/Web3Guide/assets/page2_3_3-B4xurFWd.png",c="/Web3Guide/assets/page2_3_4-DXKgQZUz.png",u="/Web3Guide/assets/page2_3_5-DoAtP86P.png",_="/Web3Guide/assets/page2_3_6-DzIIt4XB.png",h="/Web3Guide/assets/page2_3_7-BrmxkScW.png",b="/Web3Guide/assets/page2_4_1-BVrdQYTm.png",x="/Web3Guide/assets/page2_4_2-CfkKz9rn.png",K="/Web3Guide/assets/page2_4_3-D22KeLA0.png",N="/Web3Guide/assets/page2_4_4-BYC3YZ4u.png",T="/Web3Guide/assets/page2_4_5-B-dVA_qa.png",P="/Web3Guide/assets/page2_5_1-wAjTQ2-Z.png",f="/Web3Guide/assets/page2_5_2-Do0xGyBB.png",E="/Web3Guide/assets/page2_5_3-B-Ic38KA.png",k="/Web3Guide/assets/page2_6_1-B394_H0Q.png",I="/Web3Guide/assets/page2_6_2-DozNEwgy.png",C="/Web3Guide/assets/page2_7_1-CavVWGj1.png",B="/Web3Guide/assets/page2_7_2-DNQzaL8e.png",F="/Web3Guide/assets/page2_7_3-DnI82E9m.png",G="/Web3Guide/assets/page2_9_1-CwDc7oOY.png",O="/Web3Guide/assets/page2_10_1-C4teezMd.png",i="/Web3Guide/assets/page2_11_1-SgC84R2U.png",A="/Web3Guide/assets/page2_11_2-BkHp3SlG.png",R="/Web3Guide/assets/page2_11_3-iGvmzj0N.png",S="/Web3Guide/assets/page2_11_4-Cy5lO991.png",W="/Web3Guide/assets/page2_12_1-BwomdZlS.png",v=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
           <h2>什么是硬件钱包？</h2>
           <p>
           硬件钱包是一种专门用于生成和存储私钥的电子设备，其核心是使用安全芯片来保护私钥的安全。在加密数字资产领域，私钥是资产所有权的唯一凭证，因此保护私钥的安全至关重要。硬件钱包通过将私钥完全隔离在离线环境中，避免了私钥暴露在网络中的风险，从而显著降低了被盗的可能性。
@@ -167,7 +167,7 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
 <li>切勿使用第三方工具提供的 PIN 码；</li>
 <li>为保证钱包资产安全， <strong> 若连续五次输入错误 PIN 码，imKey 会被强制重置，重置后则需要导入助记词找回钱包。</strong></li>
 </ul>
-<img src="${i}" alt="PIN">
+<img src="${l}" alt="PIN">
         `},{id:"file1_6",title:"什么是区块链",content:`
           <p> <strong> 区块链（Blockchain）是由节点参与的分布式数据库系统，</strong>起源于比特币，最早在 2008 年中本聪提出。区块链是由一串使用密码学方法产生的数据块组成的，每一个区块都包含了上一个区块的哈希值，从创始区块开始连接到当前区块，形成一条区块链。每一个区块都确保按照时间顺序在上一个区块之后产生，否则前一个区块的哈希值是未知的。这些特征使得比特币的双花非常困难。</p>
           
@@ -410,7 +410,7 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
                 <ol>
                 <li>
                 <p>点击「我」-「钱包管理」，选择已经配对的 imKey 硬件钱包点「添加账户」按钮进行添加。</p>
-                <img src="${l}" alt="page2_1_1">
+                <img src="${d}" alt="page2_1_1">
 </li>
                 <li>
                 <p>硬件钱包 imKey 默认支持 Ethereum（ETH）和 Bitcoin（BTC），如需添加其他网络，请先确保手机蓝牙已成功与 imKey 硬件钱包连接，接着在 imKey 管理界面上找到 「应用管理」，安装需添加的网络
@@ -419,13 +419,13 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
 </li>
                 <li>
                 <p>安装好所需公链后返回「imKey 管理」，点击「添加账户」进行账户添加。完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的所有账户。</p>
-                <img src="${p}" alt="page2_1_3">
+                <img src="${t}" alt="page2_1_3">
 </li>
 </ol>
 
 <h2>如何切换账户</h2>
 <p>在钱包资产首页，点击左上角的账户名称即可查看所有已添加的账户。如需切换账户，在「选择账户」页中点击对应账户即可。</p>
-<img src="${t}" alt="page2_1_4">
+<img src="${p}" alt="page2_1_4">
                 `},{id:"file2_2",title:"如何添加派生地址教程",content:`
                 <p>imToken 2.15.0 版本支持派生地址功能，imKey 也同步支持这一功能。如果你想使用多个地址来增强安全性和提高隐私性时，推荐使用派生地址功能。</p>
                 
@@ -436,11 +436,11 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
                 <ol>
                 <li>
                 <p>点「我」-「钱包管理」-选择配对的 imKey，点击「添加账户」</p>
-                <img src="${o}" alt="page2_2_1">
+                <img src="${r}" alt="page2_2_1">
 </li>
                 <li>
                 <p>选择需要添加的账户点「+」-「确认」，完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的账户。<span>（这里以添加 ETH 地址为例）</span></p>
-                <img src="${s}" alt="page2_2_2">
+                <img src="${o}" alt="page2_2_2">
 </li>
 </ol>
 
@@ -448,15 +448,15 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
 <ol>
 <li>
 <p>点「我」-「钱包管理」-选择配对的 imKey「添加账户」</p>
-<img src="${n}" alt="page2_2_3">
+<img src="${s}" alt="page2_2_3">
 </li>
 <li>
 <p>选择需要添加的账户点击右上角的三个点，选择「高级模式」-「自定义」-「BIP44」</p>
-<img src="${r}" alt="page2_2_4">
+<img src="${a}" alt="page2_2_4">
 </li>
 <li>
 <p>选择 BIP44 后你可以输入派生路径最后的三个参数生成自定义路径的账户，点击「确认」，完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的账户。<span>（这里以添加 ETH 地址为例）</span></p>
-<img src="${a}" alt="page2_2_5">
+<img src="${n}" alt="page2_2_5">
 </li>
 </ol>
 <p>请注意，选择自定义的模式时，请务必妥善备份自定义的账户派生路径。若之后删除钱包进行再次恢复时，需输入派生路径才能正常恢复。因为 imToken 不会记录用户自定义路径的任何信息，一旦丢失无法找回。</p>
@@ -468,9 +468,9 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
                 <p>方式一：点击「我的所有资产」，点击代币右侧「+」添加到账户首页。注：新代币转入时，「+」会有红点标记提醒。</p>
                 <img src="${g}" alt="page2_3_1">
                 <p>方式二：在「热门资产」列表中找到想要添加的代币，点击右侧「+」添加到账户首页。</p>
-                <img src="${u}" alt="page2_3_2">
+                <img src="${m}" alt="page2_3_2">
                 <p>方式三：在上方搜索框内输入 Token 名称 / 合约地址进行搜索添加。</p>
-                <img src="${_}" alt="page2_3_3">
+                <img src="${y}" alt="page2_3_3">
                 <p><strong>搜索代币时的注意事项：</strong></p>
                 <ul>
                 <li>如果未搜索到相关代币，请尝试通过合约地址进行搜索添加。</li>
@@ -478,7 +478,7 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
 </ul>
                 <p>方式四：选择「自定义代币」，输入代币合约地址并点击右上角的「保存」添加到账户首页。</p>
                 <p><span style="color: #999">注：输入代币合约地址时，Symbol 与 Decimal 的参数会被自动获取。目前，Tron、Cosmos、Osmosis 账户不支持自定义代币功能。</span></p>
-                <img src="${m}" alt="page2_3_4">
+                <img src="${c}" alt="page2_3_4">
                 
                 <h3>调整显示顺序和隐藏</h3>
                 <p>你可以按需调整账户首页的代币显示顺序，或者隐藏不需要的代币。参考步骤：在账户首页，点击「+」-「首页资产管理」</p>
@@ -486,15 +486,15 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
                 <li>长按代币右侧三条横线上下拖动来调整显示顺序。或者点击「默认方式」按照默认 / 价值 / 名称进行排序。</li>
                 <li>点击代币左侧的「-」-「删除」可取消该代币在资产首页的显示，隐藏不常用的代币。</li>
 </ul>
-                <img src="${c}" alt="page2_3_5">
+                <img src="${u}" alt="page2_3_5">
                 
                 <h2>如何查询代币合约地址</h2>
                 <p>如果你不知道所需添加代币的合约地址，可通过区块浏览器进行查询。这里以以太坊浏览器 Etherscan 为例。</p>
                 <p>1. 打开 imToken 并切换至「浏览」页，搜索并进入「Etherscan」。</p>
                 <p><span style="color: #999">注：如果想搜索其他网络的浏览器，在搜索框内输入网络名称即可看到对应的浏览器 DApp。例如：需要搜索 Arbitrum 浏览器，输入 Arbitrum 即可。</span></p>
-                <img src="${h}" alt="page2_3_6">
+                <img src="${_}" alt="page2_3_6">
                 <p>2. 在搜索框输入代币名称（如 USDT），在搜索结果中选择你需查询的代币，点击进入代币详情页。在 Other Info 模块下的 TOKEN CONTRACT 即为代币合约地址。</p>
-                <img src="${y}" alt="page2_3_7">
+                <img src="${h}" alt="page2_3_7">
                 `},{id:"file2_4",title:"换新手机时，imKey 该如何重新绑定？",content:`
                                 <div class="video-container">
     <iframe 
@@ -520,16 +520,16 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
                 <li>在新手机上下载 imToken；</li>
                 <li>创建或恢复 imToken 钱包后，安装完成后，并打开 imToken，可以选择创建钱包或导入钱包。</li>
                 <li>打开 imToken 点击「我」-「管理钱包」
-                <img src="${N}" alt="page2_4_1">
+                <img src="${b}" alt="page2_4_1">
                 </li>
                 <li>在「钱包管理」页面点击右上方「+」号，选择「连接其他钱包」，进入后选择「imKey」；
-                <img src="${d}" alt="page2_4_2">
+                <img src="${x}" alt="page2_4_2">
                 </li>
                 <li>选择连接设备，出现蓝牙配对请求，输入 imKey 上显示的蓝牙配对码，点击「配对」；
                 <img src="${K}" alt="page2_4_3">
                 </li>
                 <li>输入绑定码，导入钱包；
-                <img src="${P}" alt="page2_4_4">
+                <img src="${N}" alt="page2_4_4">
                 </li>
                 <li>待钱包导入之后，即绑定成功。
                 <img src="${T}" alt="page2_4_5">
@@ -565,16 +565,16 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
                 <li>
                 <p>开启 imKey Pro，根据界面提示设置语言和 PIN 码，然后选择「恢复钱包」并按「OK」键确认；</p>
                 <p><span style="color: #999">注：如果 imKey Pro 已导入其他助记词，需要先重置 imKey ，然后进行步骤 1。</span></p>
-                <img src="${I}" alt="page2_5_1">
+                <img src="${P}" alt="page2_5_1">
 </li>
                 <li>
                 <p>选择助记词对应的单词数量并按「OK」键确认；</p>
-                <img src="${b}" alt="page2_5_2">
+                <img src="${f}" alt="page2_5_2">
 </li>
                 <li>
                 <p>输入助记词后，设备会显示「钱包恢复中，预计 2 分钟完成」；</p>
                 <p><span style="color: #999">注：上下按钮切换，OK 确认，C 取消。</span></p>
-                <img src="${f}" alt="page2_5_3">
+                <img src="${E}" alt="page2_5_3">
 </li>
                 <li>待出现「钱包恢复成功」的提示后，与 <a href="https://imkeyofficial.feishu.cn/wiki/OJUXwp58HiwRbekBmDYcoDKnnxb">imToken 绑定</a>即可正常使用。</li>
 </ol>
@@ -604,11 +604,11 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
                 <li>imKey 的 PIN 码设置要求为 6 - 8 位数字，不支持相同或连续的数字组合。</li>
                 <li>imKey 上显示「<strong>设置 PIN </strong>」进入设置流程。</li>
                 <li>设置每一位的数字，上下按钮切换，点击「<strong>OK</strong>」确认，点击「<strong>C</strong>」取消。
-                <img src="${F}" alt="page2_6_1">
+                <img src="${k}" alt="page2_6_1">
                 </li>
                 <li>重复此过程，直到选择了 PIN 码的所有数字。（如果你想设置 6 位 PIN 码，在第 7 位出现「✔️」符号时点击「<strong>OK</strong>」按钮即可完成设置。如果你想设置 7 位或者 8 位 PIN 码，在显示「✔️」符号时，通过切换按钮切换成数字并确认即可。）</li>
                 <li>再次输入 PIN 码进行确认
-                <img src="${E}" alt="page2_6_2">
+                <img src="${I}" alt="page2_6_2">
 </li>
 </ol>
 
@@ -624,20 +624,369 @@ const i="/Web3Guide/assets/PIN-su9Uj2Zk.png",l="/Web3Guide/assets/page2_1_1-DhV1
                 <li>切勿使用随机 PIN 码和第三方工具提供的 PIN 码。</li>
                 <li>为保证钱包资产安全，连续五次输入错误的 PIN 码，imKey 会被强制重置。</li>
 </ol>
-                `},{id:"file2_7",title:"如何解除配对如何解除配对",content:`
+                `},{id:"file2_7",title:"如何解除配对",content:`
                 <p>当用户遗忘硬件设备 imKey 的 PIN 码时，为了恢复访问权限并确保安全，需要硬件重置操作设置一个新的 PIN 码。这个过程不仅会生成一个新的 PIN 码，还会同时生成一个新的绑定码。由于绑定码用于与 imToken 连接，因此，在完成重置之后，先前基于旧绑定码所建立的所有配对都必须先解除，并且需按照新的绑定码流程重新进行配对。</p>
                 <h2>如何解除配对</h2>
                 <ol>
                 <li>打开 imToken app 点「我」-「钱包管理」
-                <img src="${k}" alt="page2_7_1">
+                <img src="${C}" alt="page2_7_1">
 </li>
                 <li>点击配对的硬件钱包
-                <img src="${G}" alt="page2_7_2">
+                <img src="${B}" alt="page2_7_2">
 </li>
                 <li>点击「解除配对」-「确认」
-                <img src="${B}" alt="page2_7_3">
+                <img src="${F}" alt="page2_7_3">
 </li>
 </ol>
-                `},{id:"file2_8",title:"如何解除配对如何解除配对",content:`
+                `},{id:"file2_8",title:"重置硬件设备",content:`
+                                                <div class="video-container">
+    <iframe 
+        src="//player.bilibili.com/player.html?isOutside=true&aid=114492771930722&bvid=BV1eJELz8EBt&cid=29917971535&p=1" 
+        frameborder="0" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        title="如何重置 imKey Pro 硬件钱包MOV"
+        class="responsive-iframe">
+    </iframe>
+</div>
+
+<p>在以下几个场景可以使用重置 imKey 的功能：</p>
+<ol>
+<li>在未备份 PIN 码的情况下重置 PIN 码</li>
+<li>删除已有的钱包，重新创建 / 导入钱包</li>
+<li>imKey 已绑定的设备丢失，未保存绑定码的情况下绑定新设备</li>
+</ol>
+<p><strong>特别提示：</strong></p>
+<ul><li><strong>无论以上哪种场景</strong>，请务必确认已经备份了 imKey 钱包的助记词！否则将会导致资产永远丢失！</li></ul>
+
+<h3>imKey 有两种重置方式:</h3>
+<ol>
+<li>连续 5 次输入错误的 PIN 码重置 imKey（适用于上文提到的第一种情况）</li>
+<li>输入 PIN 开启 imKey，点击「OK」进入钱包设置界面，选择「设置」—「重置」，输入 PIN 码后点击「OK」即可完成重置。</li>
+</ol>
                 
-                `}]}];export{W as default};
+                `},{id:"file2_9",title:"提示「账户已在钱包中存在，不能重复添加」？",content:`
+                <h2>APP 提示「账户已在钱包中存在，不能重复添加」</h2>
+                <img src="${G}" alt="page2_9_1">
+                <p>当 APP 提示「账户已在钱包中存在，不能重复添加」时，通常是因为你将 imToken 身份钱包的助记词导入 imKey，或者将 imKey 创建的助记词导入 imToken。我们的产品机制要求你先有一个 imToken 身份钱包并登录，再连接 imKey 钱包。导入相同助记词会导致该提示出现。</p>
+                <p><strong>注：通过 imKey 创建的钱包更安全，因为私钥离线存储在 imKey 硬件钱包的安全芯片中，隔离网络环境存储（物理隔绝）。</strong></p>
+                
+                <h2>解决方法：创建新的冷钱包</h2>
+                <p>如果助记词已经触网，建议将此钱包作为身份钱包使用。现在请用 imKey 创建一个新的冷钱包。具体操作如下：</p>
+                <h3>步骤一：重置 imKey</h3>
+                <ol>
+                <li>输入 PIN 开启 imKey，点击「OK」键。</li>
+                <li>选择「设置」，进入界面后选择「重置」。</li>
+</ol>
+                <h3>步骤二：创建新钱包</h3>
+                <ol>
+                <li>重置后，选择「语言」并设置新的 PIN 码。</li>
+                <li>选择「创建钱包」，并备份好 imKey 钱包的助记词。</li>
+</ol>
+                <h3>步骤三：配对硬件钱包</h3>
+                <ol>
+                <li>打开 imToken，点击「我」-「钱包管理」-「添加钱包」-「链接其他钱包」-「imKey」。</li>
+                <li>输入新生成的绑定码，完成配对（需妥善保存新生成的绑定码）。</li>
+</ol>
+                <h3>步骤四：资产转移</h3>
+                <ol>
+                <li> 将热钱包里的资产转移到新生成的 imKey 冷钱包中。</li>
+</ol>
+
+                <h2>最后</h2>
+                <p>请确保两套钱包由不同的助记词管理，并妥善备份。通过以上步骤，你可以安全地创建和管理你的钱包，避免重复导入相同的助记词。</p>
+                <p style="color: #409eff">注：如果问题仍然无法解决，请发送邮件至 support@imkey.im 与我们联系。</p>
+                `},{id:"file2_10",title:"蓝牙配对时提示「无法找到设备」怎么办？",content:`
+                <h2>如何解决 imKey 和 imToken APP 蓝牙配对问题</h2>
+                <img src="${O}" alt="page2_10_1">
+                <p>在 imKey 和 imToken APP 进行蓝牙配对过程中，如果 APP 提示「无法找到设备」，可以根据以下步骤进行检查并解决问题：</p>
+                
+                <h3>1. 苹果手机</h3>
+                <ul>
+                <li>开启手机网络和蓝牙功能。</li>
+                <li>在手机「设置」—「隐私」—「蓝牙」中找到 imToken 并打开蓝牙权限。</li>
+</ul>
+                <h3>2. 安卓手机</h3>
+                <ul>
+                <li>开启手机网络、蓝牙功能和 GPS 定位服务。</li>
+                <li>在手机「设置」的应用管理中找到 imToken 并开启访问位置信息权限。</li>
+                <li>华为手机需要进入手机设置，找到「应用和服务」—「权限管理」—「应用」—「imToken」—「附近设备」，并允许打开权限。</li>
+</ul>
+                <h3>3. 蓝牙占用问题</h3>
+                <ul>
+                <li>如果蓝牙已被其他设备占用，先在手机「设置」中取消其配对，然后返回 APP 重新进行配对。</li>
+</ul>
+                <h3>4. imKey 充电状态</h3>
+                <ul>
+                <li>imKey 在<strong>关机状态下充电</strong>时无法进行蓝牙连接，建议断电后再启动 imKey 进行操作。</li>
+</ul>
+ <p style="color: #409eff">注：如果问题仍然无法解决，请发送邮件至 support@imkey.im 与我们联系。</p>
+                `},{id:"file2_11",title:"如何快速判别 imKey Pro 是否已被激活",content:`
+                <p>使用硬件钱包管理加密资产已成为保护数字资产安全的常见方法。imKey 硬件钱包作为一种高安全性设备，为用户提供了自主掌控资产的工具。然而，我们发现有不法分子假冒我司授权经销商，在电商平台和仿冒官网等渠道销售已被激活的硬件钱包，并诱骗用户存入资金进行盗窃。本文将帮助用户快速判断新购买的 imKey Pro 是否已被激活，确保资产安全。</p>
+                <h1>首次使用未启用（未激活） imKey 的关键操作指南</h1>
+                <h2>第一步：语言选择</h2>
+                <ul>
+                <li>首次使用 imKey 时，开机后首先进入「语言选择」界面。用户可以根据需要选择适合的语言。
+                <img src="${i}" alt="page2_11_1"></li>
+</ul>
+                <h2>第二步：蓝牙连接</h2>
+                <ul>
+                <li>语言选择完成后，设备会显示提示，要求与 imToken app 进行蓝牙连接。确保手机已开启蓝牙功能，并按照提示完成连接。
+                <img src="${A}" alt="page2_11_2">
+                </li>
+</ul>
+                <h2>第三步：设备激活</h2>
+                <ul>
+                <li>蓝牙连接成功后，按提示完成操作，最终 imKey 屏幕会提示「激活成功」。此时，设备已经成功激活，可以进行后续操作。
+                <img src="${R}" alt="page2_11_3">
+                </li>
+</ul>
+
+<h2>重要提示：</h2>
+<h2>确认屏幕显示内容</h2>
+<table style="border-collapse: collapse; width: 100%;">
+<tr>
+<th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">未启用（未激活）设备</th>
+<th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">已启用（已激活）设备</th>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">首次使用时，开机会进入语言选择界面，然后提示进行蓝牙连接和设备激活。</td>
+<td style="border: 1px solid #ddd; padding: 8px;">首次使用时，开机会进入语言选择界面，然后提示进行蓝牙连接和设备激活。	如果开机后首先提示输入 PIN 码，则该设备存在风险，可能已被不法分子使用过。</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;"><img src="${i}" alt="page2_11_1"></td>
+<td style="border: 1px solid #ddd; padding: 8px;"><img src="${S}" alt="page2_11_4"></td>
+</tr>
+</table>
+
+<h2>创建钱包和备份助记词</h2>
+<p>在使用 imKey 硬件钱包时，务必自行创建钱包并妥善备份助记词。助记词是恢复钱包的唯一方式，必须安全存放。</p>
+<ul>
+<li><strong>风险提示：</strong>如果使用说明中有任何内容诱导用户相信 imKey 硬件钱包不需要助记词，则该钱包存在风险。</li>
+</ul>
+
+<h2>确认设备真伪</h2>
+<p>若经过上述检验步骤后，仍无法确认设备真伪或仍有顾虑，请联系 imKey 人工客服确认，确保你的设备为官方正品，保障数字资产的安全。</p>
+<ul>
+<li>官方邮箱：<a href="mailto:support@imkey.im" target="_blank"> support@imkey.im</a></li>
+</ul>
+<p>通过本文提供的简单步骤和检查，用户可以快速判断新购买的 imKey Pro 是否已被激活，从而消除潜在的安全风险。确保您的 imKey 设备为未激活的正品，能够有效保护您的数字资产。如果有任何疑问，请及时联系 imKey 客服获取帮助。</p>
+
+                `},{id:"file2_12",title:"如何查看 imKey Pro 的 SN 码？",content:`
+                <h3>什么是 SN 码？</h3>
+                <p>SN 码（产品序列号）是每台设备的唯一身份标识，相当于设备的身份证号码，也称为机器码、认证码、或注册申请码等。imKey 设备的 SN 码由16位数字和字母按特定规则随机生成，用于验证设备的合法性并保障用户的正版权益。</p>
+                <h3>如何查看 SN 码？</h3>
+                <p>SN 码位于 imKey Pro 硬件钱包的背面。</p>
+                <p>最下方 “SN：” 后面几位大写字母与数字组合字串即为 imKey Pro SN 码。</p>
+                <img src="${W}" alt="page2_12_1">
+                `},{id:"file2_13",title:"imKey Pro 支持哪些币种?",content:`
+                <p>imKey 支持 Ethereum、Bitcoin、Cosmos、Vaulta、TRON、Nervos、Bitcoin Cash、Litecoin、Kusama、Polkadot、Filecoin 、Dogecoin 等12 条主流
+                <a href="https://support.token.im/hc/zh-cn/articles/4414720877209-%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%AC%E6%9C%89%E9%93%BE" target="_blank">公链</a>，以及 Arbitrum、Optimism、zkSync Era 等
+                <a href="https://support.token.im/hc/zh-cn/articles/4414704940569-%E4%BB%80%E4%B9%88%E6%98%AF-Layer2" target="_blank"> Layer2 网络</a>，还有 BSC、Avalanche、Polygon 等
+                <a href="https://support.token.im/hc/zh-cn/articles/4414713036313-%E4%BB%80%E4%B9%88%E6%98%AF-EVM-%E5%85%BC%E5%AE%B9%E9%93%BE" target="_blank"> EVM 兼容网络</a>。</p>
+                <p>imKey 内每条公链对应支持的代币可查看下表。</p>
+                <table style="border-collapse: collapse; width: 100%;">
+                <tr>
+                <th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">公链</th>
+                <th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">支持代币</th>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Ethereum</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币和 ERC721、ERC1155 标准代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Bitcoin</td>
+<td style="border: 1px solid #ddd; padding: 8px;">BTC</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Cosmos</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ATOM</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">TRON</td>
+<td style="border: 1px solid #ddd; padding: 8px;">TRX、TRC10 标准代币和 TRC20 标准代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Nervos</td>
+<td style="border: 1px solid #ddd; padding: 8px;">CKB</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Bitcoin Cash</td>
+<td style="border: 1px solid #ddd; padding: 8px;">BCH</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Litecoin</td>
+<td style="border: 1px solid #ddd; padding: 8px;">LTC</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Kusama</td>
+<td style="border: 1px solid #ddd; padding: 8px;">KSM</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Polkadot</td>
+<td style="border: 1px solid #ddd; padding: 8px;">DOT</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Filecoin</td>
+<td style="border: 1px solid #ddd; padding: 8px;">FIL</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Vaulta</td>
+<td style="border: 1px solid #ddd; padding: 8px;">A 和 Vaulta 链上代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Dogecoin</td>
+<td style="border: 1px solid #ddd; padding: 8px;">DOGE</td>
+</tr>
+</table>
+
+<p>imKey 内 Layer2 网络对应支持的代币可查看下表。</p>
+<table style="border-collapse: collapse; width: 100%;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Arbitrum</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://tokenlists.org/token-list?url=https://bridge.arbitrum.io/token-list-42161.json" target="_blank">这里</a>查看 <br>ERC721、ERC1155 标准 NFT</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Optimism</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json" target="_blank">这里</a>查看</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">zkSync Era</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://explorer.zksync.io/tokens" target="_blank">这里</a>查看 <br>ERC721、ERC1155 标准 NFT</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Base</td>
+<td style="border: 1px solid #ddd; padding: 8px;">与 Optimism 钱包一致， <a href="https://docs.base.org/get-started/base" target="_blank">详见此链接</a><br>ERC721、ERC1155 标准 NFT</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Scroll</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://scrollscan.com/tokens" target="_blank">这里</a>查看 <br>ERC721、ERC1155 标准 NFT</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Linea</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://lineascan.build/tokens" target="_blank">这里</a>查看</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Arbitrum Nova</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://nova.arbiscan.io/tokens" target="_blank">这里</a>查看</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Polygon zkEVM</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://zkevm.polygonscan.com/tokens" target="_blank">这里</a>查看</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Blast</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://blastscan.io/tokens" target="_blank">这里</a>查看</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Taiko</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://taikoscan.io/tokens" target="_blank">这里</a>查看</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">zkLink Nova</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://explorer.zklink.io/tokens" target="_blank">这里</a>查看</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Manta Pacific</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://manta.socialscan.io/tokens" target="_blank">这里</a>查看</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Mint</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://explorer.mintchain.io/tokens" target="_blank">这里</a>查看</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Vizing</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ETH、ERC20 标准代币，详细代币列表点击 <a href="https://explorer.vizing.com/tokens" target="_blank">这里</a>查看</td>
+</tr>
+</table>
+
+<p>imKey  内 EVM 兼容链支持的代币可查看下表。</p>
+<table style="border-collapse: collapse; width: 100%;">
+                <tr>
+                <th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">EVM 兼容链名称</th>
+                <th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">支持代币</th>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">BNB Smart Chain</td>
+<td style="border: 1px solid #ddd; padding: 8px;">BNB、BEP20 标准代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Polygon</td>
+<td style="border: 1px solid #ddd; padding: 8px;">POL 和 Polygon 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">OKX Chain</td>
+<td style="border: 1px solid #ddd; padding: 8px;">OKX Chain	OKT、KIP20 标准代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Avalanche</td>
+<td style="border: 1px solid #ddd; padding: 8px;">AVAX 和 Avalanche 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Mantle</td>
+<td style="border: 1px solid #ddd; padding: 8px;">MNT 和 Mantle 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Bitlayer</td>
+<td style="border: 1px solid #ddd; padding: 8px;">BTC 和 Bitlayer 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Conflux eSpace</td>
+<td style="border: 1px solid #ddd; padding: 8px;">CFX 和 Conflux eSpace 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Merlin </td>
+<td style="border: 1px solid #ddd; padding: 8px;">BTC 和 Merlin 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">X Layer</td>
+<td style="border: 1px solid #ddd; padding: 8px;">OKB 和 X Layer 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Fantom</td>
+<td style="border: 1px solid #ddd; padding: 8px;">FTM 和 Fantom 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Metis Andromeda</td>
+<td style="border: 1px solid #ddd; padding: 8px;">METIS 和 Metis 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">PlatON </td>
+<td style="border: 1px solid #ddd; padding: 8px;">LAT 和 PlatON 链上的代币 <br>ERC721、ERC1155 标准 NFT</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">opBNB</td>
+<td style="border: 1px solid #ddd; padding: 8px;">BNB 和 opBNB 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Gnosis Chain</td>
+<td style="border: 1px solid #ddd; padding: 8px;">xDAI 和 Gnosis Chain 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Kaia</td>
+<td style="border: 1px solid #ddd; padding: 8px;">KAIA(KLAY) 和 Kaia 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Celo</td>
+<td style="border: 1px solid #ddd; padding: 8px;">CELO 和 Celo 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Cronos</td>
+<td style="border: 1px solid #ddd; padding: 8px;">CRO 和 Cronos 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Aurora</td>
+<td style="border: 1px solid #ddd; padding: 8px;">aETH 和 Aurora 链上的代币 <br>详细代币列表点击 <a href="https://aurora.dev/tokens">这里</a>查看</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Harmony</td>
+<td style="border: 1px solid #ddd; padding: 8px;">ONE 和 Harmony 链上的代币</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">SmartBCH</td>
+<td style="border: 1px solid #ddd; padding: 8px;">BCH 和 SmartBCH 链上的代币</td>
+</tr>
+</table>
+
+                `}]}];export{v as default};
