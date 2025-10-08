@@ -1,4 +1,4 @@
-const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",e="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",t="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",p="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",r="/Web3Guide/assets/page2_2_1-CzEi4zS6.png",o="/Web3Guide/assets/page2_2_2-G2U36qAM.png",s="/Web3Guide/assets/page2_2_3-C8jMHvqv.png",a="/Web3Guide/assets/page2_2_4-CJNBFie-.png",n="/Web3Guide/assets/page2_2_5-BCOMN-Kx.png",g="/Web3Guide/assets/page2_3_1-a-KGxGsw.png",m="/Web3Guide/assets/page2_3_2-CaRLRIzZ.png",y="/Web3Guide/assets/page2_3_3-B4xurFWd.png",c="/Web3Guide/assets/page2_3_4-DXKgQZUz.png",u="/Web3Guide/assets/page2_3_5-DoAtP86P.png",_="/Web3Guide/assets/page2_3_6-DzIIt4XB.png",h="/Web3Guide/assets/page2_3_7-BrmxkScW.png",b="/Web3Guide/assets/page2_4_1-BVrdQYTm.png",x="/Web3Guide/assets/page2_4_2-CfkKz9rn.png",K="/Web3Guide/assets/page2_4_3-D22KeLA0.png",N="/Web3Guide/assets/page2_4_4-BYC3YZ4u.png",T="/Web3Guide/assets/page2_4_5-B-dVA_qa.png",P="/Web3Guide/assets/page2_5_1-wAjTQ2-Z.png",f="/Web3Guide/assets/page2_5_2-Do0xGyBB.png",E="/Web3Guide/assets/page2_5_3-B-Ic38KA.png",k="/Web3Guide/assets/page2_6_1-B394_H0Q.png",I="/Web3Guide/assets/page2_6_2-DozNEwgy.png",C="/Web3Guide/assets/page2_7_1-CavVWGj1.png",B="/Web3Guide/assets/page2_7_2-DNQzaL8e.png",F="/Web3Guide/assets/page2_7_3-DnI82E9m.png",G="/Web3Guide/assets/page2_9_1-CwDc7oOY.png",O="/Web3Guide/assets/page2_10_1-C4teezMd.png",i="/Web3Guide/assets/page2_11_1-SgC84R2U.png",A="/Web3Guide/assets/page2_11_2-BkHp3SlG.png",R="/Web3Guide/assets/page2_11_3-iGvmzj0N.png",S="/Web3Guide/assets/page2_11_4-Cy5lO991.png",W="/Web3Guide/assets/page2_12_1-BwomdZlS.png",v=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
+const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",e="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",t="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",p="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",r="/Web3Guide/assets/page2_2_1-CzEi4zS6.png",o="/Web3Guide/assets/page2_2_2-G2U36qAM.png",s="/Web3Guide/assets/page2_2_3-C8jMHvqv.png",a="/Web3Guide/assets/page2_2_4-CJNBFie-.png",n="/Web3Guide/assets/page2_2_5-BCOMN-Kx.png",g="/Web3Guide/assets/page2_3_1-a-KGxGsw.png",m="/Web3Guide/assets/page2_3_2-CaRLRIzZ.png",y="/Web3Guide/assets/page2_3_3-B4xurFWd.png",c="/Web3Guide/assets/page2_3_4-DXKgQZUz.png",u="/Web3Guide/assets/page2_3_5-DoAtP86P.png",_="/Web3Guide/assets/page2_3_6-DzIIt4XB.png",h="/Web3Guide/assets/page2_3_7-BrmxkScW.png",b="/Web3Guide/assets/page2_4_1-BVrdQYTm.png",x="/Web3Guide/assets/page2_4_2-CfkKz9rn.png",K="/Web3Guide/assets/page2_4_3-D22KeLA0.png",N="/Web3Guide/assets/page2_4_4-BYC3YZ4u.png",T="/Web3Guide/assets/file1_1_9-B-dVA_qa.png",P="/Web3Guide/assets/page2_5_1-wAjTQ2-Z.png",f="/Web3Guide/assets/page2_5_2-Do0xGyBB.png",E="/Web3Guide/assets/page2_5_3-B-Ic38KA.png",k="/Web3Guide/assets/page2_6_1-B394_H0Q.png",I="/Web3Guide/assets/page2_6_2-DozNEwgy.png",C="/Web3Guide/assets/page2_7_1-CavVWGj1.png",B="/Web3Guide/assets/page2_7_2-DNQzaL8e.png",F="/Web3Guide/assets/page2_7_3-DnI82E9m.png",G="/Web3Guide/assets/page2_9_1-CwDc7oOY.png",O="/Web3Guide/assets/page2_10_1-C4teezMd.png",i="/Web3Guide/assets/page2_11_1-SgC84R2U.png",A="/Web3Guide/assets/page2_11_2-BkHp3SlG.png",R="/Web3Guide/assets/page2_11_3-iGvmzj0N.png",S="/Web3Guide/assets/page2_11_4-Cy5lO991.png",W="/Web3Guide/assets/page2_12_1-BwomdZlS.png",v=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
           <h2>什么是硬件钱包？</h2>
           <p>
           硬件钱包是一种专门用于生成和存储私钥的电子设备，其核心是使用安全芯片来保护私钥的安全。在加密数字资产领域，私钥是资产所有权的唯一凭证，因此保护私钥的安全至关重要。硬件钱包通过将私钥完全隔离在离线环境中，避免了私钥暴露在网络中的风险，从而显著降低了被盗的可能性。
@@ -989,4 +989,30 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
 </tr>
 </table>
 
+                `}]},{id:"section2",title:"imKey 钱包管理",content:"",children:[{id:"file3_1",title:"安全提醒",content:`
+                <p>
+                「小额资产用热钱包，大额资产用冷钱包」是数字资产管理的最佳实践。使用硬件钱包（一般为冷钱包）可以使私钥等重要信息始终不联网，从而显著提高资产安全性。因此购买硬件钱包管理数字资产成为对安全有较高需求用户的首选。但在实际购买和使用硬件钱包的过程中，仍有一些需要注意的事项，避免安全防护功亏一篑。
+</p>
+<p>
+imKey 发现存在非官方授权店铺在京东、拼多多等线上商城出售「已激活」的 imKey 硬件钱包的现象，此情况存在被社会工程攻击的可能，有较大欺诈风险。
+<strong>正常情况下，硬件钱包设备应为未激活状态，即首次使用 imKey 时，激活设备、创建钱包、备份助记词和设置 PIN 码均应由用户自行完成。</strong>
+</p>
+<h2>什么是社会工程攻击？</h2>
+<p>
+社会工程攻击是指攻击者利用人类的社会工程学原理，通过欺骗、伪装、诱骗等手段，让受害者主动或被动地泄露机密信息或进行某些操作，从而达到攻击目的的一种攻击方式。
+</p>
+<p>
+通过进一步了解和调查，imKey 发现部分非官方授权店铺在售卖「已激活」硬件钱包的同时，篡改使用说明书，诱骗用户将资金存入被作恶商家提前创建的钱包地址中。
+</p>
+<p>
+imKey 已联系各平台官方客服反馈此情况，并积极协助警方调查此类事件。同时，请通过非官方店铺购买 imKey 硬件钱包的用户注意：
+</p>
+
+<h3>如何自查</h3>
+<p>首次使用 imKey 时，务必确认自己操作以下关键步骤：</p>
+<ul>
+<li>激活设备（激活不可逆，每台设备只激活一次）</li>
+<li>设置并备份 PIN 码和绑定码</li>
+<li>创建并备份助记</li>
+</ul>
                 `}]}];export{v as default};

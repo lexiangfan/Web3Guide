@@ -1,4 +1,4 @@
-const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0qT7t.png",s="/Web3Guide/assets/use1_3-BHQEiP_V.png",l="/Web3Guide/assets/use2_1-DS7tZGYo.png",p="/Web3Guide/assets/use2_2-AjlWNL3E.png",t="/Web3Guide/assets/use2_3-lN4Fsh-o.png",n="/Web3Guide/assets/use2_4-CdM1gO19.png",a="/Web3Guide/assets/use3_1-D_wGvbVg.png",o="/Web3Guide/assets/use3_2-RuGzH6AW.png",r="/Web3Guide/assets/use3_3-BI1eYWAt.png",u="/Web3Guide/assets/use3_4-EKQXh4_c.png",m="/Web3Guide/assets/use3_5-D5kdPDdB.png",c="/Web3Guide/assets/use4_1-iX6gBf-V.png",_="/Web3Guide/assets/use4_2-BUxBPwPy.png",T="/Web3Guide/assets/use4_3-1KdTfHqi.png",g="/Web3Guide/assets/use4_4-p76BQtJv.png",y="/Web3Guide/assets/use5_1-Bil06MSX.png",h="/Web3Guide/assets/use5_2-D6RSWlv7.png",d="/Web3Guide/assets/use5_3-c4SIFoiz.png",E="/Web3Guide/assets/use5_4-DUh7VeKZ.png",K="/Web3Guide/assets/use5_5-C6i6Oc6y.png",b="/Web3Guide/assets/use5_6-Bx9aAfcj.png",B="/Web3Guide/assets/use5_7-DqycAj_y.png",C="/Web3Guide/assets/use6_1-XHM0pF7Q.png",f="/Web3Guide/assets/use6_2-77D9n6sb.png",S="/Web3Guide/assets/use6_3-N1D8I2TQ.png",A="/Web3Guide/assets/use7_1-DP6-wUqs.png",D="/Web3Guide/assets/use7_2-B5EGVW0C.png",k="/Web3Guide/assets/use7_3-tkXRf5yx.png",G="/Web3Guide/assets/use7_4-Boid5wv4.png",W="/Web3Guide/assets/use7_5-CfkoiQTU.png",H="/Web3Guide/assets/use8_1-BHjCw5mr.png",U="/Web3Guide/assets/use8_2-BXaHTE2w.png",R="/Web3Guide/assets/use8_3-Ugu-bVwK.png",$="/Web3Guide/assets/use8_4-Cxfd88Sj.png",P="/Web3Guide/assets/use9_1-BlIpgIeC.png",w="/Web3Guide/assets/use9_2-BQ3NbkoG.png",X="/Web3Guide/assets/use9_3-DYYvRoXj.png",O="/Web3Guide/assets/use9_4-DUFGN6j5.png",N="/Web3Guide/assets/use9_5-G82LbLrm.png",z="/Web3Guide/assets/use9_6-DwQexfqc.png",v=[{id:"section1",title:"体验资产操作",content:"",children:[{id:"file1_1",title:"imKey Pro 如何转账？",content:`
+const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0qT7t.png",s="/Web3Guide/assets/use1_3-BHQEiP_V.png",l="/Web3Guide/assets/use2_1-DS7tZGYo.png",p="/Web3Guide/assets/use2_2-AjlWNL3E.png",t="/Web3Guide/assets/use2_3-lN4Fsh-o.png",n="/Web3Guide/assets/use2_4-CdM1gO19.png",a="/Web3Guide/assets/use3_1-D_wGvbVg.png",o="/Web3Guide/assets/use3_2-RuGzH6AW.png",r="/Web3Guide/assets/use3_3-BI1eYWAt.png",u="/Web3Guide/assets/use3_4-EKQXh4_c.png",m="/Web3Guide/assets/use3_5-D5kdPDdB.png",c="/Web3Guide/assets/use4_1-iX6gBf-V.png",h="/Web3Guide/assets/use4_2-BUxBPwPy.png",_="/Web3Guide/assets/use4_3-1KdTfHqi.png",y="/Web3Guide/assets/use4_4-p76BQtJv.png",T="/Web3Guide/assets/use5_1-Bil06MSX.png",g="/Web3Guide/assets/use5_2-D6RSWlv7.png",d="/Web3Guide/assets/use5_3-c4SIFoiz.png",E="/Web3Guide/assets/use5_4-DUh7VeKZ.png",K="/Web3Guide/assets/use5_5-C6i6Oc6y.png",b="/Web3Guide/assets/use5_6-Bx9aAfcj.png",B="/Web3Guide/assets/use5_7-DqycAj_y.png",C="/Web3Guide/assets/use6_1-XHM0pF7Q.png",f="/Web3Guide/assets/use6_2-77D9n6sb.png",S="/Web3Guide/assets/use6_3-N1D8I2TQ.png",k="/Web3Guide/assets/use7_1-DP6-wUqs.png",A="/Web3Guide/assets/use7_2-B5EGVW0C.png",D="/Web3Guide/assets/use7_3-tkXRf5yx.png",G="/Web3Guide/assets/use7_4-Boid5wv4.png",W="/Web3Guide/assets/use7_5-CfkoiQTU.png",H="/Web3Guide/assets/use8_1-BHjCw5mr.png",U="/Web3Guide/assets/use8_2-BXaHTE2w.png",R="/Web3Guide/assets/use8_3-Ugu-bVwK.png",$="/Web3Guide/assets/use8_4-Cxfd88Sj.png",P="/Web3Guide/assets/use9_1-BlIpgIeC.png",w="/Web3Guide/assets/use9_2-BQ3NbkoG.png",X="/Web3Guide/assets/use9_3-DYYvRoXj.png",z="/Web3Guide/assets/use9_4-DUFGN6j5.png",O="/Web3Guide/assets/use9_5-G82LbLrm.png",N="/Web3Guide/assets/use9_6-DwQexfqc.png",v=[{id:"section1",title:"体验资产操作",content:"",children:[{id:"file1_1",title:"imKey Pro 如何转账？",content:`
 <h2>imKey Pro 转账教程</h2>
                  <div class="video-container">
     <iframe 
@@ -77,7 +77,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 `},{id:"file1_3",title:"如何从 OKX 交易所提币至 imKey 钱包？",content:`
                 <p>
                 你在从交易所提币至 imKey 之前，需先了解
-                <a href="#/" target="_blank"> imKey 支持哪些数字货币</a>。若你转入了 imKey 不支持的代币，会发生交易所显示提币成功，但钱包内资产不到账的问题。
+                <a href="https://support.imkey.im/hc/zh-cn/articles/42051414874777" target="_blank"> imKey 支持哪些数字货币</a>。若你转入了 imKey 不支持的代币，会发生交易所显示提币成功，但钱包内资产不到账的问题。
 </p>
 <p>
 你可以结合 imKey  本篇教程以及 <a href="https://www.okx.com/zh-hans/help/how-do-i-make-a-withdrawal-app" target="_blank"> 欧易交易所官方教程</a>进行提币。
@@ -92,7 +92,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 </li>
 <li>
 <p>在「链上提币」页面，选择「提币网络」。这里以 ETH-ERC20 为例：</p>
-<span style="color: #999">注：在选择「提币网络」之前，请先确认 <a href="#/"> imKey 支持哪些数字货币</a>。</span>
+<span style="color: #999">注：在选择「提币网络」之前，请先确认 <a href="https://support.imkey.im/hc/zh-cn/articles/42051414874777"> imKey 支持哪些数字货币</a>。</span>
 <img src="${o}" alt="use3_2">
 </li>
 <li>
@@ -137,7 +137,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
     </iframe>
     </div>
     <p>
-    你在从交易所提币至 imKey 之前，需先了解 <a href="#/">imKey 支持哪些数字货币</a>。若你转入了 imKey 不支持的代币，会发生交易所显示提币成功，但钱包内资产不到账的问题。
+    你在从交易所提币至 imKey 之前，需先了解 <a href="https://support.imkey.im/hc/zh-cn/articles/42051414874777">imKey 支持哪些数字货币</a>。若你转入了 imKey 不支持的代币，会发生交易所显示提币成功，但钱包内资产不到账的问题。
 </p>
 
 <h2>如何提币到 imKey 钱包（以币安交易所提 USDT 为例）</h2>
@@ -161,7 +161,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 <li>Tron（TRC20）</li>
 </ul>
 <p>如果你在提币时发现币安提供的网络类型，imKey 均不支持，那么该代币就无法转入 imKey。请联系交易所客服获取帮助，选择其他支持该代币的钱包。</p>
-<img src="${_}" alt="use4_2">
+<img src="${h}" alt="use4_2">
 </li>
 <li>选择合适的「提币网络」
 <p>BNB Smart Chian（BEP20）、AVAX C-Chain、Ethereum（ERC20）、Polygon、Tron（TRC20）均是 imKey 支持的 USDT 提币网络，其中：</p>
@@ -186,11 +186,11 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 <li>获取正确的「钱包地址」
 <p>打开 imToken，点击左上角的按钮，下拉到「imKey 硬件钱包」的部分选择用于收款的账户。</p>
 <p>例如：我想将 USDT 提至 imKey 钱包的 ETH 账户，则选择 ETH 账户并点击「收款」-「复制」即可复制该账户地址。</p>
-<img src="${T}" alt="use4_3">
+<img src="${_}" alt="use4_3">
 </li>
 <li>在币安输入「提币地址」
 <p>打开币安交易所 App，在提币页面粘贴你刚刚复制的 ETH 地址，选择 ERC20 提币网络，输入提币数量，点击「提现」并进行后续验证即可完成提币。在交易所显示提币成功后，等待一会你就可以在 imKey 钱包内看到你转入的代币了。</p>
-<img src="${g}" alt="use4_4">
+<img src="${y}" alt="use4_4">
 </li>
 </ol>
 
@@ -202,7 +202,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 <p>有时交易所显示提币成功，但可能实际并未成功发出，此时请联系交易所客服进行确认。</p>
 <p>原因二：转入了 imKey 不支持的代币</p>
 <p>
-请通过 「<a href="#/">imKey 支持哪些数字货币</a>」这篇文章判断你是否转入了 imKey 不支持的代币，此时会发生交易所显示提币成功，但钱包内资产不到账的问题，需要你自行联系代币项目方找回代币。
+请通过 「<a href="https://support.imkey.im/hc/zh-cn/articles/42051414874777">imKey 支持哪些数字货币</a>」这篇文章判断你是否转入了 imKey 不支持的代币，此时会发生交易所显示提币成功，但钱包内资产不到账的问题，需要你自行联系代币项目方找回代币。
 </p>
 <p>原因三：提币时选择了 BEP20 网络</p>
 <p>如果你提币时选择的是 BEP20 网络，那么你的代币转入了 imKey 钱包内的 BSC 账户，需要切换至 BSC 账户查看资产。</p>
@@ -229,11 +229,11 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <h2>使用 imKey 参与非托管 ETH 质押手把手教程👇</h2>
                 <ol>
                 <li>打开 imToken，点击左上角的导航栏进入「选择账户」界面，再点击 imKey 硬件钱包的 ETH 账户。
-                <img src="${y}" alt="use5_1">
+                <img src="${T}" alt="use5_1">
 </li>
                 <li>在 imKey 的 ETH 账户首页点击「质押」进入以太坊质押界面，再点击「质押」。
                 <p>输入要购买的验证器（即验证节点）数量，一个验证节点需要存入 32 个 ETH。确认验证器数量后，点击「下一步」进入费用确认页面。</p>
-                <img src="${h}" alt="use5_2">
+                <img src="${g}" alt="use5_2">
 </li>
                 <li>选择 imKey 的 ETH 账户地址，进行费用确认。费用分为 4 部分：
                 <ul>
@@ -319,16 +319,16 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <ol>
                 <li>
                 <p>打开 APP ，将硬件钱包切换至 Arbitrum 网络，在「浏览」页面输入「Uniswap」并打开。</p>
-                <img src="${A}" alt="use7_1">
+                <img src="${k}" alt="use7_1">
 </li>
                 <li>
                 <p>点击「确认」授权 Uniswap 访问钱包地址。点击红框位置可以切换网络，本文以 Arbitrum 网络进行币币兑换为例。</p>
-                <img src="${D}" alt="use7_2">
+                <img src="${A}" alt="use7_2">
 </li>
                 <li>
                 <p>选择要参与兑换的币种并输入数量，再依次点击「兑换」-「兑换」。</p>
                 <span style="color: #999"> 注：首次进行代币兑换时，需要先将代币的转账权限授权予 Uniswap ，然后才可以进行币币兑换，该过程会涉及两次合约交互。</span>
-                <img src="${k}" alt="use7_3">
+                <img src="${D}" alt="use7_3">
 </li>
                 <li>
                 <p>确认支付详情后，点击「请求 imKey 确认」，然后在硬件设备上完成确认。</p>
@@ -400,15 +400,15 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 </li>
                 <li>
                 <p>选择要跨链转移的代币，以及发送和接收资产的网络。</p>
-                <img src="${O}" alt="use9_4">
+                <img src="${z}" alt="use9_4">
 </li>
                 <li>
                 <p>输入要转移的代币数量后，依次点击「SEND」-「CONFIRM AND SEND」-「请求 imKey 确认」，最后在硬件设备上完成签名确认。</p>
-                <img src="${N}" alt="use9_5">
+                <img src="${O}" alt="use9_5">
 </li>
                 <li>
                 <p>等待状态从 「Processing」 变成 「Completed」，并且下方出现三个绿色完成图标时，说明交易已完成。返回 imKey 首页切换到 zkSync Era 网络，即可看到资产。</p>
-                <img src="${z}" alt="use9_6">
+                <img src="${N}" alt="use9_6">
 </li>
 </ol>
 <p>如果使用 Orbiter Finance 遇到问题，请联系 Orbiter Finance 官方咨询：</p>
