@@ -1,4 +1,4 @@
-const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",e="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",t="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",p="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",r="/Web3Guide/assets/page2_2_1-CzEi4zS6.png",o="/Web3Guide/assets/page2_2_2-G2U36qAM.png",s="/Web3Guide/assets/page2_2_3-C8jMHvqv.png",a="/Web3Guide/assets/page2_2_4-CJNBFie-.png",n="/Web3Guide/assets/page2_2_5-BCOMN-Kx.png",g="/Web3Guide/assets/page2_3_1-a-KGxGsw.png",m="/Web3Guide/assets/page2_3_2-CaRLRIzZ.png",y="/Web3Guide/assets/page2_3_3-B4xurFWd.png",c="/Web3Guide/assets/page2_3_4-DXKgQZUz.png",u="/Web3Guide/assets/page2_3_5-DoAtP86P.png",_="/Web3Guide/assets/page2_3_6-DzIIt4XB.png",h="/Web3Guide/assets/page2_3_7-BrmxkScW.png",b="/Web3Guide/assets/page2_4_1-BVrdQYTm.png",x="/Web3Guide/assets/page2_4_2-CfkKz9rn.png",K="/Web3Guide/assets/page2_4_3-D22KeLA0.png",N="/Web3Guide/assets/page2_4_4-BYC3YZ4u.png",T="/Web3Guide/assets/file1_1_9-B-dVA_qa.png",P="/Web3Guide/assets/page2_5_1-wAjTQ2-Z.png",f="/Web3Guide/assets/page2_5_2-Do0xGyBB.png",E="/Web3Guide/assets/page2_5_3-B-Ic38KA.png",k="/Web3Guide/assets/page2_6_1-B394_H0Q.png",I="/Web3Guide/assets/page2_6_2-DozNEwgy.png",C="/Web3Guide/assets/page2_7_1-CavVWGj1.png",B="/Web3Guide/assets/page2_7_2-DNQzaL8e.png",F="/Web3Guide/assets/page2_7_3-DnI82E9m.png",G="/Web3Guide/assets/page2_9_1-CwDc7oOY.png",O="/Web3Guide/assets/page2_10_1-C4teezMd.png",i="/Web3Guide/assets/page2_11_1-SgC84R2U.png",A="/Web3Guide/assets/page2_11_2-BkHp3SlG.png",R="/Web3Guide/assets/page2_11_3-iGvmzj0N.png",S="/Web3Guide/assets/page2_11_4-Cy5lO991.png",W="/Web3Guide/assets/page2_12_1-BwomdZlS.png",v=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
+const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",e="/Web3Guide/assets/page2_1_1-DhV1WCAF.png",t="/Web3Guide/assets/page2_1_2-3ZGpmv3s.png",d="/Web3Guide/assets/page2_1_3-B7GLD-ra.png",p="/Web3Guide/assets/page2_1_4-C60Eb6Uu.png",r="/Web3Guide/assets/page2_2_1-CzEi4zS6.png",s="/Web3Guide/assets/page2_2_2-G2U36qAM.png",o="/Web3Guide/assets/page2_2_3-C8jMHvqv.png",a="/Web3Guide/assets/page2_2_4-CJNBFie-.png",n="/Web3Guide/assets/page2_2_5-BCOMN-Kx.png",g="/Web3Guide/assets/page2_3_1-a-KGxGsw.png",m="/Web3Guide/assets/page2_3_2-CaRLRIzZ.png",_="/Web3Guide/assets/page2_3_3-B4xurFWd.png",y="/Web3Guide/assets/page2_3_4-DXKgQZUz.png",c="/Web3Guide/assets/page2_3_5-DoAtP86P.png",h="/Web3Guide/assets/page2_3_6-DzIIt4XB.png",u="/Web3Guide/assets/page2_3_7-BrmxkScW.png",b="/Web3Guide/assets/page2_4_1-BVrdQYTm.png",x="/Web3Guide/assets/page2_4_2-CfkKz9rn.png",T="/Web3Guide/assets/page2_4_3-D22KeLA0.png",K="/Web3Guide/assets/page2_4_4-BYC3YZ4u.png",E="/Web3Guide/assets/file1_1_9-B-dVA_qa.png",N="/Web3Guide/assets/page2_5_1-wAjTQ2-Z.png",k="/Web3Guide/assets/page2_5_2-Do0xGyBB.png",P="/Web3Guide/assets/page2_5_3-B-Ic38KA.png",f="/Web3Guide/assets/page2_6_1-B394_H0Q.png",B="/Web3Guide/assets/page2_6_2-DozNEwgy.png",C="/Web3Guide/assets/page2_7_1-CavVWGj1.png",I="/Web3Guide/assets/page2_7_2-DNQzaL8e.png",A="/Web3Guide/assets/page2_7_3-DnI82E9m.png",R="/Web3Guide/assets/page2_9_1-CwDc7oOY.png",F="/Web3Guide/assets/page2_10_1-C4teezMd.png",i="/Web3Guide/assets/page2_11_1-SgC84R2U.png",G="/Web3Guide/assets/page2_11_2-BkHp3SlG.png",S="/Web3Guide/assets/page2_11_3-iGvmzj0N.png",W="/Web3Guide/assets/page2_11_4-Cy5lO991.png",O="/Web3Guide/assets/page2_12_1-BwomdZlS.png",$="/Web3Guide/assets/page3_1_1-BEb5_4Ib.png",D="/Web3Guide/assets/page3_1_2-i0HihQm_.png",v="/Web3Guide/assets/page3_1_3-BLgdbKW6.png",z="/Web3Guide/assets/page3_2_1-BpGTHK_Z.png",X="/Web3Guide/assets/page3_2_2-C4qjUn5U.png",H="/Web3Guide/assets/page3_2_3-au1an7p1.png",M="/Web3Guide/assets/page3_3_1-BbHjfSjP.png",L="/Web3Guide/assets/page3_3_2-CUvTPjmF.png",V="/Web3Guide/assets/page3_3_3-BXxvGLEG.png",w="/Web3Guide/assets/page3_3_4-C8kHfZ0S.png",j="/Web3Guide/assets/page3_3_1-BbHjfSjP.png",U="/Web3Guide/assets/page3_4_1-BpPdsXjX.png",Z="/Web3Guide/assets/page3_4_2-ByuFDMAL.png",J="/Web3Guide/assets/page3_4_3-5Nx3b5Ws.png",Y="/Web3Guide/assets/page3_4_4-DAWMaL3P.png",Q="/Web3Guide/assets/page3_4_5-CWj1rfx2.png",q="/Web3Guide/assets/page3_4_6-6jA9NzZN.png",ii="/Web3Guide/assets/page3_5_1-Bb4yJ5vi.png",li=[{id:"section1",title:"基础知识",content:"",children:[{id:"file1_1",title:"什么是硬件钱包",content:`
           <h2>什么是硬件钱包？</h2>
           <p>
           硬件钱包是一种专门用于生成和存储私钥的电子设备，其核心是使用安全芯片来保护私钥的安全。在加密数字资产领域，私钥是资产所有权的唯一凭证，因此保护私钥的安全至关重要。硬件钱包通过将私钥完全隔离在离线环境中，避免了私钥暴露在网络中的风险，从而显著降低了被盗的可能性。
@@ -410,16 +410,16 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 <ol>
                 <li>
                 <p>点击「我」-「钱包管理」，选择已经配对的 imKey 硬件钱包点「添加账户」按钮进行添加。</p>
-                <img src="${d}" alt="page2_1_1">
+                <img src="${e}" alt="page2_1_1">
 </li>
                 <li>
                 <p>硬件钱包 imKey 默认支持 Ethereum（ETH）和 Bitcoin（BTC），如需添加其他网络，请先确保手机蓝牙已成功与 imKey 硬件钱包连接，接着在 imKey 管理界面上找到 「应用管理」，安装需添加的网络
                 <span style="color: #999">（这里以添加 TRX 公链为列）</span>。</p>
-                <img src="${e}" alt="page2_1_2">
+                <img src="${t}" alt="page2_1_2">
 </li>
                 <li>
                 <p>安装好所需公链后返回「imKey 管理」，点击「添加账户」进行账户添加。完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的所有账户。</p>
-                <img src="${t}" alt="page2_1_3">
+                <img src="${d}" alt="page2_1_3">
 </li>
 </ol>
 
@@ -440,7 +440,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
 </li>
                 <li>
                 <p>选择需要添加的账户点「+」-「确认」，完成后，在资产首页点击左上角的账户名称，即可查看并管理钱包中已添加的账户。<span>（这里以添加 ETH 地址为例）</span></p>
-                <img src="${o}" alt="page2_2_2">
+                <img src="${s}" alt="page2_2_2">
 </li>
 </ol>
 
@@ -448,7 +448,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
 <ol>
 <li>
 <p>点「我」-「钱包管理」-选择配对的 imKey「添加账户」</p>
-<img src="${s}" alt="page2_2_3">
+<img src="${o}" alt="page2_2_3">
 </li>
 <li>
 <p>选择需要添加的账户点击右上角的三个点，选择「高级模式」-「自定义」-「BIP44」</p>
@@ -470,7 +470,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 <p>方式二：在「热门资产」列表中找到想要添加的代币，点击右侧「+」添加到账户首页。</p>
                 <img src="${m}" alt="page2_3_2">
                 <p>方式三：在上方搜索框内输入 Token 名称 / 合约地址进行搜索添加。</p>
-                <img src="${y}" alt="page2_3_3">
+                <img src="${_}" alt="page2_3_3">
                 <p><strong>搜索代币时的注意事项：</strong></p>
                 <ul>
                 <li>如果未搜索到相关代币，请尝试通过合约地址进行搜索添加。</li>
@@ -478,7 +478,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
 </ul>
                 <p>方式四：选择「自定义代币」，输入代币合约地址并点击右上角的「保存」添加到账户首页。</p>
                 <p><span style="color: #999">注：输入代币合约地址时，Symbol 与 Decimal 的参数会被自动获取。目前，Tron、Cosmos、Osmosis 账户不支持自定义代币功能。</span></p>
-                <img src="${c}" alt="page2_3_4">
+                <img src="${y}" alt="page2_3_4">
                 
                 <h3>调整显示顺序和隐藏</h3>
                 <p>你可以按需调整账户首页的代币显示顺序，或者隐藏不需要的代币。参考步骤：在账户首页，点击「+」-「首页资产管理」</p>
@@ -486,15 +486,15 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 <li>长按代币右侧三条横线上下拖动来调整显示顺序。或者点击「默认方式」按照默认 / 价值 / 名称进行排序。</li>
                 <li>点击代币左侧的「-」-「删除」可取消该代币在资产首页的显示，隐藏不常用的代币。</li>
 </ul>
-                <img src="${u}" alt="page2_3_5">
+                <img src="${c}" alt="page2_3_5">
                 
                 <h2>如何查询代币合约地址</h2>
                 <p>如果你不知道所需添加代币的合约地址，可通过区块浏览器进行查询。这里以以太坊浏览器 Etherscan 为例。</p>
                 <p>1. 打开 imToken 并切换至「浏览」页，搜索并进入「Etherscan」。</p>
                 <p><span style="color: #999">注：如果想搜索其他网络的浏览器，在搜索框内输入网络名称即可看到对应的浏览器 DApp。例如：需要搜索 Arbitrum 浏览器，输入 Arbitrum 即可。</span></p>
-                <img src="${_}" alt="page2_3_6">
+                <img src="${h}" alt="page2_3_6">
                 <p>2. 在搜索框输入代币名称（如 USDT），在搜索结果中选择你需查询的代币，点击进入代币详情页。在 Other Info 模块下的 TOKEN CONTRACT 即为代币合约地址。</p>
-                <img src="${h}" alt="page2_3_7">
+                <img src="${u}" alt="page2_3_7">
                 `},{id:"file2_4",title:"换新手机时，imKey 该如何重新绑定？",content:`
                                 <div class="video-container">
     <iframe 
@@ -526,13 +526,13 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 <img src="${x}" alt="page2_4_2">
                 </li>
                 <li>选择连接设备，出现蓝牙配对请求，输入 imKey 上显示的蓝牙配对码，点击「配对」；
-                <img src="${K}" alt="page2_4_3">
+                <img src="${T}" alt="page2_4_3">
                 </li>
                 <li>输入绑定码，导入钱包；
-                <img src="${N}" alt="page2_4_4">
+                <img src="${K}" alt="page2_4_4">
                 </li>
                 <li>待钱包导入之后，即绑定成功。
-                <img src="${T}" alt="page2_4_5">
+                <img src="${E}" alt="page2_4_5">
                 </li>
 </ol>
 
@@ -565,16 +565,16 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 <li>
                 <p>开启 imKey Pro，根据界面提示设置语言和 PIN 码，然后选择「恢复钱包」并按「OK」键确认；</p>
                 <p><span style="color: #999">注：如果 imKey Pro 已导入其他助记词，需要先重置 imKey ，然后进行步骤 1。</span></p>
-                <img src="${P}" alt="page2_5_1">
+                <img src="${N}" alt="page2_5_1">
 </li>
                 <li>
                 <p>选择助记词对应的单词数量并按「OK」键确认；</p>
-                <img src="${f}" alt="page2_5_2">
+                <img src="${k}" alt="page2_5_2">
 </li>
                 <li>
                 <p>输入助记词后，设备会显示「钱包恢复中，预计 2 分钟完成」；</p>
                 <p><span style="color: #999">注：上下按钮切换，OK 确认，C 取消。</span></p>
-                <img src="${E}" alt="page2_5_3">
+                <img src="${P}" alt="page2_5_3">
 </li>
                 <li>待出现「钱包恢复成功」的提示后，与 <a href="https://imkeyofficial.feishu.cn/wiki/OJUXwp58HiwRbekBmDYcoDKnnxb">imToken 绑定</a>即可正常使用。</li>
 </ol>
@@ -604,11 +604,11 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 <li>imKey 的 PIN 码设置要求为 6 - 8 位数字，不支持相同或连续的数字组合。</li>
                 <li>imKey 上显示「<strong>设置 PIN </strong>」进入设置流程。</li>
                 <li>设置每一位的数字，上下按钮切换，点击「<strong>OK</strong>」确认，点击「<strong>C</strong>」取消。
-                <img src="${k}" alt="page2_6_1">
+                <img src="${f}" alt="page2_6_1">
                 </li>
                 <li>重复此过程，直到选择了 PIN 码的所有数字。（如果你想设置 6 位 PIN 码，在第 7 位出现「✔️」符号时点击「<strong>OK</strong>」按钮即可完成设置。如果你想设置 7 位或者 8 位 PIN 码，在显示「✔️」符号时，通过切换按钮切换成数字并确认即可。）</li>
                 <li>再次输入 PIN 码进行确认
-                <img src="${I}" alt="page2_6_2">
+                <img src="${B}" alt="page2_6_2">
 </li>
 </ol>
 
@@ -632,10 +632,10 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 <img src="${C}" alt="page2_7_1">
 </li>
                 <li>点击配对的硬件钱包
-                <img src="${B}" alt="page2_7_2">
+                <img src="${I}" alt="page2_7_2">
 </li>
                 <li>点击「解除配对」-「确认」
-                <img src="${F}" alt="page2_7_3">
+                <img src="${A}" alt="page2_7_3">
 </li>
 </ol>
                 `},{id:"file2_8",title:"重置硬件设备",content:`
@@ -668,7 +668,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 
                 `},{id:"file2_9",title:"提示「账户已在钱包中存在，不能重复添加」？",content:`
                 <h2>APP 提示「账户已在钱包中存在，不能重复添加」</h2>
-                <img src="${G}" alt="page2_9_1">
+                <img src="${R}" alt="page2_9_1">
                 <p>当 APP 提示「账户已在钱包中存在，不能重复添加」时，通常是因为你将 imToken 身份钱包的助记词导入 imKey，或者将 imKey 创建的助记词导入 imToken。我们的产品机制要求你先有一个 imToken 身份钱包并登录，再连接 imKey 钱包。导入相同助记词会导致该提示出现。</p>
                 <p><strong>注：通过 imKey 创建的钱包更安全，因为私钥离线存储在 imKey 硬件钱包的安全芯片中，隔离网络环境存储（物理隔绝）。</strong></p>
                 
@@ -699,7 +699,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 <p style="color: #409eff">注：如果问题仍然无法解决，请发送邮件至 support@imkey.im 与我们联系。</p>
                 `},{id:"file2_10",title:"蓝牙配对时提示「无法找到设备」怎么办？",content:`
                 <h2>如何解决 imKey 和 imToken APP 蓝牙配对问题</h2>
-                <img src="${O}" alt="page2_10_1">
+                <img src="${F}" alt="page2_10_1">
                 <p>在 imKey 和 imToken APP 进行蓝牙配对过程中，如果 APP 提示「无法找到设备」，可以根据以下步骤进行检查并解决问题：</p>
                 
                 <h3>1. 苹果手机</h3>
@@ -733,13 +733,13 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 <h2>第二步：蓝牙连接</h2>
                 <ul>
                 <li>语言选择完成后，设备会显示提示，要求与 imToken app 进行蓝牙连接。确保手机已开启蓝牙功能，并按照提示完成连接。
-                <img src="${A}" alt="page2_11_2">
+                <img src="${G}" alt="page2_11_2">
                 </li>
 </ul>
                 <h2>第三步：设备激活</h2>
                 <ul>
                 <li>蓝牙连接成功后，按提示完成操作，最终 imKey 屏幕会提示「激活成功」。此时，设备已经成功激活，可以进行后续操作。
-                <img src="${R}" alt="page2_11_3">
+                <img src="${S}" alt="page2_11_3">
                 </li>
 </ul>
 
@@ -756,7 +756,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
 </tr>
 <tr>
 <td style="border: 1px solid #ddd; padding: 8px;"><img src="${i}" alt="page2_11_1"></td>
-<td style="border: 1px solid #ddd; padding: 8px;"><img src="${S}" alt="page2_11_4"></td>
+<td style="border: 1px solid #ddd; padding: 8px;"><img src="${W}" alt="page2_11_4"></td>
 </tr>
 </table>
 
@@ -779,7 +779,7 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
                 <h3>如何查看 SN 码？</h3>
                 <p>SN 码位于 imKey Pro 硬件钱包的背面。</p>
                 <p>最下方 “SN：” 后面几位大写字母与数字组合字串即为 imKey Pro SN 码。</p>
-                <img src="${W}" alt="page2_12_1">
+                <img src="${O}" alt="page2_12_1">
                 `},{id:"file2_13",title:"imKey Pro 支持哪些币种?",content:`
                 <p>imKey 支持 Ethereum、Bitcoin、Cosmos、Vaulta、TRON、Nervos、Bitcoin Cash、Litecoin、Kusama、Polkadot、Filecoin 、Dogecoin 等12 条主流
                 <a href="https://support.token.im/hc/zh-cn/articles/4414720877209-%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%AC%E6%9C%89%E9%93%BE" target="_blank">公链</a>，以及 Arbitrum、Optimism、zkSync Era 等
@@ -989,30 +989,175 @@ const l="/Web3Guide/assets/PIN-su9Uj2Zk.png",d="/Web3Guide/assets/page2_1_1-DhV1
 </tr>
 </table>
 
-                `}]},{id:"section2",title:"imKey 钱包管理",content:"",children:[{id:"file3_1",title:"安全提醒",content:`
-                <p>
-                「小额资产用热钱包，大额资产用冷钱包」是数字资产管理的最佳实践。使用硬件钱包（一般为冷钱包）可以使私钥等重要信息始终不联网，从而显著提高资产安全性。因此购买硬件钱包管理数字资产成为对安全有较高需求用户的首选。但在实际购买和使用硬件钱包的过程中，仍有一些需要注意的事项，避免安全防护功亏一篑。
-</p>
-<p>
-imKey 发现存在非官方授权店铺在京东、拼多多等线上商城出售「已激活」的 imKey 硬件钱包的现象，此情况存在被社会工程攻击的可能，有较大欺诈风险。
-<strong>正常情况下，硬件钱包设备应为未激活状态，即首次使用 imKey 时，激活设备、创建钱包、备份助记词和设置 PIN 码均应由用户自行完成。</strong>
-</p>
-<h2>什么是社会工程攻击？</h2>
-<p>
-社会工程攻击是指攻击者利用人类的社会工程学原理，通过欺骗、伪装、诱骗等手段，让受害者主动或被动地泄露机密信息或进行某些操作，从而达到攻击目的的一种攻击方式。
-</p>
-<p>
-通过进一步了解和调查，imKey 发现部分非官方授权店铺在售卖「已激活」硬件钱包的同时，篡改使用说明书，诱骗用户将资金存入被作恶商家提前创建的钱包地址中。
-</p>
-<p>
-imKey 已联系各平台官方客服反馈此情况，并积极协助警方调查此类事件。同时，请通过非官方店铺购买 imKey 硬件钱包的用户注意：
-</p>
-
-<h3>如何自查</h3>
-<p>首次使用 imKey 时，务必确认自己操作以下关键步骤：</p>
-<ul>
-<li>激活设备（激活不可逆，每台设备只激活一次）</li>
-<li>设置并备份 PIN 码和绑定码</li>
-<li>创建并备份助记</li>
+                `}]},{id:"section3",title:"安全提醒",content:"",children:[{id:"file3_1",title:"安全提醒：警惕社会工程攻击骗局",content:`
+               <p>「小额资产用热钱包，大额资产用冷钱包」是数字资产管理的最佳实践。使用硬件钱包（一般为冷钱包）可以使私钥等重要信息始终不联网，从而显著提高资产安全性。因此购买硬件钱包管理数字资产成为对安全有较高需求用户的首选。但在实际购买和使用硬件钱包的过程中，仍有一些需要注意的事项，避免安全防护功亏一篑。</p>
+               <p>imKey 发现存在非官方授权店铺在京东、拼多多等线上商城出售「已激活」的 imKey 硬件钱包的现象，此情况存在被社会工程攻击的可能，有较大欺诈风险。<strong>正常情况下，硬件钱包设备应为未激活状态，即首次使用 imKey 时，激活设备、创建钱包、备份助记词和设置 PIN 码均应由用户自行完成。</strong></p>
+               
+               <h2>什么是社会工程攻击？</h2>
+               <p>社会工程攻击是指攻击者利用人类的社会工程学原理，通过欺骗、伪装、诱骗等手段，让受害者主动或被动地泄露机密信息或进行某些操作，从而达到攻击目的的一种攻击方式。</p>
+               <p>通过进一步了解和调查，imKey 发现部分非官方授权店铺在售卖「已激活」硬件钱包的同时，篡改使用说明书，诱骗用户将资金存入被作恶商家提前创建的钱包地址中。</p>
+               <p>imKey 已联系各平台官方客服反馈此情况，并积极协助警方调查此类事件。同时，请通过非官方店铺购买 imKey 硬件钱包的用户注意：</p>
+               
+               <h3>如何自查</h3>
+               <p>首次使用 imKey 时，务必确认自己操作以下关键步骤：</p>
+               <ul>
+               <li>激活设备（激活不可逆，每台设备只激活一次）</li>
+               <li>设置并备份 PIN 码和绑定码</li>
+               <li>创建并备份助记
+               <img src="${$}" alt="page3_1_1">
+               <p>如果以上步骤并非你自己操作，则存在较大的受欺诈风险，请务必警惕：</p>
+<p>首次使用 imKey 的具体教程可查看 imKey 官网（<a href="https://imkey.im/zh-hans" target="_blank"> https://imkey.im </a>) 帮助中心的操作教程《<a href="https://support.imkey.im/hc/zh-cn/articles/35731560748953-imKey-%E4%B8%8E-imToken-%E9%A6%96%E6%AC%A1%E9%85%8D%E5%AF%B9%E7%BB%91%E5%AE%9A%E6%95%99%E7%A8%8B" target="_blank">imKey 与 imToken 首次配对绑定教程</a>》</p>
+<p>同时，也可以通过官方设备验证渠道（<a href="https://imkey.im/zh-hans/pages/verify" target="_blank"></a>https://imkey.im/zh-hans/pages/imkey-verification ）对产品进行全方位验证。包括</p>
+               </li>
+               <li>外观检查：重点是检查说明书，凡提前创建 PIN 码的，均存在风险
+               <img src="${D}" alt="page3_1_2">
+</li>
+<li>设备激活状态检查：输入 SN 码可查看设备的激活时间，新设备应提示「设备尚未激活」
+<img src="${v}" alt="page3_1_3">
+</li>     
 </ul>
-                `}]}];export{v as default};
+<p><strong>如何处理</strong></p>
+<ol>
+<li>将可能存在风险的钱包地址中的资产转移至其他安全地址</li>
+<li>如有任何疑问，请通过官方邮箱 support@imkey.im 与我们联系</li>
+</ol>
+
+<h2>如何安全购买 imKey 硬件钱包</h2>
+<p>为确保产品品质以及售后服务质量，请通过官方渠道购买。目前，imKey 官方提供三种购买途径：</p>
+<ul>
+<li><strong>有赞商城：</strong>如果收件地址在国内，可以通过官方有赞商城购买，产品会通过顺丰快递在国内配送，配送速度快且安全可靠。<a href="https://shop42404838.m.youzan.com/v2/feature/d5bMdxB3Ab?dc_ps=3157273918595792902.200001" target="_blank"> https://j.youzan.com/S0w1J1</a></li>
+<li><strong>亚马逊店铺：</strong>如果收件地址在海外，可以到亚马逊 imKey 官方店铺购买。亚马逊是全球知名的电商平台，购买和配送都非常方便。（认准 Seller: IMKEY CO.,LTD.)</li>
+<li><a href="https://www.amazon.com/stores/imKey/page/BB5DB6D0-71A4-49BB-ADF0-C8F2FE0B6BF0?maas=maas_adg_12C4ABD0A5A5DCE609F181E0424A8307_afap_abs&ref_=aa_maas&tag=maas" target="_blank">Amazon US</a></li>
+<li><a href="https://www.amazon.co.jp/stores/imKey/page/F686FE53-D163-4D27-AE60-D085735F898F" target="_blank">Amazon JP:</a></li>
+<li>
+<p><strong>官方网站：</strong>如果收件地址在海外，也可以通过 imKey 官方网站购买。</p>
+<p><a href="https://imkey.im/zh-hans"></a>https://store.imkey.im/</p>
+</li>
+</ul>
+<p>请注意，只有通过官方渠道购买的 imKey 产品才能保证你的资产安全，同时还能享受官方售后服务。如果从其他渠道购买，我们无法保证产品质量和售后服务。</p>
+
+<h2>关于 imKey</h2>
+<p>imKey Pro 硬件钱包在行业内首先采用 CC EAL6+ 安全芯片，提供用户最高级别的安全保障，同时也是行业内率先采用蓝牙方式连接的硬件钱包，操作便捷，简单易用，在应用端，深度集成 imToken，可无门槛的体验 imToken 支持的各种应用，历经多年的市场验证，imKey Pro 已获得了用户和行业的广泛认可。</p>
+<p>我们深知，用户的积极反馈是打击非授权店铺欺诈行为的关键。因此，我们诚挚邀请广大用户积极参与，如发现非授权店铺或疑似欺诈行为，请通过以下方式举报：</p>
+<ul>
+<li>举报邮箱：support@imkey.im</li>
+<li>举报内容：请提供非授权店铺的名称、网址，以便我们迅速核实并采取行动。</li>
+</ul>
+                `},{id:"file3_2",title:"相同尾号地址骗局",content:`
+                <p>骗子利用用户转账时复制交易记录中地址的习惯，生成相同尾号的地址作为伪装地址，并利用伪装地址向用户小额转账，使得骗子的地址出现在用户的交易记录中。</p>
+                <p>例如下图：用户经常转账的地址为「TUahsb…JjXyp3」，伪装地址为「TSeqQh…sjXyp3」，它们有相同的尾号「jXyp3」。</p>
+                <img src="${z}" alt="page3_2_1">
+                <p>若用户从交易记录中复制地址进行转账时，只核对了尾号，则很容易错误复制成骗子的伪装地址，不小心转账后就会造成代币损失。</p>
+                <p>imToken 团队在此提醒大家：由于区块链技术不可篡改的特性，链上转账一旦成功，则无法进行取消、撤回等操作，所以转账前请务必仔细核对地址！</p>
+                <p>另外 imToken 推荐你使用地址本功能，将一些常用的地址进行保存，防止转账时转错地址。</p>
+                
+                <h3>如何使用地址本转账</h3>
+                <h4>设置地址本</h4>
+                <p>打开 imToken 钱包，并依次点击「我」-「地址本」找到地址本功能，点击右上角「+」即可添加 12 条公链的地址。</p>
+                <img src="${X}" alt="page3_2_2">
+                <p><span style="color: #999">注：设置后，请检查地址准备无误后再使用。</span></p>
+                
+                <h4>使用地址本转账</h4>
+                <p>这里以在 TRX 钱包转账 USDT 为例。选择 USDT 代币并点击「转账」进入转账页面，点击右侧的图标进入地址本选择地址，输入转账金额并确认转账信息后，点击「下一步」输入密码即可转账。</p>
+                <img src="${H}" alt="page3_2_3">
+                `},{id:"file3_3",title:"安全警示｜TRX 多重签名骗局",content:`
+                <p>近期，TRX 多重签名骗局异常猖獗，骗子通过诱导用户下载 <a href="https://support.token.im/hc/zh-cn/articles/900007679523-%E5%AE%89%E5%85%A8%E6%8F%90%E9%86%92-%E8%AD%A6%E6%83%95%E5%81%87%E5%AE%98%E7%BD%91%E9%AA%97%E5%B1%80-%E8%AF%B7%E8%AE%A4%E5%87%86-imToken-%E5%AE%98%E7%BD%91-token-im" target="_blank">假 imToken </a>等方式获取用户的助记词，但是却不直接将用户的资产盗走，而是通过修改用户的 TRX 钱包账户权限，导致用户失去对账户内资产的控制权，只能将代币转入钱包，却无法转出。</p>
+                <p>本文将揭秘 TRX 多重签名骗局具体是如何实施的，以及我们该如何防范这类骗局。</p>
+                
+                <h2>什么是 TRX 多重签名骗局</h2>
+                <p>当我们创建了一个 TRX 钱包后，这个钱包账户默认的拥有者权限为账户本人，阈值为 1，即钱包转账需持有一个拥有者权限的地址进行签名授权才能发起。</p>
+                <img src="${M}" alt="page3_3_1">
+                <p>注：拥有者权限是指一个 TRX 账户的最高权限，具有该权限的地址可进行该账户内的所有操作。</p>
+                <p>而当骗子获取了用户助记词，对其 TRX 账户权限进行修改后，用户地址的拥有者权限变为用户本人和骗子共同持有，阈值为 2，即钱包转账需要两个拥有者权限的地址——用户的地址和骗子的地址，共同签名授权才能发起。</p>
+                <img src="${L}" alt="page3_3_2">
+                <p>由于此时 TRX 钱包的转账需要多重签名（用户地址的签名和骗子地址的签名）才能完成，所以这类骗局被称为 TRX 多重签名骗局。</p>
+                <p>这就意味着，当用户的 TRX 账户被骗子更改为需多重签名的地址后，用户发起的任何交易，都需要骗子的签名授权才能完成，如果只是用户单方面发起交易，就会遇到类似「server：SIGERROR」的报错。</p>
+                <p>你可能会疑惑，为什么用户拥有自己账户的助记词 / 私钥，也无法「独立完成」资产的转出操作。</p>
+                <p>以合伙开公司的例子解释一下，你就明白了。假设有一家公司有两个合伙人，他们在这家公司成立之初规定：所有的重大决策要两个合作人都同意进行签名授权，即多重签名，才可以执行。若有一方不同意，决策则不通过。</p>
+                <p>被骗子修改为多重签名的 TRX 账户就像是这样一家公司，即便用户持有钱包助记词，但也已经无法「独立完成」对这个钱包的转账等重大操作。</p>
+                <p>用户只能将资产转入这个账户，却无法转出，骗子就是利用这一点从而「放长线钓大鱼」，等到用户在账户中积累了足够的资产后再一次性盗走。如果一个用户从来都是只收款不转账，且不去链上查看自己的账户权限，那他可能会一直蒙在鼓里并持续地向这个账户转钱。</p>
+                <p>另外，骗子除了通过诱导用户下载假 imToken 方式外，还会通过以下两类方式利用多重签名诈骗：</p>
+                <ul>
+                <li>在 Telegram 等社交平台推广充值网站，诱导用户使用数字资产进行充值，实际上是趁用户充值时获取账户的拥有者权限，导致用户失去对账户的控制权；</li>
+                <li>在 Telegram、微信等社交平台公开自己的助记词 / 私钥，诱导用户转入 TRX 作为手续费以转走钱包内的资产，但实际骗子早已将拥有者权限转移，最终导致用户损失 TRX。</li>
+</ul>
+
+<h2>安全提醒</h2>
+<p>imToken 安全团队在此提醒大家</p>
+<ul>
+<li>下载 imToken 请认准官网 ：<a href="https://token.im/" target="_blank">https://token.im/</a></li>
+<li>天下不会有免费的午餐，切莫贪小便宜</li>
+<li>定期检查 TRX 钱包账户权限（👇 附有教程）</li>
+</ul>
+
+<h3>如何查询账户权限</h3>
+<ol>
+<li>打开 TRX 钱包，切换至「浏览」页面输入 TRONSCAN 并打开。
+<img src="${V}" alt="page3_3_3">
+</li>
+<li>在输入框输入钱包地址并搜索，跳至账户信息页面并下滑至「账户权限」板块。
+<img src="${w}" alt="page3_3_4">
+</li>
+<li>如图所示，如果有且只有你的地址持有拥有者权限，说明你的账户权限是安全的。
+<img src="${j}" alt="page3_3_5">
+</li>
+</ol>
+`},{id:"file3_4",title:"授权查询和取消",content:`
+                <P>代币授权骗局主要发生在以太坊和波场上，因此本文提供 ETH 和 TRX 两类钱包的授权查询和取消的教程。</P>
+                <h2>TRX 钱包</h2>
+                <h3>准备</h3>
+                <p>确保钱包地址中至少有 30 个 TRX。若没有，你可以通过交易所提币至自己的 TRX 钱包地址。</p>
+                <h3>手把手教程</h3>
+                <ol>
+                <li>打开 imToken 内的 TRX 钱包，将首页的功能栏向左滑动，点击「授权管理」按钮，进入「TRONSCAN」页面自动连接钱包，查询授权。</li>
+                <p>TRONSACN：可查询和处理 TRX 钱包授权的工具。如果你无法打开此页面，请切换手机网络后再尝试打开。</p>
+                <img src="${U}" alt="page3_4_1">
+                <li>进入 TRONSCAN 后如果页面是英文，可点击右上角菜单栏，再点击最下方「Preferences」（ 即偏好设置）-「简体中文」-「Save」（即保存）进行语言切换</li>
+                <img src="${Z}" alt="page3_4_2">
+                <li>将页面向下滑动，点击「授权列表」即可查看你授权的地址和数量。如果列表中有不明地址，并且你自身也不了解该地址的控制方，那么这很有可能是骗子地址。请点击授权记录右侧的▼ 展开详情，点击「取消授权」并在弹窗页面中再次确认，发送取消授权交易。</li>
+                <img src="${J}" alt="page3_4_3">
+                <li>取消授权后，请确认授权记录的状态为「已取消」且当前授权数量为「0」。</li>
+                <img src="${Y}" alt="page3_4_4">
+</ol>
+
+<h2>ETH 钱包</h2>
+<p>确保钱包地址中有至少 0.02 个 ETH。若没有，你可以通过交易所提币至自己的以太坊钱包地址。</p>
+<p>注：提币时请选择 ETH（ERC20） 网络通道。</p>
+
+<h3>手把手教程</h3>
+<ol>
+<li>打开 imToken 内的 ETH 钱包，将首页的功能栏向左滑动，点击「授权管理」按钮，进入「Revoke」页面自动连接钱包，查询授权。</li>
+<p>Revoke.cash：授权（Approve）管理 DApp，已支持管理以太坊、Arbitrum、Optimism、BSC、Polygon、Avalanche 等网络中的授权。在该页面点击以太坊图标进行网络切换，即可查看对应网络的授权详情。</p>
+<img src="${Q}" alt="page3_4_5">
+<li>将页面下滑至底部就可以看到该账户授权情况，在授权金额、被授权人（Spender）、上次更新列表中查看你的授权数量、地址以及时间。</li>
+<p>如果想要取消某个授权，在授权记录列表中找到要取消授权的代币或 NFT，然后向左滑动，点击「撤销」并在弹窗页面中再次确认即可发送取消授权交易。</p>
+<img src="${q}" alt="page3_4_6">
+<li>取消授权的交易发出后回到钱包首页，点击「记录」可查看该交易状态。当状态从「等待确认」变为「成功」，说明你已成功取消授权。</li>
+<li>如果想要更改代币授权金额，可以点击金额右侧的「✏️」图标进行修改，填好数值后点击「更新」并在弹窗页面再次确认即可。</li>
+</ol>
+<p>在上图的中间这张截图中，我们可以看到被授权人（Spender）一栏显示有 Uniswap、Aave 等。这是因为当我们在 DEX 中交易时需要先进行代币转账授权，其目的是让 DEX 获得代币的转账权限，方便完成后续的代币兑换。</p>
+<p>但是，如果你发现被授权人（Spender）这一列有不明地址，并且你自身也不了解该地址的控制方，那么这很有可能是骗子地址，请立刻取消授权。</p>
+<p>温馨提示：如有任何问题，请通过 App 内「帮助与反馈」联系我们获取帮助。</p>
+                
+                `},{id:"file3_5",title:"助记词碰撞骗局",content:`
+                <p>助记词是明文私钥的另一种表现形式，最早是由 BIP39 提案提出，其目的是为了帮助用户记忆复杂的私钥。imToken 中创建的钱包助记词由 12 个单词构成，这些单词都取自一个固定词库。已知 BIP39 标准的助记词库一共有 2048 个单词，可以产生 2^128 种的助记词组合类型，助记词由于其庞大的组合数、基于强密码学的设计、有效的校验机制等多个方面，它的安全性是非常高的。</p>
+                <p>但一些用户觉得助记词也就 12 个单词，误以为用一些算力很强的机器应该能碰撞出来的，进而获得钱包代币的控制权。用户对助记词的认知不足让一些不法分子看到了从中牟利的机会，谎称自己开发出了一种能够「碰撞」助记词的工具，并通过各种渠道兜售这种所谓的破解软件。</p>
+                <p>小严是一位加密货币投资者，在推特上看到了一则推文广告，声称有一款新开发的软件可以快速「碰撞」助记词，从而获取破解的钱包地址里面的代币。这款软件价格不菲，但推文中展示的各种「成功案例」让小严感到心动。</p>
+                <img src="${ii}" alt="page3_5_1">
+                <div style="text-align: center">（碰撞助记词的诈骗推文）</div>
+                <p>小严与卖家联系后，卖家向他免费提供了这款「助记词碰撞工具」的试用版，但要完整使用需要支付高额费用。为了获取小严的信任，卖家还提供了一些虚假的视频，演示如何通过该工具成功「破解」某些钱包地址的助记词。小严使用「助记词碰撞工具」的试用版按视频步骤操作果然「破解」了一些钱包地址的助记词，导入后发现里面有少量的代币。卖家解释试用版的算力只能「碰撞」出少量资产的钱包地址助记词，小严随后支付了上千美元购买了这款软件。</p>
+                <p>然而，支付后，小严收到的软件根本无法使用，甚至在安装时触发了他电脑上的病毒防护警报。意识到可能上当受骗的小严再次联系卖家，却发现对方已将他拉黑。他不仅损失了用于购买软件的资金，电脑还被植入了恶意软件，进一步威胁他的数字代币安全。</p>
+                
+                <h2>骗局科普</h2>
+                <p>从数学的角度来讲，助记词被碰撞的概率极低， BIP39 标准的助记词库中的 2048 个单词可以产生 2^128 种的助记词组合类型。NVIDIA RTX 4090 是目前消费级市场上性能最强的显卡，如果用一张 RTX4090 的显卡来遍历完所有的助记词组合需要花费约 1.38×10^24 年，很显然在我们有限的生命里是等不到了。</p>
+                <p>但如果 12 个单词的助记词组中有 8\\9\\10 个单词泄露了，使用显卡的算力花费一定的时间是可以算出剩余的某几个单词的，所以只泄露部分助记词也是存在风险的。</p>
+                <p>此外，助记词或私钥的安全还与<a href="https://support.token.im/hc/zh-cn/articles/11726952073753-imToken-%E9%92%B1%E5%8C%85%E5%AE%89%E5%85%A8%E6%9C%88%E6%8A%A5-7-%E6%9C%9F-%E4%BB%80%E4%B9%88%E4%BC%9A%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E7%A7%81%E9%92%A5%E5%AE%89%E5%85%A8">随机性</a>有关，如果生成助记词或私钥的工具算法随机性不够，也会增加黑客暴力破解的概率，为了确保足够的随机性，imToken 在 Android 和 iOS 系统使用的都是系统提供的随机数生成器。比如 iOS 的熵（可以理解为随机数）来源是一段时间内系统发生的事件统计。由于系统的内核状态是实时不同的，所以私钥的随机性和安全性有充分的保障。</p>
+                <p><strong>imToken 安全团队提醒：</strong></p>
+                <ul>
+                <li>将助记词或私钥保存在离线存储介质，如硬件钱包或纸质备份，降低网络攻击风险。</li>
+                <li>使用正规的钱包和助记词生成工具，避免使用未知来源的应用程序或网站。</li>
+                <li>助记词的生成具有极高的随机性，碰撞成功的概率几乎为零。</li>
+                <h2>最后</h2>
+                <p>诈骗手段层出不穷，对于普通用户来说，确实难以全面预防。imToken 致力于快速发现和找到解决方案，并向社区及时反馈和科普各种新型骗局，以降低用户损失，全面提升用户在加密货币领域的安全性，努力构建一个可信赖的数字代币管理生态系统。</p>
+</ul>
+                `}]}];export{li as default};
