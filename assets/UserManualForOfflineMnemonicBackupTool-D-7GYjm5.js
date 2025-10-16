@@ -40,6 +40,7 @@ const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/i
 </ul>
                 <p>👉 <strong> 正确的备份方式 = 永久离线存储 + 物理防护 + 安全分散</strong></p>
                 <p>立即使用 <strong> 助记词密盒</strong>，让你的钱包多一层坚不可摧的防火墙。</p>
+                <p><strong>密盒 S1 购买链接：</strong><a href="https://j.youzan.com/USDlfF"> https://j.youzan.com/USDlfF</a></p>
                 `},{id:"file1_2",title:"什么是 imKey 冲压版 L1 Pro，如何使用？",content:`
                 <p>【imKey 冲压板 L1 Pro 使用教程】 </p>
 <div class="video-container">

@@ -32,7 +32,7 @@ imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>�
 <ul> <li>   中国大陆用户应显示为 <strong> 浙江省杭州市</strong>（以官网最新信息为准）。</li></ul>
 </li>
 <li>检查快递外箱
-<ul> <li>  是否为 imKey 定制包装盒，印有 logo。</li>
+<ul> <li>  是否为 imKey 定制包装盒，印有 logo 。</li>
 <li>  包装完整，无拆封痕迹。</li></ul>
 <img src="${t}" alt="imKeyPadding">
 </li>
@@ -48,12 +48,12 @@ imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>�
 </li>
 <li>验证激活流程
 <ul> <li>  将设备连接至 <strong> imToken App</strong>。</li>
-<li>  新设备会提示 <strong> “激活成功”</strong>。若未出现，需警惕。</li></ul>
+<li>  新设备会提示<strong>「激活成功」</strong>。若未出现，需警惕。</li></ul>
 </li>
 </ol>
 
 <h3>三、SN 码验证（必做环节）</h3>
-<p>SN 码是设备的“身份证”，每一台都唯一。建议完成以下操作：</p>
+<p>SN 码是设备的「身份证」，每一台都唯一。建议完成以下操作：</p>
 <ol>
 <li>
 <strong>找到 SN 码：</strong>包装盒底部，或设备设置菜单中。

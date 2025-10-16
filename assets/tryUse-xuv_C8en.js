@@ -334,7 +334,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <img src="${D}" alt="use7_4">
 </li>
                 <li>
-                <p> 5.返回钱包首页，点击「+」-「我的所有资产」进行代币添加。</p>
+                <p>返回钱包首页，点击「+」-「我的所有资产」进行代币添加。</p>
                 <img src="${W}" alt="use7_5">
 </li>
 </ol>
