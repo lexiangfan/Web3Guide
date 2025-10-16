@@ -118,7 +118,7 @@ imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>�
 <ol>
 <li>只买官方渠道</li>
 <li>到手先检查</li>
-<li>自己创助记词</li>
+<li>自己创建并物理备份助记词</li>
 </ol>
 <p>做到这三点，你就能大幅降低供应链风险，确保使用到的 imKey Pro 是一台真正安全的硬件钱包。</p>
         `}]}];export{d as default};
