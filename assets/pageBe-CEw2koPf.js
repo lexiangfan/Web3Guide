@@ -1,17 +1,23 @@
-const l="/Web3Guide/assets/bang-DnEC0Ssa.png",i="/Web3Guide/assets/file1_1_1-DJEPYNqr.png",s=[{id:"section1",title:"准备工作",content:"",children:[{id:"file1_1",title:"准备工作",content:`
+const t="/Web3Guide/assets/bang-DnEC0Ssa.png",i="/Web3Guide/assets/file1_1_1-DJEPYNqr.png",l=[{id:"section1",title:"准备工作",content:"",children:[{id:"file1_1",title:"准备工作",content:`
           <h3>1.准备设备</h3>
           <ul>
-          <li><strong>硬件设备：</strong>一台<a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj05mqphzjou2e?dc_ps=3340492903519792131.200001"> imKey Pro </a>硬件钱包</li>
+          <li><strong>硬件设备：</strong>一台<a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj05mqphzjou2e?dc_ps=3340492903519792131.200001" target="_blank"> imKey Pro </a>硬件钱包</li>
           <li><string>一台手机：</string>安装 imToken app</li>
-          <li><strong>助记词存储工具：</strong>助记词备份卡片和 <a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?dc_ps=3340495314934140935.200001">助记词密盒</a></li>
+          <li><strong>助记词存储工具：</strong>助记词备份卡片和 <a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?dc_ps=3340495314934140935.200001" target="_blank">助记词密盒</a></li>
 </ul>
-<img src="${l}" alt="绑定">
-<img src="${i}" alt="file1_1_1">
-<p><span style="color: #999">（ imKey Pro 包装盒内附带）                                          如需，👉购买传送门</span></p>
-
+<div style="display: flex; gap: 10px; width: 100%;">
+  <div style="flex: 1; text-align: center;">
+    <img src="${t}" alt="绑定" style="max-width: 100%; height: auto;">
+    <p style="color: #999; margin: 5px 0 0 0;">（ imKey Pro 包装盒内附带）</p>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="${i}" alt="file1_1_1" style="max-width: 100%; height: auto;">
+    <p style="color: #999; margin: 5px 0 0 0;">如需，👉<a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?scan=1&activity=none&from=kdt&qr=directgoods_711638544&shopAutoEnter=1" target="_blank">购买传送门</a></p>
+  </div>
+</div>
 <h3>2.安装 App </h3>
 <ul>
-<li><strong>App 准备：</strong>下载并安装<a href="https://token.im/"> imToken App</a>
+<li><strong>App 准备：</strong>下载并安装<a href="https://token.im/" target="_blank"> imToken App</a>
 <ul>
 <li><span style="color: #999">  初次使用需先创建一个热钱包</span></li>
 <li><span style="color: #999">  如果你已拥有热钱包，可直接跳过此步骤。</span></li>
@@ -50,4 +56,4 @@ const l="/Web3Guide/assets/bang-DnEC0Ssa.png",i="/Web3Guide/assets/file1_1_1-DJE
 <li>如果你计划使用<strong> imToken 热钱包</strong>，请务必备份助记词并妥善保存，否则可能导致资产丢失。</li>
 <li>如果只打算使用<strong>  imKey 冷钱包</strong>，只需在 App 中完成热钱包创建，就能继续绑定和使用 imKey。</li>
 </ul>
-        `}]}];export{s as default};
+        `}]}];export{l as default};

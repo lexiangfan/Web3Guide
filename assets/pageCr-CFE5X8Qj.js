@@ -1,7 +1,7 @@
 const i="/Web3Guide/assets/file1_1_1-Bj6AJggQ.png",e="/Web3Guide/assets/file1_1_2-O3DQOQxz.png",l="/Web3Guide/assets/file1_1_3-mwPiFI0q.png",s="/Web3Guide/assets/file1_1_4-BBWHrrPs.png",_="/Web3Guide/assets/file1_1_5-A5GzBOB7.png",t="/Web3Guide/assets/file1_1_6-BwE-ku48.png",n="/Web3Guide/assets/file1_1_7-1efhe7o6.png",f="/Web3Guide/assets/file1_1_8-Dw4-FAcw.png",o="/Web3Guide/assets/file1_1_9-B-dVA_qa.png",c=[{id:"section1",title:"创建钱包",content:"",children:[{id:"file1_1",title:"创建钱包",content:`
           <h3>一、设置 imKey 的 PIN 码</h3>
           <ol>
-          <li>1. imKey 显示「设置 PIN 」则进入了 PIN 码设置流程。使用上下按钮切换选择所需数字，「OK 」按钮确认，「C」 按钮取消，重复此过程，直到完成 PIN 码所有数字的设置。
+          <li>imKey 显示「设置 PIN 」则进入了 PIN 码设置流程。使用上下按钮切换选择所需数字，「OK 」按钮确认，「C」 按钮取消，重复此过程，直到完成 PIN 码所有数字的设置。
           <p><strong>注：PIN 码用于解锁 imKey ，设置要求为 6 - 8 位不相同或者不连续的数字。请妥善保管，切勿使用随机 PIN 码和第三方工具提供的 PIN 码。</strong></p>
           <img src="${i}" alt="file1_1_1">
 </li>

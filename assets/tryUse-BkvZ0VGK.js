@@ -1,4 +1,4 @@
-const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0qT7t.png",s="/Web3Guide/assets/use1_3-BHQEiP_V.png",l="/Web3Guide/assets/use2_1-DS7tZGYo.png",p="/Web3Guide/assets/use2_2-AjlWNL3E.png",t="/Web3Guide/assets/use2_3-lN4Fsh-o.png",n="/Web3Guide/assets/use2_4-CdM1gO19.png",a="/Web3Guide/assets/use3_1-D_wGvbVg.png",o="/Web3Guide/assets/use3_2-RuGzH6AW.png",r="/Web3Guide/assets/use3_3-BI1eYWAt.png",u="/Web3Guide/assets/use3_4-EKQXh4_c.png",m="/Web3Guide/assets/use3_5-D5kdPDdB.png",c="/Web3Guide/assets/use4_1-iX6gBf-V.png",h="/Web3Guide/assets/use4_2-BUxBPwPy.png",_="/Web3Guide/assets/use4_3-1KdTfHqi.png",y="/Web3Guide/assets/use4_4-p76BQtJv.png",T="/Web3Guide/assets/use5_1-Bil06MSX.png",g="/Web3Guide/assets/use5_2-D6RSWlv7.png",d="/Web3Guide/assets/use5_3-c4SIFoiz.png",E="/Web3Guide/assets/use5_4-DUh7VeKZ.png",K="/Web3Guide/assets/use5_5-C6i6Oc6y.png",b="/Web3Guide/assets/use5_6-Bx9aAfcj.png",B="/Web3Guide/assets/use5_7-DqycAj_y.png",C="/Web3Guide/assets/use6_1-XHM0pF7Q.png",f="/Web3Guide/assets/use6_2-77D9n6sb.png",S="/Web3Guide/assets/use6_3-N1D8I2TQ.png",k="/Web3Guide/assets/use7_1-DP6-wUqs.png",A="/Web3Guide/assets/use7_2-B5EGVW0C.png",D="/Web3Guide/assets/use7_3-tkXRf5yx.png",G="/Web3Guide/assets/use7_4-Boid5wv4.png",W="/Web3Guide/assets/use7_5-CfkoiQTU.png",H="/Web3Guide/assets/use8_1-BHjCw5mr.png",U="/Web3Guide/assets/use8_2-BXaHTE2w.png",R="/Web3Guide/assets/use8_3-Ugu-bVwK.png",$="/Web3Guide/assets/use8_4-Cxfd88Sj.png",P="/Web3Guide/assets/use9_1-BlIpgIeC.png",w="/Web3Guide/assets/use9_2-BQ3NbkoG.png",X="/Web3Guide/assets/use9_3-DYYvRoXj.png",z="/Web3Guide/assets/use9_4-DUFGN6j5.png",O="/Web3Guide/assets/use9_5-G82LbLrm.png",N="/Web3Guide/assets/use9_6-DwQexfqc.png",v=[{id:"section1",title:"体验资产操作",content:"",children:[{id:"file1_1",title:"imKey Pro 如何转账？",content:`
+const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0qT7t.png",s="/Web3Guide/assets/use1_3-BHQEiP_V.png",l="/Web3Guide/assets/use2_1-DS7tZGYo.png",p="/Web3Guide/assets/use2_2-AjlWNL3E.png",t="/Web3Guide/assets/use2_3-lN4Fsh-o.png",n="/Web3Guide/assets/use2_4-CdM1gO19.png",a="/Web3Guide/assets/use3_1-D_wGvbVg.png",o="/Web3Guide/assets/use3_2-RuGzH6AW.png",r="/Web3Guide/assets/use3_3-BI1eYWAt.png",u="/Web3Guide/assets/use3_4-EKQXh4_c.png",m="/Web3Guide/assets/use3_5-D5kdPDdB.png",c="/Web3Guide/assets/use4_1-iX6gBf-V.png",h="/Web3Guide/assets/use4_2-BUxBPwPy.png",_="/Web3Guide/assets/use4_3-1KdTfHqi.png",y="/Web3Guide/assets/use4_4-p76BQtJv.png",g="/Web3Guide/assets/use5_1-Bil06MSX.png",T="/Web3Guide/assets/use5_2-D6RSWlv7.png",d="/Web3Guide/assets/use5_3-c4SIFoiz.png",E="/Web3Guide/assets/use5_4-DUh7VeKZ.png",K="/Web3Guide/assets/use5_5-C6i6Oc6y.png",b="/Web3Guide/assets/use5_6-Bx9aAfcj.png",B="/Web3Guide/assets/use5_7-DqycAj_y.png",C="/Web3Guide/assets/use6_1-XHM0pF7Q.png",f="/Web3Guide/assets/use6_2-77D9n6sb.png",S="/Web3Guide/assets/use6_3-N1D8I2TQ.png",k="/Web3Guide/assets/use7_1-DP6-wUqs.png",A="/Web3Guide/assets/use7_2-B5EGVW0C.png",G="/Web3Guide/assets/use7_3-tkXRf5yx.png",D="/Web3Guide/assets/use7_4-Boid5wv4.png",W="/Web3Guide/assets/use7_5-CfkoiQTU.png",H="/Web3Guide/assets/use8_1-BHjCw5mr.png",U="/Web3Guide/assets/use8_2-BXaHTE2w.png",R="/Web3Guide/assets/use8_3-Ugu-bVwK.png",$="/Web3Guide/assets/use8_4-Cxfd88Sj.png",P="/Web3Guide/assets/use9_1-BlIpgIeC.png",w="/Web3Guide/assets/use9_2-BQ3NbkoG.png",X="/Web3Guide/assets/use9_3-DYYvRoXj.png",z="/Web3Guide/assets/use9_4-DUFGN6j5.png",O="/Web3Guide/assets/use9_5-G82LbLrm.png",N="/Web3Guide/assets/use9_6-DwQexfqc.png",v=[{id:"section1",title:"体验资产操作",content:"",children:[{id:"file1_1",title:"imKey Pro 如何转账？",content:`
 <h2>imKey Pro 转账教程</h2>
                  <div class="video-container">
     <iframe 
@@ -15,7 +15,6 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 <p>若你在 imKey 钱包内的资产想要转到交易所，转账之前需要先了解如何获取正确的交易所充值地址，以转账 USDT 为例：</p>
 <ul>
 <li>转账 ETH 钱包内的 USDT，需要复制交易所 ERC20 USDT 充值地址；</li>
-<li>转账 BTC 钱包内的 USDT，需要复制交易所 OMNI USDT 充值地址；</li>
 <li>转账 TRX 钱包内的 USDT，需要复制交易所 TRC20 USDT 充值地址。</li>
 </ul>
 <p>若你打开 ETH 钱包内的 USDT 转账界面，却输入了交易所 TRC20 USDT 充值地址，imToken 就会弹出「不正确的钱包地址」提示。</p>
@@ -229,11 +228,11 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <h2>使用 imKey 参与非托管 ETH 质押手把手教程👇</h2>
                 <ol>
                 <li>打开 imToken，点击左上角的导航栏进入「选择账户」界面，再点击 imKey 硬件钱包的 ETH 账户。
-                <img src="${T}" alt="use5_1">
+                <img src="${g}" alt="use5_1">
 </li>
                 <li>在 imKey 的 ETH 账户首页点击「质押」进入以太坊质押界面，再点击「质押」。
                 <p>输入要购买的验证器（即验证节点）数量，一个验证节点需要存入 32 个 ETH。确认验证器数量后，点击「下一步」进入费用确认页面。</p>
-                <img src="${g}" alt="use5_2">
+                <img src="${T}" alt="use5_2">
 </li>
                 <li>选择 imKey 的 ETH 账户地址，进行费用确认。费用分为 4 部分：
                 <ul>
@@ -328,11 +327,11 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <li>
                 <p>选择要参与兑换的币种并输入数量，再依次点击「兑换」-「兑换」。</p>
                 <span style="color: #999"> 注：首次进行代币兑换时，需要先将代币的转账权限授权予 Uniswap ，然后才可以进行币币兑换，该过程会涉及两次合约交互。</span>
-                <img src="${D}" alt="use7_3">
+                <img src="${G}" alt="use7_3">
 </li>
                 <li>
                 <p>确认支付详情后，点击「请求 imKey 确认」，然后在硬件设备上完成确认。</p>
-                <img src="${G}" alt="use7_4">
+                <img src="${D}" alt="use7_4">
 </li>
                 <li>
                 <p> 5.返回钱包首页，点击「+」-「我的所有资产」进行代币添加。</p>
