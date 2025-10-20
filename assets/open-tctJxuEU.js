@@ -18,7 +18,9 @@ imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>�
 亚马逊官方店铺（海外用户）：目前已上线
  <a href="https://www.amazon.co.jp/stores/imKey/page/F686FE53-D163-4D27-AE60-D085735F898F" target="_blank"> 日本站</a>、
  <a href="https://www.amazon.com/stores/imKey/page/BB5DB6D0-71A4-49BB-ADF0-C8F2FE0B6BF0?maas=maas_adg_12C4ABD0A5A5DCE609F181E0424A8307_afap_abs&ref_=aa_maas&tag=maas" target="_blank"> 北美站</a>、
- <a href="https://www.amazon.sg/stores/imKey/page/205682E7-2D66-4919-A1D3-3E1D07D026A8?lp_asin=B0BTM24566&ref_=ast_bln%20%20Official%20Store" target="_blank"> 新加坡站</a>，购买便捷可靠。
+ <a href="https://www.amazon.sg/stores/imKey/page/205682E7-2D66-4919-A1D3-3E1D07D026A8?lp_asin=B0BTM24566&ref_=ast_bln%20%20Official%20Store" target="_blank"> 新加坡站</a>
+ <a href="https://www.amazon.com.au/dp/B0BTM24566" target="_blank">澳洲站</a>
+ ，购买便捷可靠。
 </li>
 <li>
  <a href="https://imkey.im/zh-hans" target="_blank"> imKey 官网</a>（海外用户）：可直接下单，享受官方售后。
