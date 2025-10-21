@@ -1,4 +1,4 @@
-const t="/Web3Guide/assets/bang-DnEC0Ssa.png",i="/Web3Guide/assets/file1_1_1-DJEPYNqr.png",l=[{id:"section1",title:"准备工作",content:"",children:[{id:"file1_1",title:"准备工作",content:`
+const t="/get-started/assets/bang-DnEC0Ssa.png",l="/get-started/assets/file1_1_1-DJEPYNqr.png",i=[{id:"section1",title:"准备工作",content:"",children:[{id:"file1_1",title:"准备工作",content:`
           <h3>1.准备设备</h3>
           <ul>
           <li><strong>硬件设备：</strong>一台<a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj05mqphzjou2e?dc_ps=3340492903519792131.200001" target="_blank"> imKey Pro </a>硬件钱包</li>
@@ -11,7 +11,7 @@ const t="/Web3Guide/assets/bang-DnEC0Ssa.png",i="/Web3Guide/assets/file1_1_1-DJE
     <p style="color: #999; margin: 5px 0 0 0;">（ imKey Pro 包装盒内附带）</p>
   </div>
   <div style="flex: 1; text-align: center;">
-    <img src="${i}" alt="file1_1_1" style="max-width: 100%; height: auto;">
+    <img src="${l}" alt="file1_1_1" style="max-width: 100%; height: auto;">
     <p style="color: #999; margin: 5px 0 0 0;">如需，👉<a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?scan=1&activity=none&from=kdt&qr=directgoods_711638544&shopAutoEnter=1" target="_blank">购买传送门</a></p>
   </div>
 </div>
@@ -56,4 +56,4 @@ const t="/Web3Guide/assets/bang-DnEC0Ssa.png",i="/Web3Guide/assets/file1_1_1-DJE
 <li>如果你计划使用<strong> imToken 热钱包</strong>，请务必备份助记词并妥善保存，否则可能导致资产丢失。</li>
 <li>如果只打算使用<strong>  imKey 冷钱包</strong>，只需在 App 中完成热钱包创建，就能继续绑定和使用 imKey。</li>
 </ul>
-        `}]}];export{l as default};
+        `}]}];export{i as default};

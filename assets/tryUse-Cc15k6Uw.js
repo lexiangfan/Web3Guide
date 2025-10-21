@@ -1,4 +1,4 @@
-const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0qT7t.png",s="/Web3Guide/assets/use1_3-BHQEiP_V.png",l="/Web3Guide/assets/use2_1-DS7tZGYo.png",p="/Web3Guide/assets/use2_2-AjlWNL3E.png",t="/Web3Guide/assets/use2_3-lN4Fsh-o.png",n="/Web3Guide/assets/use2_4-CdM1gO19.png",a="/Web3Guide/assets/use3_1-D_wGvbVg.png",o="/Web3Guide/assets/use3_2-RuGzH6AW.png",r="/Web3Guide/assets/use3_3-BI1eYWAt.png",u="/Web3Guide/assets/use3_4-EKQXh4_c.png",m="/Web3Guide/assets/use3_5-D5kdPDdB.png",c="/Web3Guide/assets/use4_1-iX6gBf-V.png",h="/Web3Guide/assets/use4_2-BUxBPwPy.png",_="/Web3Guide/assets/use4_3-1KdTfHqi.png",y="/Web3Guide/assets/use4_4-p76BQtJv.png",g="/Web3Guide/assets/use5_1-Bil06MSX.png",T="/Web3Guide/assets/use5_2-D6RSWlv7.png",d="/Web3Guide/assets/use5_3-c4SIFoiz.png",E="/Web3Guide/assets/use5_4-DUh7VeKZ.png",K="/Web3Guide/assets/use5_5-C6i6Oc6y.png",b="/Web3Guide/assets/use5_6-Bx9aAfcj.png",B="/Web3Guide/assets/use5_7-DqycAj_y.png",C="/Web3Guide/assets/use6_1-XHM0pF7Q.png",f="/Web3Guide/assets/use6_2-77D9n6sb.png",S="/Web3Guide/assets/use6_3-N1D8I2TQ.png",k="/Web3Guide/assets/use7_1-DP6-wUqs.png",A="/Web3Guide/assets/use7_2-B5EGVW0C.png",G="/Web3Guide/assets/use7_3-tkXRf5yx.png",D="/Web3Guide/assets/use7_4-Boid5wv4.png",W="/Web3Guide/assets/use7_5-CfkoiQTU.png",H="/Web3Guide/assets/use8_1-BHjCw5mr.png",U="/Web3Guide/assets/use8_2-BXaHTE2w.png",R="/Web3Guide/assets/use8_3-Ugu-bVwK.png",$="/Web3Guide/assets/use8_4-Cxfd88Sj.png",P="/Web3Guide/assets/use9_1-BlIpgIeC.png",w="/Web3Guide/assets/use9_2-BQ3NbkoG.png",X="/Web3Guide/assets/use9_3-DYYvRoXj.png",z="/Web3Guide/assets/use9_4-DUFGN6j5.png",O="/Web3Guide/assets/use9_5-G82LbLrm.png",N="/Web3Guide/assets/use9_6-DwQexfqc.png",v=[{id:"section1",title:"体验资产操作",content:"",children:[{id:"file1_1",title:"imKey Pro 如何转账？",content:`
+const e="/get-started/assets/use1_1-n5WhGhYV.png",i="/get-started/assets/use1_2-BQV0qT7t.png",s="/get-started/assets/use1_3-BHQEiP_V.png",t="/get-started/assets/use2_1-DS7tZGYo.png",l="/get-started/assets/use2_2-AjlWNL3E.png",p="/get-started/assets/use2_3-lN4Fsh-o.png",a="/get-started/assets/use2_4-CdM1gO19.png",n="/get-started/assets/use3_1-D_wGvbVg.png",r="/get-started/assets/use3_2-RuGzH6AW.png",o="/get-started/assets/use3_3-BI1eYWAt.png",m="/get-started/assets/use3_4-EKQXh4_c.png",c="/get-started/assets/use3_5-D5kdPDdB.png",u="/get-started/assets/use4_1-iX6gBf-V.png",g="/get-started/assets/use4_2-BUxBPwPy.png",h="/get-started/assets/use4_3-1KdTfHqi.png",_="/get-started/assets/use4_4-p76BQtJv.png",y="/get-started/assets/use5_1-Bil06MSX.png",T="/get-started/assets/use5_2-D6RSWlv7.png",d="/get-started/assets/use5_3-c4SIFoiz.png",E="/get-started/assets/use5_4-DUh7VeKZ.png",K="/get-started/assets/use5_5-C6i6Oc6y.png",B="/get-started/assets/use5_6-Bx9aAfcj.png",C="/get-started/assets/use5_7-DqycAj_y.png",f="/get-started/assets/use6_1-XHM0pF7Q.png",S="/get-started/assets/use6_2-77D9n6sb.png",k="/get-started/assets/use6_3-N1D8I2TQ.png",A="/get-started/assets/use7_1-DP6-wUqs.png",b="/get-started/assets/use7_2-B5EGVW0C.png",D="/get-started/assets/use7_3-tkXRf5yx.png",H="/get-started/assets/use7_4-Boid5wv4.png",U="/get-started/assets/use7_5-CfkoiQTU.png",R="/get-started/assets/use8_1-BHjCw5mr.png",$="/get-started/assets/use8_2-BXaHTE2w.png",P="/get-started/assets/use8_3-Ugu-bVwK.png",w="/get-started/assets/use8_4-Cxfd88Sj.png",X="/get-started/assets/use9_1-BlIpgIeC.png",z="/get-started/assets/use9_2-BQ3NbkoG.png",O="/get-started/assets/use9_3-DYYvRoXj.png",N="/get-started/assets/use9_4-DUFGN6j5.png",v="/get-started/assets/use9_5-G82LbLrm.png",V="/get-started/assets/use9_6-DwQexfqc.png",F=[{id:"section1",title:"体验资产操作",content:"",children:[{id:"file1_1",title:"imKey Pro 如何转账？",content:`
 <h2>imKey Pro 转账教程</h2>
                  <div class="video-container">
     <iframe 
@@ -56,20 +56,20 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <ol>
                 <li>
                 <p>打开 imToken，点击左上角的导航栏进入「选择账户」界面，再点击 imKey 硬件钱包的 TRX 账户。</p>
-                <img src="${l}" alt="use2_1">
+                <img src="${t}" alt="use2_1">
 </li>
                 <li>
                 <p>点击「收款」复制地址。</p>
-                <img src="${p}" alt="use2_2">
+                <img src="${l}" alt="use2_2">
 </li>
                 <li>
                 <p>返回到「选择账户」界面，选择你要转账的 imToken 钱包中的 TRX 账户。</p>
-                <img src="${t}" alt="use2_3">
+                <img src="${p}" alt="use2_3">
 </li>
                 <li>
                 <p>点击「转账」并选择 USDT，粘贴刚刚复制的收款地址并输入转账金额，点击「下一步」并输入密码，等待一会儿就可以在 imKey 的 TRX 账户内看到你转入的代币了。</p>
                 <span style="color: #999">注：在 TRX 账户转账 USDT 需要消耗能量和带宽。如果你发起转账的钱包内没有能量和带宽，可以向 imToken 钱包的 TRX 账户中转入 50～100 个 TRX，转账时会自动燃烧少量 TRX 以抵扣转账所需的带宽和能量。</span>
-                <img src="${n}" alt="use2_4">
+                <img src="${a}" alt="use2_4">
 </li>
 </ol>
                 
@@ -87,12 +87,12 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 <li>
 <p>打开欧易交易所，点击「资产」-「提币」-「提取数字货币」，选择需提现的代币「ETH」-「链上提币」。</p>
 <span style="color: #999">注：这里以 ETH 为例</span>
-<img src="${a}" alt="use3_1">
+<img src="${n}" alt="use3_1">
 </li>
 <li>
 <p>在「链上提币」页面，选择「提币网络」。这里以 ETH-ERC20 为例：</p>
 <span style="color: #999">注：在选择「提币网络」之前，请先确认 <a href="https://support.imkey.im/hc/zh-cn/articles/42051414874777"> imKey 支持哪些数字货币</a>。</span>
-<img src="${o}" alt="use3_2">
+<img src="${r}" alt="use3_2">
 </li>
 <li>
 <p>获取正确的「钱包地址」</p>
@@ -104,12 +104,12 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 <li>  如果你想转入 USDT，可使用 ETH 或 TRX 账户进行收款，对应的交易所提币网络分别为 ERC20 和 TRC20。</li>
 </ul>
 </p></span>
-<img src="${r}" alt="use3_3">
+<img src="${o}" alt="use3_3">
 </li>
 <li>
 <p>回到欧易交易所，粘贴 ETH 收款地址选择提币网络并填写数量后，点击「提交」。</p>
 <p>通过本文提供的详细步骤和注意事项，用户可以轻松将 OKX 交易所的 USDT 安全地转入 imKey 硬件钱包。提币之前，确保选择正确的提币网络和钱包地址，以避免资产损失。如有任何疑问，请及时联系交易所或 imKey 客服获取帮助。</p>
-<img src="${u}" alt="use3_4">
+<img src="${m}" alt="use3_4">
 </li>
 <li>
 <p>根据页面提示，填写验证码，点击「确定」即可成功发起提币。</p>
@@ -118,7 +118,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 <li>  提币前，请确认手续费和你将收到的代币数量；</li>
 <li>  提币完成通常需要 1-30 分钟，如果长时间未收到，请联系欧易人工客服处理。</li>
 </ul></span>
-<img src="${m}" alt="use3_5">
+<img src="${c}" alt="use3_5">
 </li>
 </ol>
 
@@ -145,7 +145,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 <ul>
 <li>打开币安交易所 App，依次点击「资金」-「提现」，选择你要提的代币。</li>
 </ul>
-<img src="${c}" alt="use4_1">
+<img src="${u}" alt="use4_1">
 </li>
 <li><p>判断 imKey 是否支持该代币</p>
 <p>查看交易所提供的「提币网络」类型，判断 imKey 钱包是否支持该代币。例如币安提供八种 USDT 提币网络：</p>
@@ -160,7 +160,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 <li>Tron（TRC20）</li>
 </ul>
 <p>如果你在提币时发现币安提供的网络类型，imKey 均不支持，那么该代币就无法转入 imKey。请联系交易所客服获取帮助，选择其他支持该代币的钱包。</p>
-<img src="${h}" alt="use4_2">
+<img src="${g}" alt="use4_2">
 </li>
 <li>选择合适的「提币网络」
 <p>BNB Smart Chian（BEP20）、AVAX C-Chain、Ethereum（ERC20）、Polygon、Tron（TRC20）均是 imKey 支持的 USDT 提币网络，其中：</p>
@@ -185,11 +185,11 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
 <li>获取正确的「钱包地址」
 <p>打开 imToken，点击左上角的按钮，下拉到「imKey 硬件钱包」的部分选择用于收款的账户。</p>
 <p>例如：我想将 USDT 提至 imKey 钱包的 ETH 账户，则选择 ETH 账户并点击「收款」-「复制」即可复制该账户地址。</p>
-<img src="${_}" alt="use4_3">
+<img src="${h}" alt="use4_3">
 </li>
 <li>在币安输入「提币地址」
 <p>打开币安交易所 App，在提币页面粘贴你刚刚复制的 ETH 地址，选择 ERC20 提币网络，输入提币数量，点击「提现」并进行后续验证即可完成提币。在交易所显示提币成功后，等待一会你就可以在 imKey 钱包内看到你转入的代币了。</p>
-<img src="${y}" alt="use4_4">
+<img src="${_}" alt="use4_4">
 </li>
 </ol>
 
@@ -228,7 +228,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <h2>使用 imKey 参与非托管 ETH 质押手把手教程👇</h2>
                 <ol>
                 <li>打开 imToken，点击左上角的导航栏进入「选择账户」界面，再点击 imKey 硬件钱包的 ETH 账户。
-                <img src="${g}" alt="use5_1">
+                <img src="${y}" alt="use5_1">
 </li>
                 <li>在 imKey 的 ETH 账户首页点击「质押」进入以太坊质押界面，再点击「质押」。
                 <p>输入要购买的验证器（即验证节点）数量，一个验证节点需要存入 32 个 ETH。确认验证器数量后，点击「下一步」进入费用确认页面。</p>
@@ -255,7 +255,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <img src="${K}" alt="use5_5">
 </li>
                 <li>等待「创建验证器」完成后，进入请求质押步骤，点击「请求 imKey 确认」，同时在 imKey 上确认支付信息、收款地址及支付矿工费。
-                <img src="${b}" alt="use5_6">
+                <img src="${B}" alt="use5_6">
 </li>
                 <li>等待共识层的确认及验证器的激活
                 <ul>
@@ -268,7 +268,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <li> <a href="https://beaconcha.in/"> https://beaconcha.in/</a></li>
 </ul></li>
 </ul>
-                <img src="${B}" alt="use5_7">
+                <img src="${C}" alt="use5_7">
 </li>
 </ol>
 <h2>收益说明</h2>
@@ -289,7 +289,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <ol>
                 <li>
                 <p>打开 imKey 的 ETH 钱包并进入「市场」界面。在市场页面，设置好要兑换的代币和数量后点击「预览订单」。</p>
-                <img src="${C}" alt="use6_1">
+                <img src="${f}" alt="use6_1">
 </li>
                 <li>
                 <p>阅读 Tokenlon 服务条款后，点击「我已阅读并同意《Tokenlon 服务条款》」，并确认。</p>
@@ -300,11 +300,11 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <p>注：签名过程需要进行多次确认。</p>
                 <p>注：如提示「订单已过期，请重新下单」，则说明该交易申请已超时，需要重新点击「请求 imKey 确认」并用 imKey 完成签名。</p>
 </span>
-                <img src="${f}" alt="use6_2">
+                <img src="${S}" alt="use6_2">
 </li>
                 <li>
                 <p>返回 ETH 钱包，查看资产是否到账。若没有，点击「+」-「我的所有资产」，再点击代币右侧的「+」号，将代币添加至钱包首页。</p>
-                <img src="${S}" alt="use6_3">
+                <img src="${k}" alt="use6_3">
 </li>
 </ol>
                 `},{id:"file1_7",title:"手把手教你在 imKey 使用 Uniswap",content:`
@@ -318,24 +318,24 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <ol>
                 <li>
                 <p>打开 APP ，将硬件钱包切换至 Arbitrum 网络，在「浏览」页面输入「Uniswap」并打开。</p>
-                <img src="${k}" alt="use7_1">
+                <img src="${A}" alt="use7_1">
 </li>
                 <li>
                 <p>点击「确认」授权 Uniswap 访问钱包地址。点击红框位置可以切换网络，本文以 Arbitrum 网络进行币币兑换为例。</p>
-                <img src="${A}" alt="use7_2">
+                <img src="${b}" alt="use7_2">
 </li>
                 <li>
                 <p>选择要参与兑换的币种并输入数量，再依次点击「兑换」-「兑换」。</p>
                 <span style="color: #999"> 注：首次进行代币兑换时，需要先将代币的转账权限授权予 Uniswap ，然后才可以进行币币兑换，该过程会涉及两次合约交互。</span>
-                <img src="${G}" alt="use7_3">
+                <img src="${D}" alt="use7_3">
 </li>
                 <li>
                 <p>确认支付详情后，点击「请求 imKey 确认」，然后在硬件设备上完成确认。</p>
-                <img src="${D}" alt="use7_4">
+                <img src="${H}" alt="use7_4">
 </li>
                 <li>
                 <p>返回钱包首页，点击「+」-「我的所有资产」进行代币添加。</p>
-                <img src="${W}" alt="use7_5">
+                <img src="${U}" alt="use7_5">
 </li>
 </ol>
 
@@ -350,19 +350,19 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <ol>
                 <li>
                 <p>打开 imToken 钱包，切换到 imKey 钱包的 TRON 账户，在功能栏点击「跨链」进入 AllChain Bridge。</p>
-                <img src="${H}" alt="use8_1">
+                <img src="${R}" alt="use8_1">
 </li>
                 <li>
                 <p>选择需要跨链的代币类型和网络，在输入框中设置要进行跨链的代币数量，在接收地址中输入接收地址，点击「一键跨链兑换」-「购买能量」-「确定」。（这里以将 USDT 从 Tron 网络 跨链到 Ethereum 网络为例）</p>
-                <img src="${U}" alt="use8_2">
+                <img src="${$}" alt="use8_2">
 </li>
                 <li>
                 <p>DAPP 将请求授权访问你的钱包地址，点击 <strong>「确认」 </strong>并在 imKey 硬件钱包上完成签名。能量购买成功后，能量的有效期为 10 分钟，请在此时间内完成签名兑换。</p>
-                <img src="${R}" alt="use8_3">
+                <img src="${P}" alt="use8_3">
 </li>
                 <li>
                 <p>点击 <strong>「兑换」 </strong>发起跨链操作。首次调用合约或使用新地址时需要进行<trong>授权</trong>，请按照提示操作，并在硬件 钱包上完成签名。兑换完成后，目标地址将收到相应的资产。</p>
-                <img src="${$}" alt="use8_4">
+                <img src="${w}" alt="use8_4">
 </li>
 </ol>
 
@@ -380,7 +380,7 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <p>风险提示：本文内容均不构成任何形式的投资意见或建议。imToken 对本文所提及的第三方服务和产品不做任何保证和承诺，亦不承担任何责任。代币投资有风险，请谨慎评估该等投资风险，咨询相关专业人士后自行作出决定。</p>
                 `},{id:"file1_9",title:"如何在 imKey 使用 Orbiter Finance？",content:`
 
-                <img src="${P}"alt="use9_1">
+                <img src="${X}"alt="use9_1">
                 
                 <h2>什么是 Orbiter Finance？</h2>
                 <p>Orbiter Finance 是一个去中心化跨链桥应用，提供低成本和几乎即时的资产跨链，是以太坊 Layer2 的基础设施之一。目前支持 Ethereum、zkSync Era、zkSync Lite、Polygon zkEVM、Polygon、Arbitrum、Arbitrum Nova、Loopring、Optimism、Immutable X、Starknet 以及 BNB Chain 之间的资产跨链。</p>
@@ -391,23 +391,23 @@ const e="/Web3Guide/assets/use1_1-n5WhGhYV.png",i="/Web3Guide/assets/use1_2-BQV0
                 <ol>
                 <li>
                 <p>打开 imKey 钱包，点击「跨链」找到「Orbiter 」应用。</p>
-                <img src="${w}" alt="use9_2">
+                <img src="${z}" alt="use9_2">
 </li>
                 <li>
                 <p>点击「确认」，同意该应用访问钱包地址。</p>
-                <img src="${X}" alt="use9_3">
+                <img src="${O}" alt="use9_3">
 </li>
                 <li>
                 <p>选择要跨链转移的代币，以及发送和接收资产的网络。</p>
-                <img src="${z}" alt="use9_4">
+                <img src="${N}" alt="use9_4">
 </li>
                 <li>
                 <p>输入要转移的代币数量后，依次点击「SEND」-「CONFIRM AND SEND」-「请求 imKey 确认」，最后在硬件设备上完成签名确认。</p>
-                <img src="${O}" alt="use9_5">
+                <img src="${v}" alt="use9_5">
 </li>
                 <li>
                 <p>等待状态从 「Processing」 变成 「Completed」，并且下方出现三个绿色完成图标时，说明交易已完成。返回 imKey 首页切换到 zkSync Era 网络，即可看到资产。</p>
-                <img src="${N}" alt="use9_6">
+                <img src="${V}" alt="use9_6">
 </li>
 </ol>
 <p>如果使用 Orbiter Finance 遇到问题，请联系 Orbiter Finance 官方咨询：</p>
@@ -423,4 +423,4 @@ imKey 是由 imToken 孵化的专业硬件冷钱包，与 imToken 深度集成�
 <p>
 风险提示：本文内容均不构成任何形式的投资意见或建议。imToken 对本文所提及的第三方服务和产品不做任何保证和承诺，亦不承担任何责任。代币投资有风险，请谨慎评估该等投资风险，咨询相关专业人士后自行作出决定。
 </p>
-                `}]}];export{v as default};
+                `}]}];export{F as default};

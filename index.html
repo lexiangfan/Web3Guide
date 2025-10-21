@@ -2,13 +2,124 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Web3Guide/assets/logo-PHomebFi.svg" />
+    <link rel="icon" type="image/svg+xml" href="/get-started/assets/logo-PHomebFi.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEB3 入门</title>
-    <script type="module" crossorigin src="/Web3Guide/assets/index-BQynhBM2.js"></script>
-    <link rel="stylesheet" crossorigin href="/Web3Guide/assets/index-LtesVmOR.css">
+      <!-- 客服按钮 -->
+      <style>.customer-service-container {
+          position: fixed;
+          bottom: 110px;
+          right: 20px;
+          display: flex;
+          gap: 10px;
+          z-index: 9999;
+      }
+
+      @media (max-width: 768px) {
+          .customer-service-container {
+              bottom: 80px;
+              right: 15px;
+          }
+
+          .close-btn {
+              width: 20px;
+              height: 20px;
+          }
+
+      }
+
+      @media (max-width: 480px) {
+          .customer-service-container {
+              bottom: 80px;
+              right: 10px;
+          }
+
+          .close-btn {
+              width: 10px;
+              height: 10px;
+          }
+      }
+
+      .close-btn {
+          background-color: white;
+          color: #333;
+          border: none;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+          cursor: pointer;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          transition: all 0.2s ease;
+      }
+
+      .close-btn:hover {
+          transform: scale(1.05);
+      }
+
+      .service-btn {
+          background-color: white;
+          color: #333;
+          border: none;
+          border-radius: 20px;
+          padding: 10px 20px;
+          font-size: 14px;
+          font-weight: bold;
+          cursor: pointer;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          transition: all 0.2s ease;
+      }
+
+      .service-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+      </style>
+      <!-- HelpScout Beacon 代码 -->
+      <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+      <script type="text/javascript">
+          window.Beacon('init', 'c8504fe1-0a58-45ca-a829-55fc1b772c6c')
+          window.Beacon('config',{
+                  color: '#2A3535',
+          })
+      </script>
+      <script type="text/javascript">
+          function handleCloseButtonClick() {
+              // 隐藏关闭按钮自身
+              event.target.style.display = 'none';
+              // 切换客服按钮容器显示状态
+              toggleServiceBtn();
+          }
+          function toggleServiceBtn() {
+              const container = document.querySelector('.customer-service-container');
+              if (container.style.display === 'none') {
+                  container.style.display = 'flex';
+              } else {
+                  container.style.display = 'none';
+              }
+          }
+
+          // 页面加载完成后初始化
+          window.addEventListener('DOMContentLoaded', function() {
+              // 确保 Beacon 已经初始化
+              if (typeof window.Beacon !== 'undefined') {
+                  console.log('Beacon initialized successfully');
+              }
+          });
+      </script>
+    <script type="module" crossorigin src="/get-started/assets/index-qtzDUNfB.js"></script>
+    <link rel="stylesheet" crossorigin href="/get-started/assets/index-Cpew0Kya.css">
   </head>
   <body>
     <div id="app"></div>
+    <div class="customer-service-container">
+        <button class="close-btn" onclick="handleCloseButtonClick()">
+            ×
+        </button>
+        <button class="service-btn" onclick="window.Beacon('open')">
+            在线客服
+        </button>
+    </div>
+
   </body>
 </html>
