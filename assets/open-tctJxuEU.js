@@ -1,4 +1,4 @@
-const t="/get-started/assets/imKeyPadding-C7jU6FqV.png",l="/get-started/assets/imKeyPadding2-TsHydHLX.png",i="/get-started/assets/imKeyPadding3-OLodW0aR.png",d=[{id:"section1",title:"imKey Pro 开箱与设备检查教程",content:"",children:[{id:"file1_1",title:"imKey Pro 开箱与设备检查教程",content:`
+const t="/Web3Guide/assets/imKeyPadding-C7jU6FqV.png",i="/Web3Guide/assets/imKeyPadding2-TsHydHLX.png",l="/Web3Guide/assets/imKeyPadding3-OLodW0aR.png",d=[{id:"section1",title:"imKey Pro 开箱与设备检查教程",content:"",children:[{id:"file1_1",title:"imKey Pro 开箱与设备检查教程",content:`
           <p>
 imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>，安全等级达到 <strong> 军工级 CC EAL 6+ 标准</strong>，是业内公认的高安全级别硬件钱包。
 </p>
@@ -41,12 +41,12 @@ imKey Pro 采用 <strong> Infineon 安全芯片（SLE78CLUFX5000PH）</strong>�
 <li>检查产品包装
 <ul> <li>  外层塑封完好。</li>
 <li>  两侧 <strong> 不可逆封条 </strong>完整，若撕开会显示字母。</li></ul>
-<img src="${l}" alt="imKeyPadding2">
+<img src="${i}" alt="imKeyPadding2">
 </li>
 <li>检查开机界面
 <ul> <li> <p>初次启动应依次显示：</p> <p><strong>选择语言 → 显示蓝牙名称。</strong></p></li>
 <li>  如果直接进入其他界面，可能说明设备已被激活或篡改。</li></ul>
-<img src="${i}" alt="imKeyPadding3">
+<img src="${l}" alt="imKeyPadding3">
 </li>
 <li>验证激活流程
 <ul> <li>  将设备连接至 <strong> imToken App</strong>。</li>

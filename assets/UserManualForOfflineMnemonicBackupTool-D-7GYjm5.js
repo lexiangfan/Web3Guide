@@ -1,4 +1,4 @@
-const e="/get-started/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/get-started/assets/imKeyL1ProUse-DharRH78.png",l="/get-started/assets/imKeyL1Pro-BReruCF_.png",s="/get-started/assets/imKeyP1All-CgCc4lWB.png",t="/get-started/assets/imKeyP1User1-B7AotFCi.png",r="/get-started/assets/imKeyP1User2-BJa2A3YN.png",o="/get-started/assets/imKeyP1User3-5UnW3sBv.png",a="/get-started/assets/imKeyP1UserPW-6zbF4KwC.png",p="/get-started/assets/imKeyP1UserSC-CSppPtYl.png",n="/get-started/assets/imKeyS1All-DrE5h5eJ.png",m="/get-started/assets/imKeyS1User-Dzb3V6wX.png",c="/get-started/assets/imKeyS1User2-ebkxedfY.png",g="/get-started/assets/img_1-CilqYHKH.png",d=[{id:"section1",title:"助记词离线备份工具使用手册",content:"",children:[{id:"file1_1",title:"如何正确备份助记词？",content:`
+const e="/Web3Guide/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/Web3Guide/assets/imKeyL1ProUse-DharRH78.png",l="/Web3Guide/assets/imKeyL1Pro-BReruCF_.png",s="/Web3Guide/assets/imKeyP1All-CgCc4lWB.png",r="/Web3Guide/assets/imKeyP1User1-B7AotFCi.png",t="/Web3Guide/assets/imKeyP1User2-BJa2A3YN.png",o="/Web3Guide/assets/imKeyP1User3-5UnW3sBv.png",a="/Web3Guide/assets/imKeyP1UserPW-6zbF4KwC.png",p="/Web3Guide/assets/imKeyP1UserSC-CSppPtYl.png",n="/Web3Guide/assets/imKeyS1All-DrE5h5eJ.png",m="/Web3Guide/assets/imKeyS1User-Dzb3V6wX.png",c="/Web3Guide/assets/imKeyS1User2-ebkxedfY.png",d="/Web3Guide/assets/img_1-CilqYHKH.png",g=[{id:"section1",title:"助记词离线备份工具使用手册",content:"",children:[{id:"file1_1",title:"如何正确备份助记词？",content:`
                 <p>助记词是你钱包的唯一钥匙，一旦泄露或丢失，资产将无法找回。</p>
                 <p>以下是最安全、可靠的备份方式👇</p>
                 
@@ -56,7 +56,7 @@ const e="/get-started/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/get-started/asse
 </div>
 
 <h3>基本信息</h3>
-<img src="${g}" alt="imKey冲压板L1Pro">
+<img src="${d}" alt="imKey冲压板L1Pro">
 <ul>
 <li>冲压板尺寸: 76.5mm x 76.5mm x 2mm</li>
 <li>冲压板单片重量: 77g</li>
@@ -151,8 +151,8 @@ const e="/get-started/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/get-started/asse
 </li>
 <li>贴上不可逆封条贴纸
 <p>贴上不可逆封条贴纸并存放在安全的地方，防止窥探。</p>
-<img src="${t}" alt="imKeyP1User1">
-<img src="${r}" alt="imKeyP1User2">
+<img src="${r}" alt="imKeyP1User1">
+<img src="${t}" alt="imKeyP1User2">
 <img src="${o}" alt="imKeyP1User3">
 </li>
 </ol>
@@ -262,4 +262,4 @@ const e="/get-started/assets/imKeyL1Pro_imKey-BLqyCXrp.png",i="/get-started/asse
 <a href="https://shop42404838.m.youzan.com/wscgoods/detail/2xj16xca3nkmm?scan=1&activity=none&from=kdt&qr=directgoods_711638544&shopAutoEnter=1" target="_blank">https://j.youzan.com/USDlfF</a>
                 
                 
-                `}]}];export{d as default};
+                `}]}];export{g as default};
