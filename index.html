@@ -15,31 +15,6 @@
           z-index: 9999;
       }
 
-      @media (max-width: 768px) {
-          .customer-service-container {
-              bottom: 80px;
-              right: 15px;
-          }
-
-          .close-btn {
-              width: 20px;
-              height: 20px;
-          }
-
-      }
-
-      @media (max-width: 480px) {
-          .customer-service-container {
-              bottom: 140px;
-              right: 10px;
-          }
-
-          .close-btn {
-              width: 10px;
-              height: 10px;
-          }
-      }
-
       .close-btn {
           background-color: white;
           color: #333;
@@ -106,13 +81,48 @@
                   console.log('Beacon initialized successfully');
               }
           });
+          function adjustCustomerServicePosition() {
+              const container = document.getElementById('customerServiceContainer');
+              if (!container) return;
+
+              // 获取 Beacon 元素
+              const beaconElement = document.querySelector('.beacon-button');
+              if (beaconElement) {
+                  const rect = beaconElement.getBoundingClientRect();
+                  const rightPosition = rect.right - 20; // 调整距离 Beacon 的距离
+                  const bottomPosition = rect.bottom + 20; // 调整距离 Beacon 的距离
+
+                  container.style.right = `${rightPosition}px`;
+                  container.style.bottom = `${bottomPosition}px`;
+              }
+          }
+
+          // 页面加载完成后初始化
+          window.addEventListener('DOMContentLoaded', function() {
+              // 确保 Beacon 已经初始化
+              if (typeof window.Beacon !== 'undefined') {
+                  console.log('Beacon initialized successfully');
+                  // 初始化位置
+                  adjustCustomerServicePosition();
+              }
+          });
+
+          // 监听窗口大小变化
+          window.addEventListener('resize', adjustCustomerServicePosition);
+
+          // 监听 Beacon 状态变化
+          if (typeof window.Beacon !== 'undefined') {
+              window.Beacon('on', 'ready', function() {
+                  adjustCustomerServicePosition();
+              });
+          }
       </script>
     <script type="module" crossorigin src="/Web3Guide/assets/index-bC5J8BqC.js"></script>
     <link rel="stylesheet" crossorigin href="/Web3Guide/assets/index-LtesVmOR.css">
   </head>
   <body>
     <div id="app"></div>
-    <div class="customer-service-container">
+    <div class="customer-service-container" id="customerServiceContainer">
         <button class="close-btn" onclick="handleCloseButtonClick()">
             ×
         </button>
